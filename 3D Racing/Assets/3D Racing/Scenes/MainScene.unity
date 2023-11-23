@@ -3088,6 +3088,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Car
       objectReference: {fileID: 0}
+    - target: {fileID: 9087909025489425572, guid: 54433ea881550a147be5ebddc1da5ae0, type: 3}
+      propertyPath: m_WheelAxles.Array.data[1].m_BaseSidewaysStiffness
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
