@@ -38,6 +38,9 @@ namespace CarRacing
         [SerializeField] private float m_BaseSidewaysStiffness = 2.0f;
         [SerializeField] private float m_StabilitySidewaysFactor = 1.0f;
 
+        public WheelCollider LeftWheel => m_LeftWheel.collider;
+        public WheelCollider RightWheel => m_RightWheel.collider;
+
         private WheelHit m_LeftWheelHit;
         private WheelHit m_RightWheelHit;
 

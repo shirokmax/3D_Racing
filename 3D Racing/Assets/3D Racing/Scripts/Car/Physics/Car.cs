@@ -54,6 +54,8 @@ namespace CarRacing
         public float NormalizeLinearVelocity => m_CarChassis.LinearVelocity / MaxSpeed;
         public float WheelSpeed => m_CarChassis.GetWheelSpeed();
 
+        public WheelCollider[] WheelColliders => m_CarChassis.GetAllWheelColliders();
+
         // DEBUG
         [Space]
         public float Speed;
@@ -64,6 +66,9 @@ namespace CarRacing
 
         private UnityEvent<string> m_EventOnShiftGear = new UnityEvent<string>();
         public UnityEvent<string> EventOnShiftGear => m_EventOnShiftGear;
+
+        private UnityEvent<Collision> m_EventOnCollision = new UnityEvent<Collision>();
+        public UnityEvent<Collision> EventOnCollision => m_EventOnCollision;
 
         private CarChassis m_CarChassis;
         public CarChassis CarChassis => m_CarChassis;
@@ -156,6 +161,11 @@ namespace CarRacing
 
             transform.position = position;
             transform.rotation = rotation;
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            m_EventOnCollision?.Invoke(collision);
         }
     }
 }

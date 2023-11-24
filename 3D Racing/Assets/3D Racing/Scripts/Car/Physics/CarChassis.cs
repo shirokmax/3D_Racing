@@ -6,6 +6,7 @@ namespace CarRacing
     public class CarChassis : MonoBehaviour
     {
         [SerializeField] private WheelAxle[] m_WheelAxles;
+        public WheelAxle[] WheelAxles => m_WheelAxles;
 
         [Space]
         [SerializeField] private float m_WheelBaseLength;
@@ -97,6 +98,25 @@ namespace CarRacing
                 m_WheelAxles[i].ApplyBrakeTorque(BrakeTorque + HandbrakeTorque);
                 m_WheelAxles[i].ApplySteerAngle(SteerAngle, m_WheelBaseLength);
             }
+        }
+
+        public WheelCollider[] GetAllWheelColliders()
+        {
+            int wheelsCount = m_WheelAxles.Length * 2;
+
+            WheelCollider[] wheelColliders = new WheelCollider[wheelsCount];
+
+            int j = 0;
+
+            for (int i = 0; i < m_WheelAxles.Length; i++)
+            {
+                wheelColliders[j] = m_WheelAxles[i].LeftWheel;
+                j++;
+                wheelColliders[j] = m_WheelAxles[i].RightWheel;
+                j++;
+            }
+
+            return wheelColliders;
         }
 
         public void Reset()
