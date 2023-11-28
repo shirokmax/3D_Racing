@@ -33,11 +33,6 @@ namespace CarRacing
             m_TweenLink = m_Rect.DOAnchorPos(m_EnabledPosition, m_DurationTime).SetEase(m_Ease);
         }
 
-        private void OnDisable()
-        {
-            ResetPosition();
-        }
-
         private void ResetPosition()
         {
             m_Rect.anchoredPosition = m_HiddenPosition;

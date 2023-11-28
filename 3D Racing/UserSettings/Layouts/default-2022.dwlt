@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Hierarchy
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 321}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 57766
+  controlID: 1016
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 57767
+  controlID: 1017
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -168,7 +168,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 57773
+  controlID: 1107
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 57774
+  controlID: 1108
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -439,9 +439,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 3a90fdff92a4fdff86effdffdef0fdff7af7fdff3209feff620cfefff81dfeff943bfeff3640feffc27cfeffe4dbfefff2dbfeff8286ffff8486ffff04faffff3efaffff62faffff78faffff84faffff9afaffffb0faffffbcfaffffe0faffffe2faffff68650000726500008e65000098650000a8650000b0650000b865000000fe01004cfe0100a8fe01002eff010064ff01006cff010090ff0100
+      m_SelectedIDs: bc650000
+      m_LastClickedID: 26044
+      m_ExpandedIDs: e2faffff92650000a4650000bc650000c0650000e2650000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -860,9 +860,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 768.4929, y: 497.34695, z: 2.5425985}
+    m_Target: {x: 738.2348, y: 502.6964, z: 4.7650695}
     speed: 2
-    m_Value: {x: 768.4929, y: 497.34695, z: 2.5425985}
+    m_Value: {x: 738.2348, y: 502.6964, z: 4.7650695}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -912,9 +912,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 587.8389
+    m_Target: 594.68805
     speed: 2
-    m_Value: 587.8389
+    m_Value: 594.68805
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1056,7 +1056,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/3D Racing/Scenes
+    - Assets/Thirdparty/VFX/ParticlePack
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -1064,16 +1064,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/3D Racing/Scenes
+  - Assets/Thirdparty/VFX/ParticlePack
   m_LastFoldersGridSize: 96
   m_LastProjectPath: D:\Unity\Unity Projects\3D_Racing\3D Racing
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 65}
-    m_SelectedIDs: aa660000
-    m_LastClickedID: 26282
-    m_ExpandedIDs: 00000000826600008466000086660000886600008a66000000ca9a3b
+    scrollPos: {x: 0, y: 165}
+    m_SelectedIDs: 62670000
+    m_LastClickedID: 26466
+    m_ExpandedIDs: 00000000226700002467000026670000286700002a67000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1101,7 +1101,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000826600008466000086660000886600008a66000000ca9a3b
+    m_ExpandedIDs: 00000000226700002467000026670000286700002a67000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1128,7 +1128,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000bc7300002c790000667e0000ac9a000094d80000c2d90000fe7c000098790000509400006261000046620000be6100004eb90000562c01005263000032780000de630000046800000a650000bc6f000076760000527600008e7900003a950000487200004261000000000000feeaffffdc610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1227,7 +1227,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 130414
+  m_LastSelectedObjectID: 26044
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
