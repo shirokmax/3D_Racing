@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/3D Racing/Scenes/test_race.unity
     guid: af0d0c9c5b92ed847b283b8bb3d403a9
+  - enabled: 1
+    path: Assets/3D Racing/Scenes/test_race_night.unity
+    guid: 20447341f5d51c94696d709227f7a81d
   m_configObjects: {}
