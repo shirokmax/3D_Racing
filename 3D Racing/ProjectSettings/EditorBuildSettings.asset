@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Thirdparty/Other/CartoonTracksPack1/Track1/Demo Scenes/complete_track_demo.unity
-    guid: 83760dd98fe89364daec0c8817772284
+    path: Assets/3D Racing/Scenes/MainMenu.unity
+    guid: 776c5a596b513794a83482d63cbb01a2
+  - enabled: 1
+    path: Assets/3D Racing/Scenes/test_race.unity
+    guid: af0d0c9c5b92ed847b283b8bb3d403a9
   m_configObjects: {}

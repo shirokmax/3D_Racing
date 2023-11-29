@@ -89,6 +89,7 @@ GameObject:
   - component: {fileID: 4096027167232635919}
   - component: {fileID: 5053626754353051758}
   - component: {fileID: 2996279617729537305}
+  - component: {fileID: 1654779008216305980}
   m_Layer: 0
   m_Name: TimesOfDayButton
   m_TagString: Untagged
@@ -185,6 +186,32 @@ MonoBehaviour:
   m_HiddenPosition: {x: -380, y: 10}
   m_DurationTime: 0.7
   m_Ease: 15
+--- !u!114 &1654779008216305980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895595717601981448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72516e37cd7f8846a89ecc9f6e772c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Type: 1
+  m_Interactable: 1
+  m_Clickable: 1
+  m_Hoverable: 1
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectImage: {fileID: 3717777796813998033}
+  OnSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUnSelect:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3966799487391174587
 GameObject:
   m_ObjectHideFlags: 0

@@ -61,7 +61,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 1, b: 0.8862745, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 1, b: 0.8862745, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -326,7 +326,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5669628250065457758}
+  - component: {fileID: 4340082815854095590}
   - component: {fileID: 2682628457868474536}
+  - component: {fileID: 5906250829665554285}
   m_Layer: 0
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -358,6 +360,14 @@ RectTransform:
   m_AnchoredPosition: {x: -317.06314, y: 200.10393}
   m_SizeDelta: {x: 634.1264, y: 76.208}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4340082815854095590
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6849753227829835746}
+  m_CullTransparentMesh: 1
 --- !u!114 &2682628457868474536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,6 +388,29 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &5906250829665554285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6849753227829835746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a72516e37cd7f8846a89ecc9f6e772c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Interactable: 1
+  OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  m_SelectImage: {fileID: 1291704402856510653}
+  OnSelect:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUnSelect:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7117503182397613271
 GameObject:
   m_ObjectHideFlags: 0
