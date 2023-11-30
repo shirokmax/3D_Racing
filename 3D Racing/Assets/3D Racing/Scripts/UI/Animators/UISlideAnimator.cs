@@ -34,5 +34,11 @@ namespace CarRacing
         {
             m_Rect.anchoredPosition = m_HiddenPosition;
         }
+
+        private void OnDestroy()
+        {
+            if (m_TweenLink.IsActive())
+                m_TweenLink.Kill();
+        }
     }
 }

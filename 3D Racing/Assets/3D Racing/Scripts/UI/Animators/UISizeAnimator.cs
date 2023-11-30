@@ -23,5 +23,11 @@ namespace CarRacing
                 Append(transform.DOScale(Vector3.one * m_SizeMult, m_Time)).
                 Insert(m_Time, transform.DOScale(Vector3.one, m_Time));
         }
+
+        private void OnDestroy()
+        {
+            if (m_Sequence.IsActive())
+                m_Sequence.Kill();
+        }
     }
 }
