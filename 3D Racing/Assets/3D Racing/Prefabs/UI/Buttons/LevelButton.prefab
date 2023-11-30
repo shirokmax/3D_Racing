@@ -35,7 +35,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 4, y: -4}
+  m_AnchoredPosition: {x: 4, y: -3.9999847}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2111143651919390497
@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 1491309842661188957}
   - component: {fileID: 6114488304334507264}
   - component: {fileID: 2107033215318988362}
+  - component: {fileID: 2088864087216636606}
   m_Layer: 0
   m_Name: LevelButton
   m_TagString: Untagged
@@ -104,7 +105,7 @@ RectTransform:
   m_GameObject: {fileID: 1950852930454507657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99895996, y: 0.99895996, z: 0.99895996}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5394908344565544772}
@@ -169,13 +170,39 @@ MonoBehaviour:
   m_SelectImage: {fileID: 6444754860524393098}
   OnSelect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2088864087216636606}
+        m_TargetAssemblyTypeName: CarRacing.UISizeAnimator, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnUnSelect:
     m_PersistentCalls:
       m_Calls: []
   m_RaceInfo: {fileID: 0}
   m_PreviewImage: {fileID: 3096432709658853503}
   m_Title: {fileID: 8235732842770475422}
+--- !u!114 &2088864087216636606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950852930454507657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a3b2c498ad75a4d9ee200aae1e800e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SizeMult: 0.9
+  m_Time: 0.1
 --- !u!1 &2993809447960496343
 GameObject:
   m_ObjectHideFlags: 0

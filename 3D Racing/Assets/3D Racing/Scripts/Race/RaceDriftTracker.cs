@@ -95,6 +95,8 @@ namespace CarRacing
                 {
                     wheel.GetGroundHit(out m_WheelHit);
 
+                    if (m_WheelHit.collider == null) return;
+
                     if (m_WheelHit.collider.tag != ROAD_TAG)
                     {
                         StopDrift();

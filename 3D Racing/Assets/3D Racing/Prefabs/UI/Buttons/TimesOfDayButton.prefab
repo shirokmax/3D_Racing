@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 5053626754353051758}
   - component: {fileID: 2996279617729537305}
   - component: {fileID: 1654779008216305980}
+  - component: {fileID: 4560714797203267655}
   m_Layer: 0
   m_Name: TimesOfDayButton
   m_TagString: Untagged
@@ -208,10 +209,36 @@ MonoBehaviour:
   m_SelectImage: {fileID: 3717777796813998033}
   OnSelect:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4560714797203267655}
+        m_TargetAssemblyTypeName: CarRacing.UISizeAnimator, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnUnSelect:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4560714797203267655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895595717601981448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a3b2c498ad75a4d9ee200aae1e800e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SizeMult: 0.95
+  m_Time: 0.1
 --- !u!1 &3966799487391174587
 GameObject:
   m_ObjectHideFlags: 0

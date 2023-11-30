@@ -252,6 +252,8 @@ GameObject:
   - component: {fileID: 2601454275104430892}
   - component: {fileID: 571148063682149385}
   - component: {fileID: 5988287447242203744}
+  - component: {fileID: 767981713975415178}
+  - component: {fileID: 1916104224952957734}
   m_Layer: 0
   m_Name: PreviousButton
   m_TagString: Untagged
@@ -317,6 +319,63 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &767981713975415178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762074210843323243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6033810ac930b45830189813ad4de0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Type: 0
+  m_Interactable: 1
+  m_Clickable: 1
+  m_Hoverable: 0
+  OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7402038111539035862}
+        m_TargetAssemblyTypeName: CarRacing.UISettingButton, Assembly-CSharp
+        m_MethodName: SetPreviousValueSetting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1916104224952957734}
+        m_TargetAssemblyTypeName: CarRacing.UISizeAnimator, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1916104224952957734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762074210843323243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a3b2c498ad75a4d9ee200aae1e800e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SizeMult: 0.5
+  m_Time: 0.1
 --- !u!1 &6849753227829835746
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +387,7 @@ GameObject:
   - component: {fileID: 5669628250065457758}
   - component: {fileID: 4340082815854095590}
   - component: {fileID: 2682628457868474536}
-  - component: {fileID: 5906250829665554285}
+  - component: {fileID: 7402038111539035862}
   m_Layer: 0
   m_Name: SettingsButton
   m_TagString: Untagged
@@ -388,7 +447,7 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
---- !u!114 &5906250829665554285
+--- !u!114 &7402038111539035862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -397,10 +456,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 6849753227829835746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a72516e37cd7f8846a89ecc9f6e772c9, type: 3}
+  m_Script: {fileID: 11500000, guid: e5bb29cffc8bdb94687fe9e6c440ce09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Type: 0
   m_Interactable: 1
+  m_Clickable: 0
+  m_Hoverable: 1
   OnClick:
     m_PersistentCalls:
       m_Calls: []
@@ -411,6 +473,11 @@ MonoBehaviour:
   OnUnSelect:
     m_PersistentCalls:
       m_Calls: []
+  m_Setting: {fileID: 0}
+  m_TitleText: {fileID: 6993694214221015048}
+  m_ValueText: {fileID: 5095237949340031184}
+  m_PreviousButtonImage: {fileID: 5988287447242203744}
+  m_NextButtonImage: {fileID: 4267610422773390097}
 --- !u!1 &7117503182397613271
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +565,8 @@ GameObject:
   - component: {fileID: 8579666883566921396}
   - component: {fileID: 2145431556820965328}
   - component: {fileID: 4267610422773390097}
+  - component: {fileID: 6170391361279519136}
+  - component: {fileID: 3829678988102537458}
   m_Layer: 0
   m_Name: NextButton
   m_TagString: Untagged
@@ -563,3 +632,60 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &6170391361279519136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8840612719402487891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d6033810ac930b45830189813ad4de0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Type: 0
+  m_Interactable: 1
+  m_Clickable: 1
+  m_Hoverable: 0
+  OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7402038111539035862}
+        m_TargetAssemblyTypeName: CarRacing.UISettingButton, Assembly-CSharp
+        m_MethodName: SetNextValueSetting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3829678988102537458}
+        m_TargetAssemblyTypeName: CarRacing.UISizeAnimator, Assembly-CSharp
+        m_MethodName: Animate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3829678988102537458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8840612719402487891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8a3b2c498ad75a4d9ee200aae1e800e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SizeMult: 0.5
+  m_Time: 0.1

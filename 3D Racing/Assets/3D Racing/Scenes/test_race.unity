@@ -3040,6 +3040,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1277762689100802643, guid: 54433ea881550a147be5ebddc1da5ae0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1406506192636754691, guid: 54433ea881550a147be5ebddc1da5ae0, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -3087,6 +3091,10 @@ PrefabInstance:
     - target: {fileID: 2935225528960881095, guid: 54433ea881550a147be5ebddc1da5ae0, type: 3}
       propertyPath: m_Name
       value: Car
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184555455483016064, guid: 54433ea881550a147be5ebddc1da5ae0, type: 3}
+      propertyPath: m_Type
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
