@@ -68,11 +68,10 @@ namespace CarRacing
 
             float angle = Vector3.Angle(m_Car.CarChassis.VelocityDir, m_Car.transform.forward);
 
-            if (m_DriftStartTimer.IsFinished)
-            {
-                CheckDriftFail(angle);
+            CheckDriftFail(angle);
+
+            if (m_DriftStartTimer.IsFinished && IsOnRoad() == true)
                 CheckDrift(angle);
-            }
         }
 
         private void CheckDriftFail(float angle)
@@ -91,19 +90,27 @@ namespace CarRacing
                     return;
                 }
 
-                foreach(var wheel in WheelColliders)
+                if (IsOnRoad() == false)
                 {
-                    wheel.GetGroundHit(out m_WheelHit);
-
-                    if (m_WheelHit.collider == null) return;
-
-                    if (m_WheelHit.collider.tag != ROAD_TAG)
-                    {
-                        StopDrift();
-                        return;
-                    }
+                    StopDrift();
+                    return;
                 }
             }
+        }
+
+        private bool IsOnRoad()
+        {
+            foreach (var wheel in WheelColliders)
+            {
+                wheel.GetGroundHit(out m_WheelHit);
+
+                if (m_WheelHit.collider == null) return false;
+
+                if (m_WheelHit.collider.tag != ROAD_TAG)
+                    return false;
+            }
+
+            return true;
         }
 
         private void CheckDrift(float angle)
