@@ -13,4 +13,5 @@ public abstract class Setting : ScriptableObject
     public abstract object GetValue();
     public abstract string GetStringValue();
     public abstract void Apply();
+    public abstract void Load();
 }
