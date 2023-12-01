@@ -7007,6 +7007,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1278926245575430920, guid: 617d1bfd60336134bbbb5ccc87191c1d, type: 3}
+      propertyPath: m_Setting
+      value: 
+      objectReference: {fileID: 11400000, guid: bce875c4832851e46bc091d4a90891d1, type: 2}
+    - target: {fileID: 1887313751529154959, guid: 617d1bfd60336134bbbb5ccc87191c1d, type: 3}
+      propertyPath: m_Setting
+      value: 
+      objectReference: {fileID: 11400000, guid: d53fc9a2f6f87af48993e830080374e5, type: 2}
+    - target: {fileID: 2560140183157924027, guid: 617d1bfd60336134bbbb5ccc87191c1d, type: 3}
+      propertyPath: m_Name
+      value: SFXVolume
+      objectReference: {fileID: 0}
+    - target: {fileID: 2885061962851195452, guid: 617d1bfd60336134bbbb5ccc87191c1d, type: 3}
+      propertyPath: m_Name
+      value: MusicVolume
+      objectReference: {fileID: 0}
     - target: {fileID: 4444747871299233951, guid: 617d1bfd60336134bbbb5ccc87191c1d, type: 3}
       propertyPath: m_Properties.Array.size
       value: 3
@@ -7078,6 +7094,10 @@ PrefabInstance:
     - target: {fileID: 7520305297070283004, guid: 617d1bfd60336134bbbb5ccc87191c1d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8224938995236072300, guid: 617d1bfd60336134bbbb5ccc87191c1d, type: 3}
+      propertyPath: m_Name
+      value: Resolution
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

@@ -16,6 +16,9 @@ sysinfo.txt
 # Ассет трека
 CartoonTracksPack1/
 
+# Папка с логами (из-за тяжелых логов воркеров)
+Logs/
+
 ###
 # VS/MD solution and project files
 ###

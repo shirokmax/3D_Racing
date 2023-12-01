@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 5988287447242203744}
   - component: {fileID: 767981713975415178}
   - component: {fileID: 1916104224952957734}
+  - component: {fileID: 3093351091898575195}
   m_Layer: 0
   m_Name: PreviousButton
   m_TagString: Untagged
@@ -376,6 +377,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SizeMult: 0.5
   m_Time: 0.1
+--- !u!114 &3093351091898575195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6762074210843323243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
 --- !u!1 &6849753227829835746
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 1, b: 0.8862746, a: 0.3137255}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -567,6 +583,7 @@ GameObject:
   - component: {fileID: 4267610422773390097}
   - component: {fileID: 6170391361279519136}
   - component: {fileID: 3829678988102537458}
+  - component: {fileID: 4886093634373945951}
   m_Layer: 0
   m_Name: NextButton
   m_TagString: Untagged
@@ -689,3 +706,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SizeMult: 0.5
   m_Time: 0.1
+--- !u!114 &4886093634373945951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8840612719402487891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfabb0440166ab443bba8876756fdfa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
