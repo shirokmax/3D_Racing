@@ -3,12 +3,6 @@ using UnityEngine.Events;
 
 namespace CarRacing
 {
-    public enum TrackType
-    {
-        Circular,
-        Sprint
-    }
-
     public class TrackpointCircuit : MonoBehaviour
     {
         [SerializeField] private TrackType m_TrackType;

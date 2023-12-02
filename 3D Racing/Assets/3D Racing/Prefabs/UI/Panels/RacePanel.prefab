@@ -119,9 +119,57 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 969a6cf335a4c354887494b0243112fb, type: 3}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetInteractable
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CarRacing.UISelectableButtonContainer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1895595717601981448, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
       propertyPath: m_Name
-      value: RaceNightButton
+      value: NightRaceButton
       objectReference: {fileID: 0}
     - target: {fileID: 2996279617729537305, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
       propertyPath: m_HiddenPosition.x
@@ -253,9 +301,57 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1140358211655189101}
     m_Modifications:
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetInteractable
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CarRacing.UISelectableButtonContainer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1654779008216305980, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
+      propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1895595717601981448, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
       propertyPath: m_Name
-      value: RaceDayButton
+      value: DayRaceButton
       objectReference: {fileID: 0}
     - target: {fileID: 7566485876469175813, guid: 9478dc8659dc31c41bca0975d46f5f65, type: 3}
       propertyPath: m_Pivot.x

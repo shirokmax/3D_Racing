@@ -5,13 +5,6 @@ using DG.Tweening;
 
 namespace CarRacing
 {
-    public enum ButtonType
-    {
-        Default,
-        Play,
-        Back
-    }
-
     public class UIButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
         [SerializeField] private ButtonType m_Type;

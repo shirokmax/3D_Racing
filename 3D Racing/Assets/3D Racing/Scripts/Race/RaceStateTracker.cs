@@ -3,14 +3,6 @@ using UnityEngine.Events;
 
 namespace CarRacing
 {
-    public enum RaceState
-    {
-        Preparation,
-        Countdown,
-        Race,
-        Completed
-    }
-
     public class RaceStateTracker : MonoBehaviour, IDependency<TrackpointCircuit>
     {
         [SerializeField] private SimpleTimer m_CountdownTimer;

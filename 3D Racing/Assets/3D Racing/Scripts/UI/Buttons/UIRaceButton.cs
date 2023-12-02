@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace CarRacing
 {
-    public class UIRaceButton : UISelectableButton
+    public class UIRaceButton : UISelectableButton, IScriptableObjectProperty
     {
         [SerializeField] private RaceInfo m_RaceInfo;
 
@@ -14,7 +14,7 @@ namespace CarRacing
 
         private void Start()
         {
-            ApplyProperties(m_RaceInfo);
+            ApplyProperty(m_RaceInfo);
         }
 
         public override void OnPointerClick(PointerEventData eventData)
@@ -26,11 +26,13 @@ namespace CarRacing
             SceneManager.LoadScene(m_RaceInfo.SceneName);
         }
 
-        public void ApplyProperties(RaceInfo raceInfo)
+        public void ApplyProperty(ScriptableObject property)
         {
-            if (raceInfo == null) return;
+            if (property == null) return;
 
-            m_RaceInfo = raceInfo;
+            if (property is RaceInfo == false) return;
+
+            m_RaceInfo = property as RaceInfo;
 
             m_PreviewImage.sprite = m_RaceInfo.PreviewSprite;
             m_Title.text = m_RaceInfo.Title;

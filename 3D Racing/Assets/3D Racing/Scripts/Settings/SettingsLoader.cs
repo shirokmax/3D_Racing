@@ -4,9 +4,9 @@ public class SettingsLoader : MonoBehaviour
 {
     [SerializeField] private Setting[] m_AllSettings;
 
-    private void Awake()
+    public void Initialize()
     {
-        foreach(var setting in m_AllSettings)
+        foreach (var setting in m_AllSettings)
         {
             setting.Load();
             setting.Apply();

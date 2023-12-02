@@ -14,10 +14,9 @@ namespace CarRacing
 
         private UIButton[] m_Buttons;
 
-        private void Awake()
+        public void Initialize()
         {
             m_Audio = GetComponent<AudioSource>();
-
             m_Buttons = GetComponentsInChildren<UIButton>(true);
         }
 

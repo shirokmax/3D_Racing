@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace CarRacing
 {
-    public class UISettingButton : UISelectableButton
+    public class UISettingButton : UISelectableButton, IScriptableObjectProperty
     {
         [SerializeField] private Setting m_Setting;
 
@@ -18,11 +18,13 @@ namespace CarRacing
             ApplyProperty(m_Setting);
         }
 
-        public void ApplyProperty(Setting property)
+        public void ApplyProperty(ScriptableObject property)
         {
             if (property == null) return;
 
-            m_Setting = property;
+            if (property is Setting == false) return;
+
+            m_Setting = property as Setting;
 
             UpdateInfo();
         }

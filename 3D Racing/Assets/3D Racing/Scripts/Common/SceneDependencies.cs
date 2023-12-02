@@ -1,19 +1,6 @@
 using CarRacing;
 using UnityEngine;
 
-/// <summary>
-/// Обобщенный интерфейс для внедрения зависимостей.
-/// </summary>
-/// <typeparam name="T">Тип объекта.</typeparam>
-public interface IDependency<T>
-{
-    /// <summary>
-    /// Передача ссылки на объект.
-    /// </summary>
-    /// <param name="obj"></param>
-    void Construct(T obj);
-}
-
 public class SceneDependencies : MonoBehaviour
 {
     [SerializeField] private Car m_Car;

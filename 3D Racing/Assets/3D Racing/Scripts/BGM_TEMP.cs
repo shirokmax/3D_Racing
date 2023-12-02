@@ -3,7 +3,7 @@ using UnityEngine;
 namespace CarRacing
 {
     [RequireComponent(typeof(AudioSource))]
-    public class BGM : MonoSingleton<BGM>, IDependency<RaceStateTracker>
+    public class BGM_TEMP : MonoSingleton<BGM_TEMP>, IDependency<RaceStateTracker>
     {
         private RaceStateTracker m_RaceStateTracker;
         public void Construct(RaceStateTracker obj) => m_RaceStateTracker = obj;
