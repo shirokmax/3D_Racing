@@ -21,7 +21,7 @@ namespace CarRacing
 
         private void Start()
         {
-            m_RaceStateTracker.EventOnPrepararionStarted.AddListener(OnPreparationStarted);
+            m_RaceStateTracker.EventOnCountdownStarted.AddListener(OnPreparationStarted);
             m_RaceStateTracker.EventOnRaceStarted.AddListener(OnRaceStarted);
             m_RaceStateTracker.CountdownTimer.EventOnTimerSecondsTicked.AddListener(OnTimerSecondsTicked);
 

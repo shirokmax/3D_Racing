@@ -14,14 +14,15 @@ namespace CarRacing
 
         private UIButton[] m_Buttons;
 
-        public void Initialize()
+        public void Awake()
         {
             m_Audio = GetComponent<AudioSource>();
-            m_Buttons = GetComponentsInChildren<UIButton>(true);
         }
 
         private void Start()
-        {
+        {            
+            m_Buttons = GetComponentsInChildren<UIButton>(true);
+
             for (int i = 0; i < m_Buttons.Length; i++)
             {
                 m_Buttons[i].PointerEnter += OnPointerEnter;

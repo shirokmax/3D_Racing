@@ -6,8 +6,8 @@ public class SpawnObjectsByPropertiesList : MonoBehaviour
     [SerializeField] private GameObject m_Prefab;
     [SerializeField] private ScriptableObject[] m_Properties;
 
-    [ContextMenu(nameof(Spawn))]
-    public void Spawn()
+    [ContextMenu(nameof(SpawnInEditMode))]
+    public void SpawnInEditMode()
     {
         GameObject[] allObjects = new GameObject[m_Parent.childCount];
 

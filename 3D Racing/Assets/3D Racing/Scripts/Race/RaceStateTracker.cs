@@ -16,8 +16,11 @@ namespace CarRacing
         private RaceState m_State;
         public RaceState State => m_State;
 
-        private UnityEvent m_EventOnPrepararionStarted = new UnityEvent();
-        public UnityEvent EventOnPrepararionStarted => m_EventOnPrepararionStarted;
+        private UnityEvent m_EventOnPreparationStarted = new UnityEvent();
+        public UnityEvent EventOnPreparationStarted => m_EventOnPreparationStarted;
+
+        private UnityEvent m_EventOnCountdownStarted = new UnityEvent();
+        public UnityEvent EventOnCountdownStarted => m_EventOnCountdownStarted;
 
         private UnityEvent m_EventOnRaceStarted = new UnityEvent();
         public UnityEvent EventOnRaceStarted => m_EventOnRaceStarted;
@@ -34,6 +37,7 @@ namespace CarRacing
         private void Start()
         {
             StartState(RaceState.Preparation);
+            m_EventOnPreparationStarted?.Invoke();
 
             m_TrackpointCircuit.EventOnTrackPointTriggered.AddListener(OnTrackPointTriggered);
             m_TrackpointCircuit.EventOnLapCompleted.AddListener(OnLapCompleted);
@@ -78,7 +82,7 @@ namespace CarRacing
 
             m_CountdownTimer.enabled = true;
 
-            m_EventOnPrepararionStarted?.Invoke();
+            m_EventOnCountdownStarted?.Invoke();
         }
 
         private void StartRace()
@@ -100,6 +104,16 @@ namespace CarRacing
         private void CompleteLap(int lapAmount)
         {
             m_EventOnLapCompleted?.Invoke(lapAmount);
+        }
+
+        private void OnDestroy()
+        {
+            m_EventOnPreparationStarted.RemoveAllListeners();
+            m_EventOnCountdownStarted.RemoveAllListeners();
+            m_EventOnRaceStarted.RemoveAllListeners();
+            m_EventOnRaceFinished.RemoveAllListeners();
+            m_EventOnTrackPointPassed.RemoveAllListeners();
+            m_EventOnLapCompleted.RemoveAllListeners();
         }
     }
 }

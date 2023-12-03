@@ -25,7 +25,10 @@ public class ResolutionSetting : Setting
 
     public override string GetStringValue()
     {
-        return m_AvailableResolutions[m_CurrentResolutionIndex].width + "x" + m_AvailableResolutions[m_CurrentResolutionIndex].height;
+        if (Application.isPlaying)
+            return m_AvailableResolutions[m_CurrentResolutionIndex].width + "x" + m_AvailableResolutions[m_CurrentResolutionIndex].height;
+
+        return string.Empty;
     }
 
     public override object GetValue()
