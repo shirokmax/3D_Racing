@@ -64,7 +64,15 @@ namespace CarRacing
 
         private void PlayRandomRaceMusic()
         {
-            m_Audio.clip = m_Race[Random.Range(0, m_Race.Length)];
+            int clipRandomIndex;
+
+            do
+            {
+                clipRandomIndex = Random.Range(0, m_Race.Length);
+            }
+            while (m_Audio.clip == m_Race[clipRandomIndex]);
+
+            m_Audio.clip = m_Race[clipRandomIndex];
             m_Audio.Play();
         }
     }
