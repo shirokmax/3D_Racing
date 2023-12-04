@@ -11,7 +11,7 @@ namespace CarRacing
 
         private AudioSource m_Audio;
 
-        private string m_LastLoadedSceneName;
+        private string m_LastLoadedSceneName = string.Empty;
 
         private RaceStateTracker m_RaceStateTracker;
         public void Construct(RaceStateTracker obj)
@@ -22,12 +22,9 @@ namespace CarRacing
             m_RaceStateTracker.EventOnCountdownStarted.AddListener(PlayRandomRaceMusic);
         }
 
-        private void Start()
+        private void Awake()
         {
             m_Audio = GetComponent<AudioSource>();
-            PlayMainMenuMusic();
-
-            m_LastLoadedSceneName = SceneManager.GetActiveScene().name;
 
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
