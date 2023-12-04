@@ -9,13 +9,13 @@ namespace CarRacing
 
         private void Start()
         {
-            m_RaceStateTracker.EventOnCountdownStarted.AddListener(OnPrepararionStarted);
+            m_RaceStateTracker.EventOnCountdownStarted.AddListener(OnCountdownStarted);
 
             enabled = true;
             gameObject.SetActive(true);
         }
 
-        private void OnPrepararionStarted()
+        private void OnCountdownStarted()
         {
             gameObject.SetActive(false);
             enabled = false;

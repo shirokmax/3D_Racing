@@ -24,7 +24,7 @@ namespace CarRacing
 
         private void SwitchLight()
         {
-            if (Input.GetKeyDown(KeyCode.L))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 if (m_Type == CarLightType.Default)
                 {

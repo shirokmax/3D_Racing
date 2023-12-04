@@ -29,6 +29,12 @@ namespace CarRacing
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+                PlayRandomRaceMusic();
+        }
+
         private void OnDestroy()
         {
             SceneManager.sceneLoaded -= OnSceneLoaded;

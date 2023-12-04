@@ -21,14 +21,14 @@ namespace CarRacing
 
         private void Start()
         {
-            m_RaceStateTracker.EventOnCountdownStarted.AddListener(OnPreparationStarted);
+            m_RaceStateTracker.EventOnCountdownStarted.AddListener(OnCountdownStarted);
             m_RaceStateTracker.EventOnRaceStarted.AddListener(OnRaceStarted);
             m_RaceStateTracker.CountdownTimer.EventOnTimerSecondsTicked.AddListener(OnTimerSecondsTicked);
 
             m_TimerText.enabled = false;
         }
 
-        private void OnPreparationStarted()
+        private void OnCountdownStarted()
         {
             m_TimerText.enabled = true;
             enabled = true;

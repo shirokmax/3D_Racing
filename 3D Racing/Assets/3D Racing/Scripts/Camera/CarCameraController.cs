@@ -27,14 +27,14 @@ namespace CarRacing
 
         private void Start()
         {
-            m_RaceStateTracker.EventOnCountdownStarted.AddListener(OnPreparationStarted);
+            m_RaceStateTracker.EventOnCountdownStarted.AddListener(OnCountdownStarted);
             m_RaceStateTracker.EventOnRaceFinished.AddListener(OnRaceFinished);
 
             m_CameraFollow.enabled = false;
             m_CameraPathFollower.enabled = true;
         }
 
-        private void OnPreparationStarted()
+        private void OnCountdownStarted()
         {
             m_CameraFollow.enabled = true;
             m_CameraPathFollower.enabled = false;
