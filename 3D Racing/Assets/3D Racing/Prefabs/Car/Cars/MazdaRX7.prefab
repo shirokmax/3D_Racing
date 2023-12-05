@@ -4612,7 +4612,7 @@ Transform:
   - {fileID: 37526703544038662}
   - {fileID: 477435946240543998}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &4230794093234677832
 Rigidbody:
@@ -5141,6 +5141,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8706748411341910653, guid: 7d35145721d934d4b834f81154a17180, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706748411341910653, guid: 7d35145721d934d4b834f81154a17180, type: 3}
       propertyPath: InitialModule.maxNumParticles
       value: 1000
       objectReference: {fileID: 0}
@@ -5514,6 +5518,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8706748411341910653, guid: 7d35145721d934d4b834f81154a17180, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706748411341910653, guid: 7d35145721d934d4b834f81154a17180, type: 3}
       propertyPath: InitialModule.maxNumParticles
       value: 1000
       objectReference: {fileID: 0}
@@ -5598,6 +5606,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4149844925516958032, guid: 7d35145721d934d4b834f81154a17180, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706748411341910653, guid: 7d35145721d934d4b834f81154a17180, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8706748411341910653, guid: 7d35145721d934d4b834f81154a17180, type: 3}
@@ -5815,6 +5827,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4149844925516958032, guid: 7d35145721d934d4b834f81154a17180, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8706748411341910653, guid: 7d35145721d934d4b834f81154a17180, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8706748411341910653, guid: 7d35145721d934d4b834f81154a17180, type: 3}

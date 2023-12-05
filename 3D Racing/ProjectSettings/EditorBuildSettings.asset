@@ -9,9 +9,15 @@ EditorBuildSettings:
     path: Assets/3D Racing/Scenes/MainMenu.unity
     guid: 776c5a596b513794a83482d63cbb01a2
   - enabled: 1
-    path: Assets/3D Racing/Scenes/test_race.unity
+    path: Assets/3D Racing/Scenes/test_race_day.unity
     guid: af0d0c9c5b92ed847b283b8bb3d403a9
   - enabled: 1
     path: Assets/3D Racing/Scenes/test_race_night.unity
     guid: 20447341f5d51c94696d709227f7a81d
+  - enabled: 1
+    path: Assets/3D Racing/Scenes/free_drift_day.unity
+    guid: 28f134d13f93b544aaaa72d1b0a6bec6
+  - enabled: 1
+    path: Assets/3D Racing/Scenes/free_drift_night.unity
+    guid: 4bd6f7c3d649b8042a31a5a64d44f8d8
   m_configObjects: {}
