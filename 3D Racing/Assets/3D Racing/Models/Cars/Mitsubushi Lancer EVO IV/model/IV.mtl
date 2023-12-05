@@ -1,0 +1,338 @@
+# Blender MTL File: 'IV.blend'
+# Material Count: 30
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006BadgeA_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_BadgeA_Normal.png
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_BadgeA_DiffuseAOSO.png
+map_d C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_BadgeA_DiffuseAOSO.png
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006Base_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006Carbon1_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.341000 0.341000 0.341000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006Coloured_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 1.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\Already Modded\\Global_Texture_Coloured_Diffuse.png
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006EngineA_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_EngineA_Normal.png
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_EngineA_DiffuseAOSO.png
+map_d C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_EngineA_DiffuseAOSO.png
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006Grille1A_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille2A_Normal.png
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille1A_DiffuseAOSO.png
+map_d C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille1A_DiffuseAOSO.png
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006Grille2A_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille2A_Normal.png
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille2A_DiffuseAOSO.png
+map_d C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille2A_DiffuseAOSO.png
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006Grille3A_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille3A_Normal.png
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille3A_DiffuseAOSO.png
+map_d C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille3A_DiffuseAOSO.png
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006Grille4A_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille4A_Normal.png
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille4A_DiffuseAOSO.png
+map_d C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille4A_DiffuseAOSO.png
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006Grille5A_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille6A_Normal.png
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille5A_DiffuseAOSO.png
+map_d C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille5A_DiffuseAOSO.png
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006Grille6A_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille6A_Normal.png
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille6A_DiffuseAOSO.png
+map_d C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_Grille6A_DiffuseAOSO.png
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006InteriorA_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_InteriorA_Normal.png
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_InteriorA_DiffuseAOSO.png
+map_d C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_InteriorA_DiffuseAOSO.png
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006LicensePlateDefaultA_0b3d9e6
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.049546 0.049546 0.049546
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006LightA_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_LightA_Diffuse.png
+map_d C:\\Users\\ACER\\Desktop\\Mods\\CSR2 Model\\Mitsubishi Lancer EVO IX APR\\GameObject\\Mitsubishi_LancerEvolutionIXF3_2006_LightA_Diffuse.png
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006PaintA_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.184464 0.006089 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006SeatBelt_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 1.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006WindowA_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.500000
+illum 6
+
+newmtl Mitsubishi_LancerEvolutionIXF3_2006WindowInsideA_Material
+Ns 199.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.000000 0.000000 0.000000
+Ks 1.000000 1.000000 1.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 0.500000
+illum 6
+
+newmtl None
+Ns 500
+Ka 0.8 0.8 0.8
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+
+newmtl plastic
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.021979 0.021979 0.021979
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl plat
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\Already Modded\\plat3.png
+
+newmtl redlight
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 0.000000 0.000000
+Ks 0.500000 0.500000 0.500000
+Ke 5.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl reverse
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.015992 0.015992 0.015992
+Ks 0.500000 0.500000 0.500000
+Ke 2.000000 2.000000 2.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl rim
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.045186 0.045186 0.045186
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\3D Models\\Rims\\LD97 Forged Remake\\rim.png
+
+newmtl rotor
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\3D Models\\Rims\\BBS_BBS-LM\\maps\\BrakeDisc_ForgedDrilled_diff.png
+
+newmtl sidewall
+Ns 39.999995
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.300000 0.300000 0.300000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 2.000000 C:\\Users\\ACER\\Desktop\\Mods\\3D Models\\Rims\\LD97 Forged Remake\\sidewall_normal.png
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\3D Models\\Rims\\LD97 Forged Remake\\sidewall.png
+
+newmtl spoke
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.045186 0.045186 0.045186
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\3D Models\\Rims\\LD97 Forged Remake\\spoke.png
+
+newmtl steel
+Ns 422.500008
+Ka 1.000000 1.000000 1.000000
+Kd 0.167947 0.167947 0.167947
+Ks 0.700000 0.700000 0.700000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl tread
+Ns 39.999995
+Ka 0.300000 0.300000 0.300000
+Kd 0.800000 0.800000 0.800000
+Ks 0.014493 0.014493 0.014493
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump -bm 2.000000 C:\\Users\\ACER\\Desktop\\Mods\\3D Models\\Rims\\LD97 Forged Remake\\tread_normal.png
+map_Kd C:\\Users\\ACER\\Desktop\\Mods\\3D Models\\Rims\\LD97 Forged Remake\\tread.png
+
+newmtl turnlight
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.799103 0.356400 0.011612
+Ks 0.500000 0.500000 0.500000
+Ke 1.598206 0.712800 0.023225
+Ni 1.450000
+d 1.000000
+illum 2

@@ -6,12 +6,15 @@ namespace CarRacing
     [RequireComponent(typeof(AudioSource))]
     public class BGM : MonoBehaviour, IDependency<RaceStateTracker>
     {
+        public const string MAIN_MENU_SCENE_NAME = "MainMenu";
+
         [SerializeField] private AudioClip m_MainMenu;
         [SerializeField] private AudioClip[] m_Race;
 
         private AudioSource m_Audio;
 
         private string m_LastLoadedSceneName = string.Empty;
+        private bool m_CanChangeSong;
 
         private RaceStateTracker m_RaceStateTracker;
         public void Construct(RaceStateTracker obj)
@@ -31,8 +34,8 @@ namespace CarRacing
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.E))
-                PlayRandomRaceMusic();
+            if (m_CanChangeSong)
+                ChangeSong();
         }
 
         private void OnDestroy()
@@ -46,7 +49,7 @@ namespace CarRacing
             {
                 m_LastLoadedSceneName = scene.name;
 
-                if (scene.name == "MainMenu")
+                if (scene.name == MAIN_MENU_SCENE_NAME)
                     PlayMainMenuMusic();
             }
         }
@@ -54,6 +57,16 @@ namespace CarRacing
         private void OnRacePreparationStarted()
         {
             m_Audio.Stop();
+            m_CanChangeSong = false;
+        }
+
+        private void ChangeSong()
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                if (SceneManager.GetActiveScene().name != MAIN_MENU_SCENE_NAME)
+                    PlayRandomRaceMusic();
+            }
         }
 
         private void PlayMainMenuMusic()
@@ -64,6 +77,8 @@ namespace CarRacing
 
         private void PlayRandomRaceMusic()
         {
+            m_CanChangeSong = true;
+
             int clipRandomIndex;
 
             do

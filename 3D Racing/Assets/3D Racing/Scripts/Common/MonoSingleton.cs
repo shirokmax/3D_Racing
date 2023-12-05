@@ -21,5 +21,5 @@ public abstract class MonoSingleton<T> : MonoBehaviour where T : MonoBehaviour
 
         if (m_DoNotDestroyOnLoad)
             DontDestroyOnLoad(gameObject);
-    } 
+    }
 }

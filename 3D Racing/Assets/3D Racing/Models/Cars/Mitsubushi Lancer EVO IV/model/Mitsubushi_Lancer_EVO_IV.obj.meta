@@ -1,0 +1,259 @@
+fileFormatVersion: 2
+guid: e91eea39ba3c2f9459934bf7621555c0
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006BadgeA_Material
+    second: {fileID: 2100000, guid: abf9f2bc89645ed48bb43781b51dcc26, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006Base_Material
+    second: {fileID: 2100000, guid: d2c39a141be9ac24caddbb4765791d04, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006Carbon1_Material
+    second: {fileID: 2100000, guid: 037c76b957a73984c993fa32220a4d33, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006Coloured_Material
+    second: {fileID: 2100000, guid: e6fe599effb14f64b99fcfe5aa5ccf37, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006EngineA_Material
+    second: {fileID: 2100000, guid: 8f09bf848ea1a464baf3bc258166081a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006Grille1A_Material
+    second: {fileID: 2100000, guid: 5ddded87a5fb45f4cb7c696cec1125d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006Grille2A_Material
+    second: {fileID: 2100000, guid: acf25145c4ab51549883669fe2b34c38, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006Grille3A_Material
+    second: {fileID: 2100000, guid: 82671e2d453a4954992656db707267d4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006Grille4A_Material
+    second: {fileID: 2100000, guid: aceb0fbd97db81a4185215b1c7beb5c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006Grille5A_Material
+    second: {fileID: 2100000, guid: 966d8b75925f6644388c51787148dd46, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006Grille6A_Material
+    second: {fileID: 2100000, guid: bf04b6c4ddaa0ba40b793aaf5c573d9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006InteriorA_Material
+    second: {fileID: 2100000, guid: 1d862ad8931b03f46a03d7fbd9d3aeee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006LicensePlateDefaultA_0b3d9e6
+    second: {fileID: 2100000, guid: 918e5f3e99cd01b49a23cd2486d45486, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006LightA_Material
+    second: {fileID: 2100000, guid: cb53593d9fdaefe4e861146ce0b2fc31, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006PaintA_Material
+    second: {fileID: 2100000, guid: 9677fe5090524574fb1e6bbf5e1c07f2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006SeatBelt_Material
+    second: {fileID: 2100000, guid: 9a9c45b64a6887f4f82b165ff597cddd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006WindowA_Material
+    second: {fileID: 2100000, guid: aee306fc254884e41a630e56653095ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mitsubishi_LancerEvolutionIXF3_2006WindowInsideA_Material
+    second: {fileID: 2100000, guid: d3889fbe30441544e8bd137e004060cb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: None
+    second: {fileID: 2100000, guid: c63bff2637fd7a8429531bad97f26ce7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plastic
+    second: {fileID: 2100000, guid: 6022775dfcdff7f489e2eed08f9860d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plat
+    second: {fileID: 2100000, guid: 32b9c6688c42073428b291e5481faf25, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: redlight
+    second: {fileID: 2100000, guid: 806f58216a38c664e8cfb8713375e38d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: reverse
+    second: {fileID: 2100000, guid: c797a574c640a4641ad2e811f5584b19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rim
+    second: {fileID: 2100000, guid: 1066bfe73cc9a874d8c1a08470c9e480, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rotor
+    second: {fileID: 2100000, guid: 8833aa01d3b6ef94aa03ef7b41f5fe55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: sidewall
+    second: {fileID: 2100000, guid: 68f7cc651344a6147b85b0f548557b15, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: spoke
+    second: {fileID: 2100000, guid: 601febcc40591e141a2e3159cdf21ad2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: steel
+    second: {fileID: 2100000, guid: 0deee97326d319c4e9c878d4905452bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tread
+    second: {fileID: 2100000, guid: 1860661978e7e6446b1e3fda507510af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: turnlight
+    second: {fileID: 2100000, guid: 3b758a1ec7c963d4d8fe8caebe22a5a0, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1.8
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1.8
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 0
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
