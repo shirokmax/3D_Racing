@@ -22,4 +22,10 @@ public class SettingsLoader : MonoBehaviour
             setting.Apply();
         }
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.F1))
+            PlayerPrefs.DeleteAll();
+    }
 }

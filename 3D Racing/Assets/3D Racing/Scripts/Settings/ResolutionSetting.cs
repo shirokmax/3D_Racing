@@ -3,7 +3,11 @@ using UnityEngine;
 [CreateAssetMenu]
 public class ResolutionSetting : Setting
 {
+    public const string MONITOR_NAME = "Monitor Name";
+
     [SerializeField] private Resolution[] m_AvailableResolutions;
+
+    private string m_MonitorName;
 
     private int m_CurrentResolutionIndex;
 
@@ -46,12 +50,25 @@ public class ResolutionSetting : Setting
     {
         InitializeAvailableResolutions();
 
-        m_CurrentResolutionIndex = PlayerPrefs.GetInt(m_Title, GetCurrentResolutionIndex());
+        string currentMonitorName = Screen.mainWindowDisplayInfo.name;
+
+        m_MonitorName = PlayerPrefs.GetString(MONITOR_NAME, currentMonitorName);
+
+        if (m_MonitorName != currentMonitorName)
+        {
+            m_MonitorName = currentMonitorName;
+            m_CurrentResolutionIndex = GetCurrentResolutionIndex();
+        }
+        else
+        {
+            m_CurrentResolutionIndex = PlayerPrefs.GetInt(m_Title, GetCurrentResolutionIndex());
+        }     
     }
 
     private void Save()
     {
         PlayerPrefs.SetInt(m_Title, m_CurrentResolutionIndex);
+        PlayerPrefs.SetString(MONITOR_NAME, m_MonitorName);
     }
 
     private void InitializeAvailableResolutions()
@@ -70,6 +87,6 @@ public class ResolutionSetting : Setting
             }
         }
 
-        return 0;
+        return m_AvailableResolutions.Length - 1;
     }
 }
