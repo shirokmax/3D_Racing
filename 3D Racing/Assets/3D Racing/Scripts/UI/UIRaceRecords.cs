@@ -5,6 +5,9 @@ namespace CarRacing
 {
     public class UIRaceRecords : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<RaceDriftTracker>, IDependency<RaceResults>
     {
+        [SerializeField] private GameObject m_Panels;
+
+        [Space]
         [SerializeField] private GameObject m_GoldTimeRecordPanel;
         [SerializeField] private GameObject m_PlayerTimeRecordPanel;
         [SerializeField] private GameObject m_BestDriftRecordPanel;
@@ -30,6 +33,7 @@ namespace CarRacing
             m_RaceStateTracker.EventOnRaceStarted.AddListener(OnRaceStarted);
             m_RaceStateTracker.EventOnRaceFinished.AddListener(OnRaceFinished);
 
+            m_Panels.SetActive(true);
             DisableRecordPanels();
             enabled = false;
         }

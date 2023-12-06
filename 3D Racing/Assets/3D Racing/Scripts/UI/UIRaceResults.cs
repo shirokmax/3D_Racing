@@ -4,6 +4,9 @@ using UnityEngine.UI;
 
 public class UIRaceResults : MonoBehaviour, IDependency<RaceResults>
 {
+    [SerializeField] private GameObject m_RaceResultsPanel;
+
+    [Space]
     [SerializeField] private Text m_RaceRecordTimeText;
     [SerializeField] private Text m_RacePlayerTimeText;
     [SerializeField] private Text m_TimeNewRecordText;
@@ -21,6 +24,8 @@ public class UIRaceResults : MonoBehaviour, IDependency<RaceResults>
 
     private void Start()
     {
+        m_RaceResultsPanel.SetActive(true);
+
         m_RaceResults.EventOnResultsUpdated.AddListener(OnResultsUpdated);
 
         m_TimeNewRecordText.enabled = false;

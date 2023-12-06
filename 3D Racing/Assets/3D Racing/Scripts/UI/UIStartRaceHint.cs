@@ -4,6 +4,8 @@ namespace CarRacing
 {
     public class UIStartRaceHint : MonoBehaviour, IDependency<RaceStateTracker>
     {
+        [SerializeField] private GameObject m_StartRaceHintPanel;
+
         private RaceStateTracker m_RaceStateTracker;
         public void Construct(RaceStateTracker obj) => m_RaceStateTracker = obj;
 
@@ -11,13 +13,12 @@ namespace CarRacing
         {
             m_RaceStateTracker.EventOnCountdownStarted.AddListener(OnCountdownStarted);
 
-            enabled = true;
-            gameObject.SetActive(true);
+            m_StartRaceHintPanel.SetActive(true);
         }
 
         private void OnCountdownStarted()
         {
-            gameObject.SetActive(false);
+            m_StartRaceHintPanel.SetActive(false);
             enabled = false;
         }
     }
