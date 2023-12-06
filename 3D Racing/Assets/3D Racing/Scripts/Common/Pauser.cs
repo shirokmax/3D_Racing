@@ -1,5 +1,7 @@
+using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 namespace CarRacing
 {
@@ -9,6 +11,16 @@ namespace CarRacing
 
         private bool m_IsPaused;
         public bool IsPaused => m_IsPaused;
+
+        private void Awake()
+        {
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+
+        private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
+        {
+            UnPause();
+        }
 
         public void Pause()
         {

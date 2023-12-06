@@ -3,16 +3,20 @@ using UnityEngine;
 namespace CarRacing
 {
     [RequireComponent(typeof(AudioSource))]
-    public class UIButtonSound : MonoBehaviour
+    public class UISounds : MonoBehaviour, IDependency<Pauser>
     {
         [SerializeField] private AudioClip m_Click;
         [SerializeField] private AudioClip m_Play;
         [SerializeField] private AudioClip m_Back;
         [SerializeField] private AudioClip m_Hover;
+        [SerializeField] private AudioClip m_Pause;
 
         private AudioSource m_Audio;
 
         private UIButton[] m_Buttons;
+
+        private Pauser m_Pauser;
+        public void Construct(Pauser obj) => m_Pauser = obj;
 
         public void Awake()
         {
@@ -28,6 +32,19 @@ namespace CarRacing
                 m_Buttons[i].PointerEnter += OnPointerEnter;
                 m_Buttons[i].PointerClick += OnPointerClick;
             }
+
+            m_Pauser.EventOnPauseStateChange += OnPauseStateChange;
+        }
+
+        private void OnDestroy()
+        {
+            for (int i = 0; i < m_Buttons.Length; i++)
+            {
+                m_Buttons[i].PointerEnter -= OnPointerEnter;
+                m_Buttons[i].PointerClick -= OnPointerClick;
+            }
+
+            m_Pauser.EventOnPauseStateChange -= OnPauseStateChange;
         }
 
         private void OnPointerEnter(UIButton button)
@@ -48,10 +65,15 @@ namespace CarRacing
                 case ButtonType.Back:
                     m_Audio.PlayOneShot(m_Back);
                     break;
-                default:
-                    m_Audio.PlayOneShot(m_Click);
-                    break;
             }
+        }
+
+        private void OnPauseStateChange(bool isPaused)
+        {
+            if (isPaused == true)
+                m_Audio.PlayOneShot(m_Pause);
+            else
+                m_Audio.PlayOneShot(m_Back);
         }
     }
 }

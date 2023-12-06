@@ -4,6 +4,7 @@
     {
         Default,
         Play,
-        Back
+        Back,
+        None
     }
 }

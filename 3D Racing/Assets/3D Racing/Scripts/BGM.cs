@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,10 +8,8 @@ namespace CarRacing
     [RequireComponent(typeof(AudioSource))]
     public class BGM : MonoBehaviour, IDependency<RaceStateTracker>
     {
-        public const string MAIN_MENU_SCENE_NAME = "MainMenu";
-
         [SerializeField] private AudioClip m_MainMenu;
-        [SerializeField] private AudioClip[] m_Race;
+        [SerializeField] private AudioClip[] m_RaceClips;
 
         private AudioSource m_Audio;
 
@@ -25,9 +25,13 @@ namespace CarRacing
             m_RaceStateTracker.EventOnCountdownStarted.AddListener(PlayRandomRaceMusic);
         }
 
+        private List<AudioClip> m_RandomClips;
+
         private void Awake()
         {
             m_Audio = GetComponent<AudioSource>();
+
+            InitializeRandomClipsList();
 
             SceneManager.sceneLoaded += OnSceneLoaded;
         }
@@ -49,7 +53,7 @@ namespace CarRacing
             {
                 m_LastLoadedSceneName = scene.name;
 
-                if (scene.name == MAIN_MENU_SCENE_NAME)
+                if (scene.name == GlobalConsts.MAIN_MENU_SCENE_NAME)
                     PlayMainMenuMusic();
             }
         }
@@ -64,7 +68,7 @@ namespace CarRacing
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                if (SceneManager.GetActiveScene().name != MAIN_MENU_SCENE_NAME)
+                if (SceneManager.GetActiveScene().name != GlobalConsts.MAIN_MENU_SCENE_NAME)
                     PlayRandomRaceMusic();
             }
         }
@@ -77,18 +81,28 @@ namespace CarRacing
 
         private void PlayRandomRaceMusic()
         {
+            if (!m_Audio.isPlaying && m_Audio.time != 0)
+                return;
+
             m_CanChangeSong = true;
 
-            int clipRandomIndex;
+            if (m_RandomClips.Count == 0)
+                InitializeRandomClipsList();
 
-            do
-            {
-                clipRandomIndex = Random.Range(0, m_Race.Length);
-            }
-            while (m_Audio.clip == m_Race[clipRandomIndex]);
+            int clipRandomIndex = Random.Range(0, m_RandomClips.Count);
 
-            m_Audio.clip = m_Race[clipRandomIndex];
+            m_Audio.clip = m_RandomClips[clipRandomIndex];
             m_Audio.Play();
+
+            m_RandomClips.RemoveAt(clipRandomIndex);
+        }
+
+        private void InitializeRandomClipsList()
+        {
+            m_RandomClips = new List<AudioClip>();
+
+            foreach (var clip in m_RaceClips)
+                m_RandomClips.Add(clip);
         }
     }
 }

@@ -1,9 +1,12 @@
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace CarRacing
 {
     public class GlobalDependenciesContainer : Dependency
     {
+        [SerializeField] private Pauser m_Pauser;
+
         private static GlobalDependenciesContainer m_Instance;
 
         private void Awake()
@@ -24,6 +27,11 @@ namespace CarRacing
         private void OnDestroy()
         {
             SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
+
+        protected override void BindAll(MonoBehaviour monoBehaviourInScene)
+        {
+            Bind<Pauser>(m_Pauser, monoBehaviourInScene);
         }
 
         private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)

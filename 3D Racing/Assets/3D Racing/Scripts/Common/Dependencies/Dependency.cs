@@ -2,7 +2,7 @@ using UnityEngine;
 
 public abstract class Dependency : MonoBehaviour
 {
-    protected virtual void BindAll(MonoBehaviour monoBehaviourInScene) { }
+    protected abstract void BindAll(MonoBehaviour monoBehaviourInScene);
 
     /// <summary>
     /// Метод связывания ссылок.
