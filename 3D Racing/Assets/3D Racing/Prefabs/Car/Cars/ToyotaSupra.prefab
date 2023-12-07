@@ -5266,7 +5266,7 @@ Transform:
   - {fileID: 8459525228224760095}
   - {fileID: 4919798081092824303}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -123.022, z: 0}
 --- !u!54 &8272399056945837539
 Rigidbody:
@@ -17758,6 +17758,7 @@ GameObject:
   - component: {fileID: 7957408107583945190}
   - component: {fileID: 1328537117397135522}
   - component: {fileID: 5878249865910980151}
+  - component: {fileID: 1042909195588651470}
   m_Layer: 0
   m_Name: EngineSound
   m_TagString: Untagged
@@ -17893,6 +17894,18 @@ MonoBehaviour:
   m_RpmModifier: 5
   m_BasePitch: 0.8
   m_BaseVolume: 0.1
+--- !u!114 &1042909195588651470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4611270668874988346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 241a93fb7ca2401468a67a3cbd01c909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4677021707314920346
 GameObject:
   m_ObjectHideFlags: 0

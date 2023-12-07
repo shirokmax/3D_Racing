@@ -447,6 +447,7 @@ GameObject:
   - component: {fileID: 3791238090218219048}
   - component: {fileID: 7970966225810448298}
   - component: {fileID: 4262137059518911544}
+  - component: {fileID: 7970794199034955988}
   m_Layer: 0
   m_Name: GearBoxSound
   m_TagString: Untagged
@@ -575,6 +576,18 @@ MonoBehaviour:
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9bb45941b14834649a358d92722d6aee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7970794199034955988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140925289922212543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 241a93fb7ca2401468a67a3cbd01c909, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1189873688781291270
@@ -970,7 +983,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8285591623137459696}
   - component: {fileID: 8507792177550905384}
-  - component: {fileID: 7625611966820724745}
   m_Layer: 0
   m_Name: WheelsSlipSound
   m_TagString: Untagged
@@ -1089,18 +1101,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7625611966820724745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2511206624928942935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 241a93fb7ca2401468a67a3cbd01c909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2702398638444605612
 GameObject:
   m_ObjectHideFlags: 0

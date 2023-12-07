@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace CarRacing
 {
-    public class WheelEffect : MonoBehaviour
+    public class WheelEffect : MonoBehaviour, IDependency<Pauser>
     {
         [SerializeField] private WheelCollider[] m_Wheels;
         [SerializeField] private ParticleSystem[] m_WheelsSmoke;
@@ -15,6 +15,9 @@ namespace CarRacing
 
         private Transform[] m_SkidTrails;
         private WheelHit m_WheelHit;
+
+        private Pauser m_Pauser;
+        public void Construct(Pauser obj) => m_Pauser = obj;
 
         private void Awake()
         {
@@ -36,10 +39,19 @@ namespace CarRacing
 
                     isSlip = true;
 
-                    if (m_Audio.isPlaying == false)
+                    if (m_Pauser.IsPaused == false)
                     {
-                        m_Audio.time = Random.Range(0f, m_Audio.clip.length);
-                        m_Audio.Play();
+                        m_Audio.UnPause();
+
+                        if (m_Audio.isPlaying == false)
+                        {
+                            m_Audio.time = Random.Range(0f, m_Audio.clip.length);
+                            m_Audio.Play();
+                        }
+                    }
+                    else
+                    {
+                        m_Audio.Pause();
                     }
 
                     m_SkidTrails[i].position = m_Wheels[i].transform.position - m_WheelHit.normal * m_Wheels[i].radius;
