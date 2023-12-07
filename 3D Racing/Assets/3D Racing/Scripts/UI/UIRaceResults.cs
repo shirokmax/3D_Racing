@@ -24,8 +24,6 @@ public class UIRaceResults : MonoBehaviour, IDependency<RaceResults>
 
     private void Start()
     {
-        m_RaceResultsPanel.SetActive(true);
-
         m_RaceResults.EventOnResultsUpdated.AddListener(OnResultsUpdated);
 
         m_TimeNewRecordText.enabled = false;
@@ -36,13 +34,11 @@ public class UIRaceResults : MonoBehaviour, IDependency<RaceResults>
 
         m_CurrentDriftRecord = m_RaceResults.GetAbsoluteDriftRecord();
         m_RaceRecordDriftText.text = ((int)m_CurrentDriftRecord).ToString();
-
-        gameObject.SetActive(false);
     }
 
     private void OnResultsUpdated()
     {
-        gameObject.SetActive(true);
+        m_RaceResultsPanel.SetActive(true);
 
         m_RacePlayerTimeText.text = StringTime.SecondToTimeString(m_RaceResults.CurrentTime);
 

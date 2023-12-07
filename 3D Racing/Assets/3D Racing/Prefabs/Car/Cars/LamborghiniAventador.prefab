@@ -4030,7 +4030,6 @@ GameObject:
   - component: {fileID: 7388480621518483713}
   - component: {fileID: 6258789872635421967}
   - component: {fileID: 3027322610500299832}
-  - component: {fileID: 506078358231545276}
   m_Layer: 0
   m_Name: EngineSound
   m_TagString: Untagged
@@ -4166,18 +4165,6 @@ MonoBehaviour:
   m_RpmModifier: 5
   m_BasePitch: 1
   m_BaseVolume: 0.1
---- !u!114 &506078358231545276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7272767646405889531}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 241a93fb7ca2401468a67a3cbd01c909, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7281997415841192731
 GameObject:
   m_ObjectHideFlags: 0

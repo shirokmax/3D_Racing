@@ -21,6 +21,7 @@ namespace CarRacing
         public void Awake()
         {
             m_Audio = GetComponent<AudioSource>();
+            m_Audio.ignoreListenerPause = true;
         }
 
         private void Start()

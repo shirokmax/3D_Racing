@@ -88,8 +88,8 @@ GameObject:
   - component: {fileID: 7575800957932234806}
   - component: {fileID: 4096027167232635919}
   - component: {fileID: 5053626754353051758}
-  - component: {fileID: 2996279617729537305}
   - component: {fileID: 1654779008216305980}
+  - component: {fileID: 7789931124006297316}
   - component: {fileID: 4560714797203267655}
   m_Layer: 0
   m_Name: TimesOfDayButton
@@ -172,21 +172,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
---- !u!114 &2996279617729537305
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1895595717601981448}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf281f6dfda73a544a740cef38b80536, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_HiddenPosition: {x: -380, y: 10}
-  m_DurationTime: 0.7
-  m_Ease: 15
 --- !u!114 &1654779008216305980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,6 +210,22 @@ MonoBehaviour:
   OnUnSelect:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7789931124006297316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895595717601981448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4d22c2ee045e040a26db58be2f78a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EndPosition: {x: 0, y: 0}
+  m_DurationTime: 0.7
+  m_Ease: 15
+  m_AnimateOnEnable: 1
 --- !u!114 &4560714797203267655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,8 +238,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8a3b2c498ad75a4d9ee200aae1e800e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SizeMult: 0.95
+  m_EndValue: 0.9
   m_Time: 0.1
+  m_InEase: 1
+  m_OutnEase: 1
 --- !u!1 &3966799487391174587
 GameObject:
   m_ObjectHideFlags: 0

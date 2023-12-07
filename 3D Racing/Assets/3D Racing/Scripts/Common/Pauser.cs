@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -27,6 +26,8 @@ namespace CarRacing
             if (IsPaused == true) return;
 
             Time.timeScale = 0;
+            AudioListener.pause = true;
+
             m_IsPaused = true;
             EventOnPauseStateChange?.Invoke(m_IsPaused);
         }
@@ -36,6 +37,8 @@ namespace CarRacing
             if (IsPaused == false) return;
 
             Time.timeScale = 1;
+            AudioListener.pause = false;
+
             m_IsPaused = false;
             EventOnPauseStateChange?.Invoke(m_IsPaused);
         }

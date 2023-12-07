@@ -39,19 +39,10 @@ namespace CarRacing
 
                     isSlip = true;
 
-                    if (m_Pauser.IsPaused == false)
+                    if (m_Audio.isPlaying == false)
                     {
-                        m_Audio.UnPause();
-
-                        if (m_Audio.isPlaying == false)
-                        {
-                            m_Audio.time = Random.Range(0f, m_Audio.clip.length);
-                            m_Audio.Play();
-                        }
-                    }
-                    else
-                    {
-                        m_Audio.Pause();
+                        m_Audio.time = Random.Range(0f, m_Audio.clip.length);
+                        m_Audio.Play();
                     }
 
                     m_SkidTrails[i].position = m_Wheels[i].transform.position - m_WheelHit.normal * m_Wheels[i].radius;
