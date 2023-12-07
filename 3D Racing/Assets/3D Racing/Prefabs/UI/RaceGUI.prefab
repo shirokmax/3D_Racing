@@ -3783,7 +3783,7 @@ MonoBehaviour:
   m_EndValue: 0.5
   m_Time: 0.9
   m_InEase: 1
-  m_OutnEase: 30
+  m_OutEase: 1
 --- !u!1 &6933324106609705268
 GameObject:
   m_ObjectHideFlags: 0
@@ -5904,7 +5904,7 @@ MonoBehaviour:
   m_EndValue: 0.5
   m_Time: 0.9
   m_InEase: 1
-  m_OutnEase: 30
+  m_OutEase: 1
 --- !u!1001 &430210965471540960
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5919,6 +5919,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4424371983912413079, guid: cb6cc07eaa4a6b64caee4a0f178555a1, type: 3}
       propertyPath: m_Type
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424371983912413079, guid: cb6cc07eaa4a6b64caee4a0f178555a1, type: 3}
+      propertyPath: m_SoundType
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4424371983912413079, guid: cb6cc07eaa4a6b64caee4a0f178555a1, type: 3}
@@ -6546,6 +6550,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4424371983912413079, guid: cb6cc07eaa4a6b64caee4a0f178555a1, type: 3}
+      propertyPath: m_SoundType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424371983912413079, guid: cb6cc07eaa4a6b64caee4a0f178555a1, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -6690,6 +6698,10 @@ PrefabInstance:
     - target: {fileID: 4424371983912413079, guid: cb6cc07eaa4a6b64caee4a0f178555a1, type: 3}
       propertyPath: m_Type
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424371983912413079, guid: cb6cc07eaa4a6b64caee4a0f178555a1, type: 3}
+      propertyPath: m_SoundType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4424371983912413079, guid: cb6cc07eaa4a6b64caee4a0f178555a1, type: 3}
       propertyPath: OnClick.m_PersistentCalls.m_Calls.Array.size

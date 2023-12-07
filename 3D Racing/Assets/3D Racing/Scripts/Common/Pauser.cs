@@ -13,7 +13,7 @@ namespace CarRacing
 
         private void Awake()
         {
-            SceneManager.sceneLoaded += OnSceneLoaded;
+            UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
         private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)

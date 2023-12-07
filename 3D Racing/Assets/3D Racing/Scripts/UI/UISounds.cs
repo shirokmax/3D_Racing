@@ -55,16 +55,27 @@ namespace CarRacing
 
         private void OnPointerClick(UIButton button)
         {
-            switch (button.Type)
+            PlaySound(button.SoundType);
+        }
+
+        public void PlaySound(SoundType type)
+        {
+            switch (type)
             {
-                case ButtonType.Default:
+                case SoundType.Click:
                     m_Audio.PlayOneShot(m_Click);
                     break;
-                case ButtonType.Play:
+                case SoundType.Play:
                     m_Audio.PlayOneShot(m_Play);
                     break;
-                case ButtonType.Back:
+                case SoundType.Back:
                     m_Audio.PlayOneShot(m_Back);
+                    break;
+                case SoundType.Hover:
+                    m_Audio.PlayOneShot(m_Hover);
+                    break;
+                case SoundType.Pause:
+                    m_Audio.PlayOneShot(m_Pause);
                     break;
             }
         }

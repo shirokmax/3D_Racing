@@ -7,8 +7,8 @@ namespace CarRacing
 {
     public class UIButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
-        [SerializeField] private ButtonType m_Type;
-        public ButtonType Type => m_Type;
+        [SerializeField] private SoundType m_SoundType;
+        public SoundType SoundType => m_SoundType;
 
         [Space]
         [SerializeField] private bool m_Interactable = true;

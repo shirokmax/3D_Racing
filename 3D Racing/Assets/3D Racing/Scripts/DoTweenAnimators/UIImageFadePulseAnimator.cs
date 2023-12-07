@@ -17,18 +17,21 @@ namespace CarRacing
             m_Image = GetComponent<Image>();
             m_StartFade = m_Image.color.a;
 
-            SceneManager.sceneLoaded += OnSceneLoaded;
+            UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
         protected override void OnDestroy()
         {
             base.OnDestroy();
 
-            SceneManager.sceneLoaded -= OnSceneLoaded;
+            UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
         }
 
-        private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
+        private void OnSceneLoaded(Scene scene, LoadSceneMode arg1)
         {
+            if (scene.name == GlobalConsts.MAIN_MENU_SCENE_NAME) 
+                return;
+
             KillReset();
         }
 

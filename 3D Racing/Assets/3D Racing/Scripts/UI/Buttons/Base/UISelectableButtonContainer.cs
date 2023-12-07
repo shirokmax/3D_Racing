@@ -12,13 +12,16 @@ namespace CarRacing
 
         private int m_SelectButtonIndex = 0;
 
-        private void Start()
+        private void Awake()
         {
             m_Buttons = transform.GetComponentsInChildren<UISelectableButton>();
 
             if (m_Buttons == null)
                 Debug.LogError("Button list is empty!");
+        }
 
+        private void Start()
+        {
             foreach (var button in m_Buttons)
                 button.PointerEnter += OnPointerEnter;
 
@@ -52,6 +55,11 @@ namespace CarRacing
                     break;
                 }
             }
+        }
+
+        public void SelectFirstButton()
+        {
+            SelectButton(m_Buttons[0]);
         }
 
         public void SelectNext() { }

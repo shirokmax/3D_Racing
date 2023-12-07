@@ -23,7 +23,7 @@ namespace CarRacing
 
             if (m_RaceInfo == null) return;
 
-            SceneManager.LoadScene(m_RaceInfo.SceneName);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(m_RaceInfo.SceneName);
         }
 
         public void ApplyProperty(ScriptableObject property)

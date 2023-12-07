@@ -1,7 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
-using System;
 
 namespace CarRacing
 {
@@ -26,11 +25,14 @@ namespace CarRacing
 
             m_StartPosition = m_Rect.anchoredPosition;
 
-            SceneManager.sceneLoaded += OnSceneLoaded;
+            UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
-        private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
+        private void OnSceneLoaded(Scene scene, LoadSceneMode arg1)
         {
+            if (scene.name == GlobalConsts.MAIN_MENU_SCENE_NAME)
+                return;
+
             KillReset();
         }
 
@@ -51,7 +53,7 @@ namespace CarRacing
 
         private void OnDestroy()
         {
-            SceneManager.sceneLoaded -= OnSceneLoaded;
+            UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
 
             KillReset();
         }

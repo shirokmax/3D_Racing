@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d6033810ac930b45830189813ad4de0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Type: 2
+  m_SoundType: 2
   m_Interactable: 1
   m_Clickable: 1
   m_Hoverable: 0

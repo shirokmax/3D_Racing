@@ -35,7 +35,7 @@ namespace CarRacing
 
             InitializeRandomClipsList();
 
-            SceneManager.sceneLoaded += OnSceneLoaded;
+            UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
         private void Update()
@@ -48,7 +48,7 @@ namespace CarRacing
 
         private void OnDestroy()
         {
-            SceneManager.sceneLoaded -= OnSceneLoaded;
+            UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
         }
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
@@ -65,9 +65,11 @@ namespace CarRacing
 
         private void AutoChangeSong()
         {
+            if (m_Audio.clip == null) return;
+
             if (m_Audio.time == m_Audio.clip.length)
             {
-                if (SceneManager.GetActiveScene().name == GlobalConsts.MAIN_MENU_SCENE_NAME)
+                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == GlobalConsts.MAIN_MENU_SCENE_NAME)
                     PlayMainMenuMusic();
                 else
                     PlayRandomRaceMusic();
@@ -76,7 +78,7 @@ namespace CarRacing
 
         private void ChangeSong()
         {
-            if (SceneManager.GetActiveScene().name != GlobalConsts.MAIN_MENU_SCENE_NAME)
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != GlobalConsts.MAIN_MENU_SCENE_NAME)
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
