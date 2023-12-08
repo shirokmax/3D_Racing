@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 namespace CarRacing
 {
     [RequireComponent(typeof(RectTransform))]
-    public class UISlideAnimator : MonoBehaviour
+    public class UIRectSlideAnimator : MonoBehaviour
     {
         [SerializeField] private Vector2 m_EndPosition;
         [SerializeField] private float m_DurationTime;

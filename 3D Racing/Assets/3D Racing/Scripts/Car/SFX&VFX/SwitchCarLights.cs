@@ -8,7 +8,7 @@ namespace CarRacing
         Neon
     }
 
-    public class SwitchCarLightsTemp : MonoBehaviour
+    public class SwitchCarLights : MonoBehaviour
     {
         [SerializeField] private GameObject m_DefaultLight;
         [SerializeField] private GameObject m_NeonLight;

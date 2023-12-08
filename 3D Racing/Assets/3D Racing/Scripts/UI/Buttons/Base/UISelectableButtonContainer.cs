@@ -15,8 +15,8 @@ namespace CarRacing
         private void Awake()
         {
             m_Buttons = transform.GetComponentsInChildren<UISelectableButton>();
-
-            if (m_Buttons == null)
+            
+            if (m_Buttons.Length == 0)
                 Debug.LogError("Button list is empty!");
         }
 

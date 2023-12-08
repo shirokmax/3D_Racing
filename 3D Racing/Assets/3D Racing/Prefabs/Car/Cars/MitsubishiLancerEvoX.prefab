@@ -1691,7 +1691,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986074784977677519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 326.90427, y: 0.8484721, z: -117.403625}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1799,6 +1799,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9707e2fd4ab7dc44189b5bd2d1900693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_CarName: Mitsubishi Lancer Evo X
   m_MaxSpeed: 350
   m_MaxSteerAngle: 50
   m_MaxBrakeTorque: 20000

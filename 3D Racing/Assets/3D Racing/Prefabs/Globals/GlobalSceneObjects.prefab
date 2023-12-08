@@ -185,7 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72c0a50439ea06243a80d18b1bfb0a5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Car: {fileID: 0}
+  m_CarSpawner: {fileID: 0}
   m_CarInputControl: {fileID: 0}
   m_CarCameraController: {fileID: 0}
   m_TrackpointCircuit: {fileID: 0}

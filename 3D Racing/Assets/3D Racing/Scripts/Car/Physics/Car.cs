@@ -7,6 +7,9 @@ namespace CarRacing
     public class Car : MonoBehaviour
     {
         #region Properties
+        [SerializeField] private string m_CarName;
+        public string CarName => m_CarName;
+
         [SerializeField] private float m_MaxSpeed;
         public float MaxSpeed => m_MaxSpeed;
 

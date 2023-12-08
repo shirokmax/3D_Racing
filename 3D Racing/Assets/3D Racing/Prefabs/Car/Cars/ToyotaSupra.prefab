@@ -5253,8 +5253,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 579661672263595932}
-  m_LocalRotation: {x: 0, y: -0.87890875, z: 0, w: 0.47698998}
-  m_LocalPosition: {x: 326.675, y: 0.884, z: -117.518}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5267,7 +5267,7 @@ Transform:
   - {fileID: 4919798081092824303}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -123.022, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &8272399056945837539
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5362,6 +5362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9707e2fd4ab7dc44189b5bd2d1900693, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_CarName: Toyota Supra
   m_MaxSpeed: 350
   m_MaxSteerAngle: 50
   m_MaxBrakeTorque: 20000

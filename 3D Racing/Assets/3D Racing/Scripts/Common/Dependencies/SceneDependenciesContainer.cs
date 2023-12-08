@@ -5,7 +5,7 @@ namespace CarRacing
 {
     public class SceneDependenciesContainer : Dependency
     {
-        [SerializeField] private Car m_Car;
+        [SerializeField] private CarSpawner m_CarSpawner;
         [SerializeField] private CarInputControl m_CarInputControl;
         [SerializeField] private CarCameraController m_CarCameraController;
         [SerializeField] private TrackpointCircuit m_TrackpointCircuit;
@@ -13,6 +13,8 @@ namespace CarRacing
         [SerializeField] private RaceTimeTracker m_RaceTimeTracker;
         [SerializeField] private RaceResults m_RaceResults;
         [SerializeField] private RaceDriftTracker m_RaceDriftTracker;
+
+        private Car m_Car;
 
         protected override void BindAll(MonoBehaviour monoBehaviourInScene)
         {
@@ -28,6 +30,8 @@ namespace CarRacing
 
         private void Awake()
         {
+            m_Car = m_CarSpawner.Spawn();
+
             FindAllObjectsToBind();
         }
     }

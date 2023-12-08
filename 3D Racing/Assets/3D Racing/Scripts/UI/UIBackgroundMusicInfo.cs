@@ -8,7 +8,7 @@ namespace CarRacing
     {
         [SerializeField] private BackgroundMusic m_BGM;
         [SerializeField] private Text m_Text;
-        [SerializeField] private UISlideAnimator m_SlideAnimator;
+        [SerializeField] private UIRectSlideAnimator m_SlideAnimator;
         [SerializeField] private UIImageFadePulseAnimator m_FadePulseAnimator;
         [SerializeField] private AudioClip m_SwitchClipSound;
 
