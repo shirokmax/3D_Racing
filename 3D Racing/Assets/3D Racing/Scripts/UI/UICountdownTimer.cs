@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace CarRacing
+namespace UnityDrift
 {
     [RequireComponent(typeof(Text))]
     public class UICountdownTimer : MonoBehaviour, IDependency<RaceStateTracker>

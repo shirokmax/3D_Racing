@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace CarRacing
+namespace UnityDrift
 {
     public class UISelectableButton : UIButton
     {

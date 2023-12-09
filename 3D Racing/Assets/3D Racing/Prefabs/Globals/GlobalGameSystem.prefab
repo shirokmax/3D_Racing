@@ -653,6 +653,51 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bf2de740eee3c2141962d63b13943b35, type: 2}
   - {fileID: 11400000, guid: d53fc9a2f6f87af48993e830080374e5, type: 2}
   - {fileID: 11400000, guid: 564c20b4c199c3d47a32748deb02f64f, type: 2}
+  - {fileID: 11400000, guid: ea057d7e3b965be408be3c3b4d1857ff, type: 2}
+--- !u!1 &7416646929737456035
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2668733849968374857}
+  - component: {fileID: 632289808653417345}
+  m_Layer: 0
+  m_Name: LoadedRaceSceneInfo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2668733849968374857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7416646929737456035}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7228287789267855023}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &632289808653417345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7416646929737456035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a43d0b886a6f3843819557bff549894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8050931326075728506
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +729,7 @@ Transform:
   m_Children:
   - {fileID: 3973586477214871769}
   - {fileID: 8450244590093294207}
+  - {fileID: 2668733849968374857}
   - {fileID: 6625521321237307575}
   - {fileID: 1979100328478249100}
   m_Father: {fileID: 0}
@@ -702,6 +748,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Pauser: {fileID: 1799393868769672098}
+  m_SceneInfo: {fileID: 632289808653417345}
 --- !u!1 &8569650596241904120
 GameObject:
   m_ObjectHideFlags: 0

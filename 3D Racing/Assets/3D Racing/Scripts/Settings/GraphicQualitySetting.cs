@@ -40,7 +40,7 @@ public class GraphicQualitySetting : Setting
         m_CurrentLevelIndex = PlayerPrefs.GetInt(m_Title, QualitySettings.names.Length - 1);
     }
 
-    private void Save()
+    public override void Save()
     {
         PlayerPrefs.SetInt(m_Title, m_CurrentLevelIndex);
     }

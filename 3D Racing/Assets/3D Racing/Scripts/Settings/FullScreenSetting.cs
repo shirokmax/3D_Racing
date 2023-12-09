@@ -42,7 +42,7 @@ public class FullScreenSetting : Setting
         m_FullScreen = Convert.ToBoolean(PlayerPrefs.GetInt(m_Title, 1));
     }
 
-    private void Save()
+    public override void Save()
     {
         PlayerPrefs.SetInt(m_Title, m_FullScreen ? 1 : 0);
     }

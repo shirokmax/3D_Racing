@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using DG.Tweening;
 
-namespace CarRacing
+namespace UnityDrift
 {
     [RequireComponent(typeof(Image))]
     public class UIImageFadePulseAnimator : PulseAnimator

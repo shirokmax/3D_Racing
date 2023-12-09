@@ -65,7 +65,7 @@ public class ResolutionSetting : Setting
         }     
     }
 
-    private void Save()
+    public override void Save()
     {
         PlayerPrefs.SetInt(m_Title, m_CurrentResolutionIndex);
         PlayerPrefs.SetString(MONITOR_NAME, m_MonitorName);

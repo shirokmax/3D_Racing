@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CarRacing
+namespace UnityDrift
 {
     public class RaceDriftTracker : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<Car>
     {

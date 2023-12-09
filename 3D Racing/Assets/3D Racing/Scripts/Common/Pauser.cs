@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-namespace CarRacing
+namespace UnityDrift
 {
     public class Pauser : MonoBehaviour
     {
@@ -13,7 +13,7 @@ namespace CarRacing
 
         private void Awake()
         {
-            UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
         private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)

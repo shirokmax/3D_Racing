@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace CarRacing
+namespace UnityDrift
 {
     [RequireComponent(typeof(AudioSource))]
     public class UIBackgroundMusicInfo : MonoBehaviour

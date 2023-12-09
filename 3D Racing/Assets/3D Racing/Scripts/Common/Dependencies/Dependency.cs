@@ -17,7 +17,7 @@ public abstract class Dependency : MonoBehaviour
     protected void FindAllObjectsToBind()
     {
         // Массив всех монобехов, находящихся на сцене
-        MonoBehaviour[] monosInScene = FindObjectsOfType<MonoBehaviour>();
+        MonoBehaviour[] monosInScene = FindObjectsOfType<MonoBehaviour>(true);
 
         // Обработка всех монобехов на сцене.
         // Для определения очередности необходимо делать отдельный такой цикл и ставить его в нужном порядке по очередности относительно других циклов.

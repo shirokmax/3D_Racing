@@ -1,43 +1,42 @@
+using System;
 using UnityEngine;
 
-namespace CarRacing
+namespace UnityDrift
 {
-    public enum CarLightType
+    public class SwitchCarLights : MonoBehaviour, IDependency<LoadedRaceSceneInfo>
     {
-        Default,
-        Neon
-    }
-
-    public class SwitchCarLights : MonoBehaviour
-    {
+        [SerializeField] private CarLightsSetting m_CarLightsSettings;
         [SerializeField] private GameObject m_DefaultLight;
         [SerializeField] private GameObject m_NeonLight;
 
-        [SerializeField] private CarLightType m_Type;
-        public CarLightType Type => m_Type;
-        public void SetLightType(CarLightType type) => m_Type = type;
+        private bool m_Neon;
+
+        private LoadedRaceSceneInfo m_LoadedSceneInfo;
+        public void Construct(LoadedRaceSceneInfo obj) => m_LoadedSceneInfo = obj;
+
+        private void Start()
+        {
+            m_Neon = Convert.ToBoolean(PlayerPrefs.GetInt(m_CarLightsSettings.Title, 0));
+
+            m_DefaultLight.SetActive(false);
+            m_NeonLight.SetActive(false);
+
+            if (m_LoadedSceneInfo.Info.Night == true)
+                SwitchLights();
+        }
 
         private void Update()
         {
-            SwitchLight();
+            if (Input.GetKeyDown(KeyCode.F))
+                SwitchLights();
         }
 
-        private void SwitchLight()
+        private void SwitchLights()
         {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                if (m_Type == CarLightType.Default)
-                {
-                    m_DefaultLight.SetActive(!m_DefaultLight.activeSelf);
-                    m_NeonLight.SetActive(false);
-                }
-
-                if (m_Type == CarLightType.Neon)
-                {
-                    m_NeonLight.SetActive(!m_NeonLight.activeSelf);
-                    m_DefaultLight.SetActive(false);
-                }
-            }
+            if (m_Neon == true)
+                m_NeonLight.SetActive(!m_NeonLight.activeSelf);
+            else
+                m_DefaultLight.SetActive(!m_DefaultLight.activeSelf);
         }
     }
 }

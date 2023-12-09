@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace CarRacing
+namespace UnityDrift
 {
     public class TrackpointCircuit : MonoBehaviour
     {

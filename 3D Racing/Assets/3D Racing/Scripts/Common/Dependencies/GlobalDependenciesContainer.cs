@@ -1,11 +1,12 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace CarRacing
+namespace UnityDrift
 {
     public class GlobalDependenciesContainer : Dependency
     {
         [SerializeField] private Pauser m_Pauser;
+        [SerializeField] private LoadedRaceSceneInfo m_SceneInfo;
 
         private static GlobalDependenciesContainer m_Instance;
 
@@ -21,17 +22,18 @@ namespace CarRacing
 
             DontDestroyOnLoad(gameObject);
 
-            UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
         private void OnDestroy()
         {
-            UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
+            SceneManager.sceneLoaded -= OnSceneLoaded;
         }
 
         protected override void BindAll(MonoBehaviour monoBehaviourInScene)
         {
             Bind<Pauser>(m_Pauser, monoBehaviourInScene);
+            Bind<LoadedRaceSceneInfo>(m_SceneInfo, monoBehaviourInScene);
         }
 
         private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)

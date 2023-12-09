@@ -2,7 +2,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
 
-namespace CarRacing
+namespace UnityDrift
 {
     [RequireComponent(typeof(RectTransform))]
     public class UIRectSlideAnimator : MonoBehaviour

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace CarRacing
+namespace UnityDrift
 {
     [Serializable]
     public class WheelAxle

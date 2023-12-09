@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
-namespace CarRacing
+namespace UnityDrift
 {
     [RequireComponent(typeof(AudioSource))]
     public class BackgroundMusic : MonoBehaviour, IDependency<RaceStateTracker>

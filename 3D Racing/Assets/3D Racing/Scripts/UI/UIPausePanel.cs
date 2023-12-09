@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace CarRacing
+namespace UnityDrift
 {
     public class UIPausePanel : MonoBehaviour, IDependency<Pauser>
     {

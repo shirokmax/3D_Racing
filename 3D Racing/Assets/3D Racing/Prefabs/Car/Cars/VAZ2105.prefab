@@ -1086,9 +1086,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 712588de7d447144796ecfdc28a30984, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_CarLightsSettings: {fileID: 11400000, guid: ea057d7e3b965be408be3c3b4d1857ff, type: 2}
   m_DefaultLight: {fileID: 6161033469292340254}
   m_NeonLight: {fileID: 1779608962640442483}
-  m_Type: 0
 --- !u!1 &1458645524623873706
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace CarRacing
+namespace UnityDrift
 {
     [RequireComponent(typeof(CarChassis))]
-    public class Car : MonoBehaviour
+    public class Car : MonoBehaviour, IScriptableObjectProperty
     {
         #region Properties
         [SerializeField] private string m_CarName;
@@ -96,6 +96,11 @@ namespace CarRacing
             m_CarChassis.BrakeTorque = BrakeControl * m_MaxBrakeTorque;
             m_CarChassis.HandbrakeTorque = HandbrakeControl * m_MaxHandbrakeTorque;
             m_CarChassis.SteerAngle = SteerControl * m_MaxSteerAngle;
+        }
+
+        public void ApplyProperty(ScriptableObject property)
+        {
+            //TODO: применять пресет
         }
 
         private void UpdateEngineTorque()

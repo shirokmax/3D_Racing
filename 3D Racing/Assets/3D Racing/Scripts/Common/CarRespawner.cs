@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CarRacing
+namespace UnityDrift
 {
     public class CarRespawner : MonoBehaviour, IDependency<Car>, IDependency<CarInputControl>, IDependency<RaceStateTracker>
     {

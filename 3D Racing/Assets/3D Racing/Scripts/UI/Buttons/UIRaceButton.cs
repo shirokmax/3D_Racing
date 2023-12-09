@@ -1,16 +1,19 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-namespace CarRacing
+namespace UnityDrift
 {
-    public class UIRaceButton : UISelectableButton, IScriptableObjectProperty
+    public class UIRaceButton : UISelectableButton, IScriptableObjectProperty, IDependency<LoadedRaceSceneInfo>
     {
         [SerializeField] private RaceInfo m_RaceInfo;
 
         [SerializeField] private Image m_PreviewImage;
         [SerializeField] private Text m_Title;
+
+        private LoadedRaceSceneInfo m_RaceSceneInfo;
+        public void Construct(LoadedRaceSceneInfo obj) => m_RaceSceneInfo = obj;
 
         private void Start()
         {
@@ -23,7 +26,8 @@ namespace CarRacing
 
             if (m_RaceInfo == null) return;
 
-            UnityEngine.SceneManagement.SceneManager.LoadScene(m_RaceInfo.SceneName);
+            m_RaceSceneInfo.SetInfo(m_RaceInfo);
+            SceneManager.LoadScene(m_RaceInfo.SceneName);
         }
 
         public void ApplyProperty(ScriptableObject property)

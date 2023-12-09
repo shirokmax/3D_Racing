@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CarRacing
+namespace UnityDrift
 {
     [CreateAssetMenu]
     public class RaceInfo : ScriptableObject
@@ -13,5 +13,8 @@ namespace CarRacing
 
         [SerializeField] private string m_Title;
         public string Title => m_Title;
+
+        [SerializeField] private bool m_Night;
+        public bool Night => m_Night;
     }
 }

@@ -1,7 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 
-namespace CarRacing
+namespace UnityDrift
 {
     public class SizePulsatingAnimator : PulsatingAnimator
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CarRacing
+namespace UnityDrift
 {
     [CreateAssetMenu]
     public class CarSelectionSetting : Setting
@@ -39,7 +39,6 @@ namespace CarRacing
 
         public override void Apply()
         {
-            // TODO: Применять префаб машины для его последующего использования в уровнях
             Save();
         }
 
@@ -48,7 +47,7 @@ namespace CarRacing
             PlayerPrefs.GetInt(m_Title, 0);
         }
 
-        private void Save()
+        public override void Save()
         {
             PlayerPrefs.SetInt(m_Title, m_CurrentCarIndex);
         }

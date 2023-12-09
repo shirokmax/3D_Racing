@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CarRacing
+namespace UnityDrift
 {
     public class CarSpawner : MonoBehaviour
     {
@@ -11,7 +11,7 @@ namespace CarRacing
             int carIndex = PlayerPrefs.GetInt(m_CarSelectionSetting.Title, 0);
             Car car = Instantiate(m_CarSelectionSetting.CarPrefabs[carIndex], transform.position, transform.rotation);
 
-            //TODO: Применять сохраненные настройки пресета и неона
+            //TODO: Применять сохраненные настройки пресета
 
             return car;
         }

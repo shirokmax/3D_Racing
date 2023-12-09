@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CarRacing
+namespace UnityDrift
 {
     [RequireComponent(typeof(AudioSource))]
     public class UISounds : MonoBehaviour, IDependency<Pauser>

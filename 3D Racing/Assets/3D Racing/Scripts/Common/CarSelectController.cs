@@ -2,7 +2,7 @@ using DG.Tweening;
 
 using UnityEngine;
 
-namespace CarRacing
+namespace UnityDrift
 {
     public class CarSelectController : MonoBehaviour
     {

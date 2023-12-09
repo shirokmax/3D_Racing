@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace CarRacing
+namespace UnityDrift
 {
     [RequireComponent(typeof(CarCameraController))]
     public abstract class CarCameraComponent : MonoBehaviour

@@ -2,7 +2,7 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 
-namespace CarRacing
+namespace UnityDrift
 {
     [RequireComponent(typeof(Text))]
     public class UITextFadePulsatingAnimator : PulsatingAnimator

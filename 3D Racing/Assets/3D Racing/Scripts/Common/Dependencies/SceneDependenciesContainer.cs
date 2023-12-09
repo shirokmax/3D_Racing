@@ -1,7 +1,7 @@
-using CarRacing;
+using UnityDrift;
 using UnityEngine;
 
-namespace CarRacing
+namespace UnityDrift
 {
     public class SceneDependenciesContainer : Dependency
     {
