@@ -37,7 +37,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -37.983, z: 0}
 --- !u!20 &710128224760355381
 Camera:
@@ -78,7 +78,7 @@ Camera:
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -170,9 +170,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9ceaa05c86599143a6f1cc495be4800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Car: {fileID: 0}
-  m_Camera: {fileID: 710128224760355381}
-  m_RaceStateTracker: {fileID: 0}
   m_CameraFollow: {fileID: 1691378201385482912}
   m_CameraFovCorrector: {fileID: 4629880717108395803}
   m_CameraShaker: {fileID: 4503204235576144979}

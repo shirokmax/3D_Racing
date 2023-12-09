@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ViewHeight: 0
-  m_Height: 250
+  m_Height: 280
   m_Distance: 1
   m_RotationDamping: 6
   m_HeightDamping: 5
