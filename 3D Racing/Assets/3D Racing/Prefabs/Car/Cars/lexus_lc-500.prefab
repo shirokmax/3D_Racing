@@ -247,7 +247,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -426,7 +426,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -520,7 +520,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -852,7 +852,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -946,7 +946,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -1591,7 +1591,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -1980,7 +1980,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -2323,7 +2323,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -2642,7 +2642,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -2881,7 +2881,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -3055,7 +3055,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -3325,7 +3325,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -3535,7 +3535,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -4226,7 +4226,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -4320,7 +4320,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -4414,7 +4414,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -4508,7 +4508,7 @@ Light:
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 119
   m_RenderingLayerMask: 1
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
@@ -4774,6 +4774,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2295156098312039333, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 2909117067516978762, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -4785,6 +4789,10 @@ PrefabInstance:
     - target: {fileID: 2909117067516978762, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Intensity
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909117067516978762, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 3814951107622537919, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Color.b
@@ -4798,6 +4806,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3814951107622537919, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 4829944452190831993, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -4809,6 +4821,10 @@ PrefabInstance:
     - target: {fileID: 4829944452190831993, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Intensity
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829944452190831993, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 7725081066890795418, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_RootOrder
@@ -4869,6 +4885,10 @@ PrefabInstance:
     - target: {fileID: 7896341803100284291, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Intensity
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896341803100284291, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 7896984691005999563, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Name
@@ -5100,6 +5120,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2295156098312039333, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 2909117067516978762, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -5111,6 +5135,10 @@ PrefabInstance:
     - target: {fileID: 2909117067516978762, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Intensity
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909117067516978762, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 3814951107622537919, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Color.b
@@ -5124,6 +5152,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3814951107622537919, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 4829944452190831993, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -5135,6 +5167,10 @@ PrefabInstance:
     - target: {fileID: 4829944452190831993, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Intensity
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829944452190831993, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 7725081066890795418, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_RootOrder
@@ -5196,6 +5232,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7896341803100284291, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 7896984691005999563, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Name
       value: NeonTube (3)
@@ -5238,6 +5278,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2295156098312039333, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 2909117067516978762, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -5254,6 +5298,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2909117067516978762, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 3814951107622537919, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -5270,6 +5318,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3814951107622537919, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 4829944452190831993, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -5285,6 +5337,10 @@ PrefabInstance:
     - target: {fileID: 4829944452190831993, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Intensity
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829944452190831993, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 7725081066890795418, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_RootOrder
@@ -5353,6 +5409,10 @@ PrefabInstance:
     - target: {fileID: 7896341803100284291, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Intensity
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896341803100284291, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 7896984691005999563, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Name
@@ -5503,6 +5563,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2295156098312039333, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 2909117067516978762, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -5514,6 +5578,10 @@ PrefabInstance:
     - target: {fileID: 2909117067516978762, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Intensity
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2909117067516978762, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 3814951107622537919, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Color.b
@@ -5527,6 +5595,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3814951107622537919, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 4829944452190831993, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -5538,6 +5610,10 @@ PrefabInstance:
     - target: {fileID: 4829944452190831993, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Intensity
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829944452190831993, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 7725081066890795418, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_RootOrder
@@ -5594,6 +5670,10 @@ PrefabInstance:
     - target: {fileID: 7896341803100284291, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Intensity
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7896341803100284291, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
+      propertyPath: m_CullingMask.m_Bits
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 7896984691005999563, guid: 2b31e65b023902b49a5183dac2d212dd, type: 3}
       propertyPath: m_Name
