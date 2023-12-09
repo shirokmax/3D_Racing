@@ -2,7 +2,8 @@ using UnityEngine;
 
 namespace UnityDrift
 {
-    public class CarCameraFollower : CarCameraComponent
+    [RequireComponent(typeof(Camera))]
+    public class CarCameraFollower : MonoBehaviour, IDependency<Car>
     {
         [Header("Offset")]
         [SerializeField] private float m_ViewHeight;
@@ -14,8 +15,17 @@ namespace UnityDrift
         [SerializeField] private float m_HeightDamping;
         [SerializeField] private float m_SpeedThreshold = 5;
 
+        private Car m_Car;
+        public void Construct(Car obj) => m_Car = obj;
+
         private Transform m_Target;
         private Rigidbody m_TargetRigidbody;
+
+        private void Awake()
+        {
+            m_Target = m_Car.transform;
+            m_TargetRigidbody = m_Car.RigidBody;
+        }
 
         private void FixedUpdate()
         {
@@ -36,14 +46,6 @@ namespace UnityDrift
 
             // Rotation
             transform.LookAt(m_Target.transform.position + new Vector3(0, m_ViewHeight, 0));
-        }
-
-        public override void SetProperties(Car car, Camera camera)
-        {
-            base.SetProperties(car, camera);
-
-            m_Target = car.transform;
-            m_TargetRigidbody = car.RigidBody;
         }
     }
 }

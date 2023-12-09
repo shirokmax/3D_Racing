@@ -12,7 +12,7 @@ namespace UnityDrift
 
         private void Update()
         {
-            m_SpeedText.text = m_Car.Speed.ToString("F0");
+            m_SpeedText.text = m_Car.LinearVelocity.ToString("F0");
         }
     }
 }

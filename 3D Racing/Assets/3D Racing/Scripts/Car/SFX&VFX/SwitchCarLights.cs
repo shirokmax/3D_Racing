@@ -21,7 +21,7 @@ namespace UnityDrift
             m_DefaultLight.SetActive(false);
             m_NeonLight.SetActive(false);
 
-            if (m_LoadedSceneInfo.Info.Night == true)
+            if (m_LoadedSceneInfo.Info?.Night == true)
                 SwitchLights();
         }
 

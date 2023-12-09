@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4d021032f39134692c524d0dc37b03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Image: {fileID: 3096432709658853503}
   m_SoundType: 1
   m_Interactable: 1
   m_Clickable: 1

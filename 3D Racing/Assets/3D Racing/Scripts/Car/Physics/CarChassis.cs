@@ -24,11 +24,10 @@ namespace UnityDrift
         [SerializeField] private float m_AngularDragMax;
         [SerializeField] private float m_AngularDragFactor;
 
-        // DEBUG
-        public float MotorTorque;
-        public float BrakeTorque;
-        public float HandbrakeTorque;
-        public float SteerAngle;
+        public float MotorTorque { get; set; }
+        public float BrakeTorque { get; set; }
+        public float HandbrakeTorque { get; set; }
+        public float SteerAngle { get; set; }
 
         public float LinearVelocity => m_RigidBody.velocity.magnitude * 3.6f;
         public Vector3 VelocityDir => m_RigidBody.velocity.normalized;

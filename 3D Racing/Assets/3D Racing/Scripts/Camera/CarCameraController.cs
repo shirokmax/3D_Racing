@@ -2,11 +2,9 @@ using UnityEngine;
 
 namespace UnityDrift
 {
+    [RequireComponent(typeof(Camera))]
     public class CarCameraController : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<Car>
     {
-        [SerializeField] private Camera m_Camera;
-
-        [Space]
         [SerializeField] private CarCameraFollower m_CameraFollow;
         [SerializeField] private CarCameraFovCorrector m_CameraFovCorrector;
         [SerializeField] private CarCameraShaker m_CameraShaker;
@@ -17,13 +15,6 @@ namespace UnityDrift
 
         private RaceStateTracker m_RaceStateTracker;
         public void Construct(RaceStateTracker obj) => m_RaceStateTracker = obj;
-
-        private void Awake()
-        {
-            m_CameraFollow.SetProperties(m_Car, m_Camera);
-            m_CameraFovCorrector.SetProperties(m_Car, m_Camera);
-            m_CameraShaker.SetProperties(m_Car, m_Camera);
-        }
 
         private void Start()
         {

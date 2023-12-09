@@ -5,13 +5,15 @@ namespace UnityDrift
     public class CarSpawner : MonoBehaviour
     {
         [SerializeField] private CarSelectionSetting m_CarSelectionSetting;
+        [SerializeField] private CarPresetSetting m_CarPresetSetting;
 
         public Car Spawn()
         {
-            int carIndex = PlayerPrefs.GetInt(m_CarSelectionSetting.Title, 0);
-            Car car = Instantiate(m_CarSelectionSetting.CarPrefabs[carIndex], transform.position, transform.rotation);
+            Car car = Instantiate(m_CarSelectionSetting.CarPrefabs[m_CarSelectionSetting.CurrentCarIndex],
+                                  transform.position, 
+                                  transform.rotation);
 
-            //TODO: Применять сохраненные настройки пресета
+            car.ApplyPreset(m_CarPresetSetting.PresetType);
 
             return car;
         }

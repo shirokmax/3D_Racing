@@ -1,17 +1,26 @@
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
-using DG.Tweening;
+using UnityEngine.UI;
 
 namespace UnityDrift
 {
     public class UIButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
+        [SerializeField] private Image m_Image;
+        public Image Image => m_Image;
+
         [SerializeField] private SoundType m_SoundType;
         public SoundType SoundType => m_SoundType;
 
         [Space]
         [SerializeField] private bool m_Interactable = true;
+        public bool Interactable 
+        {
+            get => m_Interactable;
+            set => m_Interactable = value;
+        }
+
         [SerializeField] private bool m_Clickable = true;
         [SerializeField] private bool m_Hoverable = true;
 

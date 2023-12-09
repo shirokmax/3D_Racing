@@ -2,11 +2,22 @@ using UnityEngine;
 
 namespace UnityDrift
 {
-    public class CarCameraFovCorrector : CarCameraComponent
+    [RequireComponent(typeof(Camera))]
+    public class CarCameraFovCorrector : MonoBehaviour, IDependency<Car>
     {
         [Space]
         [SerializeField] private float m_MinFieldOfView;
         [SerializeField] private float m_MaxFieldOfView;
+
+        private Camera m_Camera;
+
+        private Car m_Car;
+        public void Construct(Car obj) => m_Car = obj;
+
+        private void Awake()
+        {
+            m_Camera = GetComponent<Camera>();
+        }
 
         private void Update()
         {

@@ -44,7 +44,7 @@ namespace UnityDrift
 
         public override void Load()
         {
-            PlayerPrefs.GetInt(m_Title, 0);
+            m_CurrentCarIndex = PlayerPrefs.GetInt(m_Title, 0);
         }
 
         public override void Save()

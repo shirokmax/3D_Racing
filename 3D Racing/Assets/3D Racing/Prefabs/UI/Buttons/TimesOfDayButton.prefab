@@ -184,6 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72516e37cd7f8846a89ecc9f6e772c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Image: {fileID: 916331949977854004}
   m_SoundType: 1
   m_Interactable: 1
   m_Clickable: 1

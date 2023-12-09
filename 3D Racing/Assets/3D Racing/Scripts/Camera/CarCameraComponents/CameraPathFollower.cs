@@ -2,7 +2,8 @@ using UnityEngine;
 
 namespace UnityDrift
 {
-    public class CameraPathFollower : CarCameraComponent
+    [RequireComponent(typeof(Camera))]
+    public class CameraPathFollower : MonoBehaviour
     {
         [SerializeField] private Transform m_LookTarget;
         [SerializeField] private float m_Height;

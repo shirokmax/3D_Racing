@@ -4,7 +4,7 @@ using UnityEngine.Events;
 namespace UnityDrift
 {
     [RequireComponent(typeof(CarChassis))]
-    public class Car : MonoBehaviour, IScriptableObjectProperty
+    public class Car : MonoBehaviour
     {
         #region Properties
         [SerializeField] private string m_CarName;
@@ -19,6 +19,9 @@ namespace UnityDrift
         [SerializeField] private float m_MaxBrakeTorque;
         [SerializeField] private float m_MaxHandbrakeTorque;
 
+        [Space]
+        [SerializeField] private CarPreset[] m_CarPresets;
+
         [Header("Engine")]
         [SerializeField] private AnimationCurve m_EngineTorqueCurve;
         [SerializeField] private float m_EngineMaxTorque;
@@ -32,12 +35,6 @@ namespace UnityDrift
         public float[] Gears => m_Gears;
 
         [SerializeField] private float m_FinalDriveRatio;
-
-        // DEBUG
-        [Space]
-        [SerializeField] private int m_SelectedGearIndex;
-
-        [SerializeField] private float m_SelectedGear;
         [SerializeField] private float m_RearGear;
 
         [SerializeField] private float m_UpShiftEngineRpm;
@@ -46,26 +43,24 @@ namespace UnityDrift
         [SerializeField] private float m_DownShiftEngineRpm;
         public float DownShiftEngineRpm => m_DownShiftEngineRpm;
 
-        // DEBUG
-        [Space]
-        [SerializeField] private float m_EngineTorque;
-
-        [SerializeField] private float m_EngineRpm;
-        public float EngineRpm => m_EngineRpm;
-
         public float LinearVelocity => m_CarChassis.LinearVelocity;
         public float NormalizeLinearVelocity => m_CarChassis.LinearVelocity / MaxSpeed;
         public float WheelSpeed => m_CarChassis.GetWheelSpeed();
 
         public WheelCollider[] WheelColliders => m_CarChassis.GetAllWheelColliders();
 
-        // DEBUG
-        [Space]
-        public float Speed;
-        public float ThrottleControl;
-        public float BrakeControl;
-        public float HandbrakeControl;
-        public float SteerControl;
+        private int m_SelectedGearIndex;
+        private float m_SelectedGear;
+
+        private float m_EngineTorque;
+
+        private float m_EngineRpm;
+        public float EngineRpm => m_EngineRpm;
+
+        public float ThrottleControl { get; set; }
+        public float BrakeControl { get; set; }
+        public float HandbrakeControl { get; set; }
+        public float SteerControl { get; set; }
 
         private UnityEvent<string> m_EventOnShiftGear = new UnityEvent<string>();
         public UnityEvent<string> EventOnShiftGear => m_EventOnShiftGear;
@@ -86,8 +81,6 @@ namespace UnityDrift
 
         private void Update()
         {
-            Speed = LinearVelocity;
-
             UpdateEngineTorque();
 
             AutoGearShift();
@@ -98,9 +91,22 @@ namespace UnityDrift
             m_CarChassis.SteerAngle = SteerControl * m_MaxSteerAngle;
         }
 
-        public void ApplyProperty(ScriptableObject property)
+        public bool ApplyPreset(CarPresetType type)
         {
-            //TODO: применять пресет
+            foreach(var preset in m_CarPresets)
+            {
+                if (preset.Type == type)
+                    ApplyPresetProperties(preset);
+
+                return true;
+            }
+
+            return false;
+        }
+
+        private void ApplyPresetProperties(CarPreset props)
+        {
+            //TODO: применять пресет на все нужные компоненты
         }
 
         private void UpdateEngineTorque()
