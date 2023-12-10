@@ -4,10 +4,11 @@ using UnityEngine.SceneManagement;
 
 namespace UnityDrift
 {
-    public class RaceResults : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<RaceTimeTracker>, IDependency<RaceDriftTracker>
+    public class RaceResults : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<RaceTimeTracker>, IDependency<RaceDriftTracker>, IDependency<LoadedRaceSceneInfo>
     {
-        public const string TIME_SAVE_MARK = "_player_best_time";
-        public const string DRIFT_SAVE_MARK = "_player_best_drift";
+        public const string TIME_SAVE_MARK = " Player_Best_Time";
+        public const string DRIFT_SAVE_MARK = " Player_Best_Drift";
+        public const string COMPLETE_SAVE_MARK = " Ñomplete";
 
         [SerializeField] private float m_GoldTime;
         public float GoldTime => m_GoldTime;
@@ -23,6 +24,9 @@ namespace UnityDrift
 
         private RaceDriftTracker m_RaceDriftTracker;
         public void Construct(RaceDriftTracker obj) => m_RaceDriftTracker = obj;
+
+        private LoadedRaceSceneInfo m_LoadedRaceSceneInfo;
+        public void Construct(LoadedRaceSceneInfo obj) => m_LoadedRaceSceneInfo = obj;
 
         private float m_PlayerRecordTime;
         public float PlayerRecordTime => m_PlayerRecordTime;
@@ -41,37 +45,48 @@ namespace UnityDrift
 
         public bool IsTimeRecordSetted => m_PlayerRecordTime != 0;
 
-        private void Awake()
-        {
-            Load();
-        }
-
         private void Start()
         {
+            Load();
+
             m_RaceStateTracker.EventOnRaceFinished.AddListener(OnRaceFinished);
         }
 
         private void OnRaceFinished()
         {
-            float absoluteTimeRecord = GetAbsoluteTimeRecord();
-            float absoluteDriftRecord = GetAbsoluteDriftRecord();
-
-            if (m_RaceTimeTracker.CurrentTime < absoluteTimeRecord || IsTimeRecordSetted == false)
+            if (m_LoadedRaceSceneInfo.Info.RaceType == RaceType.Race)
             {
-                m_PlayerRecordTime = m_RaceTimeTracker.CurrentTime;
+                if (m_RaceTimeTracker.CurrentTime < m_GoldTime)
+                    SaveComplete();
 
-                SaveTimeRecord();
+                float absoluteTimeRecord = GetAbsoluteTimeRecord();
+
+                if (m_RaceTimeTracker.CurrentTime < absoluteTimeRecord || IsTimeRecordSetted == false)
+                {
+                    m_PlayerRecordTime = m_RaceTimeTracker.CurrentTime;
+
+                    SaveTimeRecord();
+                }
+
+                m_CurrentTime = m_RaceTimeTracker.CurrentTime;
             }
 
-            if (m_RaceDriftTracker.TotalPoints > absoluteDriftRecord)
+            if (m_LoadedRaceSceneInfo.Info.RaceType == RaceType.Drift)
             {
-                m_PlayerRecordDrift = m_RaceDriftTracker.TotalPoints;
+                if (m_RaceDriftTracker.TotalPoints > m_GoldDrift)
+                    SaveComplete();
 
-                SaveDriftRecord();
+                float absoluteDriftRecord = GetAbsoluteDriftRecord();
+
+                if (m_RaceDriftTracker.TotalPoints > absoluteDriftRecord)
+                {
+                    m_PlayerRecordDrift = m_RaceDriftTracker.TotalPoints;
+
+                    SaveDriftRecord();
+                }
+
+                m_CurrentDriftPoints = m_RaceDriftTracker.TotalPoints;
             }
-
-            m_CurrentTime = m_RaceTimeTracker.CurrentTime;
-            m_CurrentDriftPoints = m_RaceDriftTracker.TotalPoints;
 
             m_EventOnResultsUpdated?.Invoke();
         }
@@ -94,18 +109,23 @@ namespace UnityDrift
 
         private void Load()
         {
-            m_PlayerRecordTime = PlayerPrefs.GetFloat(SceneManager.GetActiveScene().buildIndex + TIME_SAVE_MARK, 0);
-            m_PlayerRecordDrift = PlayerPrefs.GetFloat(SceneManager.GetActiveScene().buildIndex + DRIFT_SAVE_MARK, 0);
+            m_PlayerRecordTime = PlayerPrefs.GetFloat(m_LoadedRaceSceneInfo.Info.Title + TIME_SAVE_MARK, 0);
+            m_PlayerRecordDrift = PlayerPrefs.GetFloat(m_LoadedRaceSceneInfo.Info.Title + DRIFT_SAVE_MARK, 0);
         }
 
         private void SaveTimeRecord()
         {
-            PlayerPrefs.SetFloat(SceneManager.GetActiveScene().buildIndex + TIME_SAVE_MARK, m_PlayerRecordTime);
+            PlayerPrefs.SetFloat(m_LoadedRaceSceneInfo.Info.Title + TIME_SAVE_MARK, m_PlayerRecordTime);
         }
 
         private void SaveDriftRecord()
         {
-            PlayerPrefs.SetFloat(SceneManager.GetActiveScene().buildIndex + DRIFT_SAVE_MARK, m_PlayerRecordDrift);
+            PlayerPrefs.SetFloat(m_LoadedRaceSceneInfo.Info.Title + DRIFT_SAVE_MARK, m_PlayerRecordDrift);
+        }
+
+        private void SaveComplete()
+        {
+            PlayerPrefs.SetInt(m_LoadedRaceSceneInfo.Info.Title + COMPLETE_SAVE_MARK, 1);
         }
     }
 }

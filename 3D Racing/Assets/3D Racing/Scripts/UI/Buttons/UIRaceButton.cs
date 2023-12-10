@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -11,12 +12,19 @@ namespace UnityDrift
 
         [SerializeField] private Image m_PreviewImage;
         [SerializeField] private Text m_Title;
+        [SerializeField] private GameObject m_CompletedPanel;
 
         private LoadedRaceSceneInfo m_RaceSceneInfo;
         public void Construct(LoadedRaceSceneInfo obj) => m_RaceSceneInfo = obj;
 
         private void Start()
         {
+            bool completed = Convert.ToBoolean(PlayerPrefs.GetInt(m_RaceInfo.Title + RaceResults.COMPLETE_SAVE_MARK, 0));
+
+            Debug.Log(m_RaceInfo.Title + RaceResults.COMPLETE_SAVE_MARK + ": " + PlayerPrefs.GetInt(m_RaceInfo.Title + RaceResults.COMPLETE_SAVE_MARK, 0));
+
+            m_CompletedPanel.SetActive(completed);
+
             ApplyProperty(m_RaceInfo);
         }
 
