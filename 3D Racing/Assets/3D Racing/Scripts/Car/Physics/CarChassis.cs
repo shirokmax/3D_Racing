@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace UnityDrift
 {
@@ -16,20 +17,30 @@ namespace UnityDrift
 
         [Header("Down Force")]
         [SerializeField] private float m_DownForceMin;
+        public float DownForceMin => m_DownForceMin;
+
         [SerializeField] private float m_DownForceMax;
+        public float DownForceMax => m_DownForceMax;
+
         [SerializeField] private float m_DownForceFactor;
+        public float DownForceFactor => m_DownForceFactor;
 
         [Header("Angular Drag")]
         [SerializeField] private float m_AngularDragMin;
+        public float AngularDragMin => m_AngularDragMin;
+
         [SerializeField] private float m_AngularDragMax;
+        public float AngularDragMax => m_AngularDragMax;
+
         [SerializeField] private float m_AngularDragFactor;
+        public float AngularDragFactor => m_AngularDragFactor;
 
         public float MotorTorque { get; set; }
         public float BrakeTorque { get; set; }
         public float HandbrakeTorque { get; set; }
         public float SteerAngle { get; set; }
 
-        public float LinearVelocity => m_RigidBody.velocity.magnitude * 3.6f;
+        public float LinearVelocity => m_RigidBody.velocity.magnitude * 3f;
         public Vector3 VelocityDir => m_RigidBody.velocity.normalized;
 
         private Rigidbody m_RigidBody;
@@ -51,6 +62,23 @@ namespace UnityDrift
             UpdateAngularDrag();
             UpdateDownForce();
             UpdateWheelAxles();
+        }
+
+        public void ApplyPreset(CarPreset props)
+        {
+            if (m_CenterOfMass != null)
+            {
+                m_CenterOfMass.localPosition = props.CenterOfMassPosition;
+                m_RigidBody.centerOfMass = m_CenterOfMass.localPosition;
+            }
+
+            m_DownForceMin = props.DownForceMin;
+            m_DownForceMax = props.DownForceMax;
+            m_DownForceFactor = props.DownForceFactor;
+
+            m_AngularDragMin = props.AngularDragMin;
+            m_AngularDragMax = props.AngularDragMax;
+            m_AngularDragFactor = props.AngularDragFactor;
         }
 
         public float GetAverageRpm()

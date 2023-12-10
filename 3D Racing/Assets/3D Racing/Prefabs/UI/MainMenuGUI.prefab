@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5bb29cffc8bdb94687fe9e6c440ce09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Image: {fileID: 0}
+  m_Image: {fileID: 8616062790687306171}
   m_SoundType: 5
   m_Interactable: 1
   m_Clickable: 0
@@ -1750,7 +1750,7 @@ MonoBehaviour:
     m_Right: 0
     m_Top: 0
     m_Bottom: 0
-  m_ChildAlignment: 0
+  m_ChildAlignment: 1
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1

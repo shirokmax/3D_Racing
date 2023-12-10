@@ -57,7 +57,7 @@ namespace UnityDrift
 
                 if (m_TrackType == TrackType.Circular)
                     if (m_LapsCompleted > 0)
-                        m_EventOnLapCompleted.Invoke(m_LapsCompleted);
+                        m_EventOnLapCompleted?.Invoke(m_LapsCompleted);
             }
         }
     }

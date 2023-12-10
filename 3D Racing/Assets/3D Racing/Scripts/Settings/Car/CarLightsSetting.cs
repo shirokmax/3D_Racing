@@ -40,7 +40,7 @@ namespace UnityDrift
 
         public override void Load()
         {
-            m_Neon = Convert.ToBoolean(PlayerPrefs.GetInt(m_Title, 0));
+            m_Neon = Convert.ToBoolean(PlayerPrefs.GetInt(m_Title, 1));
         }
 
         public override void Save()

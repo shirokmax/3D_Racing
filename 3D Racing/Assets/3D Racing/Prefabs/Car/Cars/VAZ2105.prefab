@@ -4895,11 +4895,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CarName: VAZ 2105
-  m_MaxSpeed: 300
+  m_CarPresets:
+  - {fileID: 11400000, guid: 95539ed3cab935a4585a5aad89d804bc, type: 2}
+  - {fileID: 11400000, guid: 5d2c07001a099bd47aa26e5edbfb2f04, type: 2}
+  m_MaxSpeed: 250
   m_MaxSteerAngle: 50
   m_MaxBrakeTorque: 18000
   m_MaxHandbrakeTorque: 6000
-  m_CarPresets: []
   m_EngineTorqueCurve:
     serializedVersion: 2
     m_Curve:
@@ -4960,7 +4962,7 @@ MonoBehaviour:
   - 1.6
   - 1
   - 0.7
-  m_FinalDriveRatio: 3.7
+  m_FinalDriveRatio: 3
   m_RearGear: -3.7
   m_UpShiftEngineRpm: 3300
   m_DownShiftEngineRpm: 1400

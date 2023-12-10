@@ -1398,7 +1398,7 @@ GameObject:
   - component: {fileID: 9087909025489425572}
   - component: {fileID: 7861719714857740761}
   m_Layer: 0
-  m_Name: Pagani
+  m_Name: PaganiZonda
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1518,11 +1518,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CarName: Pagani Zonda
-  m_MaxSpeed: 350
+  m_CarPresets:
+  - {fileID: 11400000, guid: f4b8f6ea3f52fd542b03a370c84e97a7, type: 2}
+  - {fileID: 11400000, guid: 00d7eca2069772c419b1e16c377d7d54, type: 2}
+  m_MaxSpeed: 320
   m_MaxSteerAngle: 50
   m_MaxBrakeTorque: 20000
   m_MaxHandbrakeTorque: 8000
-  m_CarPresets: []
   m_EngineTorqueCurve:
     serializedVersion: 2
     m_Curve:
@@ -1583,7 +1585,7 @@ MonoBehaviour:
   - 1.6
   - 1
   - 0.7
-  m_FinalDriveRatio: 3.7
+  m_FinalDriveRatio: 3
   m_RearGear: -3.7
   m_UpShiftEngineRpm: 4200
   m_DownShiftEngineRpm: 2000

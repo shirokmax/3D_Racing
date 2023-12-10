@@ -41,7 +41,7 @@ namespace UnityDrift
 
         public override void Load()
         {
-            m_PresetType = (CarPresetType)PlayerPrefs.GetInt(m_Title, 0);
+            m_PresetType = (CarPresetType)PlayerPrefs.GetInt(m_Title, (int)(CarPresetType.Drift));
         }
 
         public override void Save()

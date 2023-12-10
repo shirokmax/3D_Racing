@@ -24,7 +24,7 @@ namespace UnityDrift
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                if (m_MainCanvas.activeSelf == true && IsLevelPanelsClosed() == true)
+                if (m_MainCanvas.activeSelf == true && CloseLevelPanels() == false)
                 {
                     ExitToMainMenu();
                     m_Sounds.PlaySound(SoundType.Back);
@@ -39,20 +39,26 @@ namespace UnityDrift
             m_MainMenuCanvas.SetActive(true);
         }
 
-        private bool IsLevelPanelsClosed()
+        private bool CloseLevelPanels()
         {
+            bool wasClosed = false;
+
             foreach (var panel in m_LevelPanels)
             {
                 if (panel.activeSelf == true)
                 {
                     panel.SetActive(false);
-                    m_Sounds.PlaySound(SoundType.Back);
-
-                    return false;
+                    wasClosed = true;
                 }
             }
 
-            return true;
+            if (wasClosed)
+            {
+                m_MenuItemsBarContainer.SetInteractable(true);
+                m_Sounds.PlaySound(SoundType.Back);
+            }
+
+            return wasClosed;
         }
     }
 }

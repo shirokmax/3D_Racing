@@ -47,6 +47,22 @@ namespace UnityDrift
         #endregion
 
         #region Public API
+
+        public void ApplyPreset(WheelAxle axle)
+        {
+            m_IsMotor = axle.IsMotor;
+            m_IsSteer = axle.IsSteer;
+
+            m_AntiRollForce = axle.m_AntiRollForce;
+            m_AdditionalWheelDownForce = axle.m_AdditionalWheelDownForce;
+
+            m_BaseForwardStiffness = axle.m_BaseForwardStiffness;
+            m_StabilityForwardFactor = axle.m_StabilityForwardFactor;
+
+            m_BaseSidewaysStiffness = axle.m_BaseSidewaysStiffness;
+            m_StabilitySidewaysFactor = axle.m_StabilitySidewaysFactor;
+        }
+
         public void UpdateAxle()
         {
             UpdateWheelHits();

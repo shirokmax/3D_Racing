@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655575ac6f68a4945bacfe2604422d6c, type: 3}
+  m_Name: ToyotaSupra_Race
+  m_EditorClassIdentifier: 
+  m_Type: 0
+  m_WheelAxles:
+  - m_LeftWheel:
+      collider: {fileID: 0}
+      mesh: {fileID: 0}
+    m_RightWheel:
+      collider: {fileID: 0}
+      mesh: {fileID: 0}
+    m_IsMotor: 0
+    m_IsSteer: 1
+    m_WheelBaseWidth: 2.512
+    m_AntiRollForce: 70000
+    m_AdditionalWheelDownForce: 120
+    m_BaseForwardStiffness: 1
+    m_StabilityForwardFactor: 1
+    m_BaseSidewaysStiffness: 1.2
+    m_StabilitySidewaysFactor: 1
+  - m_LeftWheel:
+      collider: {fileID: 0}
+      mesh: {fileID: 0}
+    m_RightWheel:
+      collider: {fileID: 0}
+      mesh: {fileID: 0}
+    m_IsMotor: 1
+    m_IsSteer: 0
+    m_WheelBaseWidth: 2.512
+    m_AntiRollForce: 70000
+    m_AdditionalWheelDownForce: 150
+    m_BaseForwardStiffness: 1.5
+    m_StabilityForwardFactor: 1.5
+    m_BaseSidewaysStiffness: 1.5
+    m_StabilitySidewaysFactor: 1.2
+  m_CenterOfMassPosition: {x: 0, y: -0.7, z: 0.05}
+  m_DownForceMin: 100
+  m_DownForceMax: 200
+  m_DownForceFactor: 0.1
+  m_AngularDragMin: 0.3
+  m_AngularDragMax: 3
+  m_AngularDragFactor: 0.05
+  m_MaxSpeed: 350
+  m_MaxSteerAngle: 50
+  m_MaxBrakeTorque: 20000
+  m_MaxHandbrakeTorque: 8000
+  m_EngineMaxTorque: 1300
+  m_EngineMinRpm: 800
+  m_EngineMaxRpm: 5000
+  m_UpShiftEngineRpm: 4200
+  m_DownShiftEngineRpm: 2000

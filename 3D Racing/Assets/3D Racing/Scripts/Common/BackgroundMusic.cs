@@ -35,7 +35,7 @@ namespace UnityDrift
 
             InitializeRandomClipsList();
 
-            UnityEngine.SceneManagement.SceneManager.sceneLoaded += OnSceneLoaded;
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
 
         private void Update()
@@ -48,7 +48,7 @@ namespace UnityDrift
 
         private void OnDestroy()
         {
-            UnityEngine.SceneManagement.SceneManager.sceneLoaded -= OnSceneLoaded;
+            SceneManager.sceneLoaded -= OnSceneLoaded;
         }
 
         private void OnSceneLoaded(Scene scene, LoadSceneMode loadSceneMode)
@@ -69,7 +69,7 @@ namespace UnityDrift
 
             if (m_Audio.time == m_Audio.clip.length)
             {
-                if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == GlobalConsts.MAIN_MENU_SCENE_NAME)
+                if (SceneManager.GetActiveScene().name == GlobalConsts.MAIN_MENU_SCENE_NAME)
                     PlayMainMenuMusic();
                 else
                     PlayRandomRaceMusic();
@@ -78,7 +78,7 @@ namespace UnityDrift
 
         private void ChangeSong()
         {
-            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != GlobalConsts.MAIN_MENU_SCENE_NAME)
+            if (SceneManager.GetActiveScene().name != GlobalConsts.MAIN_MENU_SCENE_NAME)
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {

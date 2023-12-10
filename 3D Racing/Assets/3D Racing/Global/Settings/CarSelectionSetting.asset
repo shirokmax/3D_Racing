@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Title: Car Select
   m_CarPrefabs:
-  - {fileID: 1177148221591566564, guid: 93fb8fcceb6b31f4f92dac57a7129c10, type: 3}
+  - {fileID: 224615971099891020, guid: 93fb8fcceb6b31f4f92dac57a7129c10, type: 3}
   - {fileID: 8429037652677034035, guid: 7aa012d38bc447e4ea9f599ae5ed5127, type: 3}
   - {fileID: 8936621571616568354, guid: d0f383e23936a5f46a4d17e96c4a2d9b, type: 3}
   - {fileID: 7950830109286786697, guid: 266dd9465f8f0344dbe8c405d035d05a, type: 3}

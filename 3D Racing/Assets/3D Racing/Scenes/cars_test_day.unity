@@ -180,130 +180,78 @@ Camera:
   m_CorrespondingSourceObject: {fileID: 710128224760355381, guid: 921e11f20468dc24e9e00d5a4759f9c5, type: 3}
   m_PrefabInstance: {fileID: 1867255822}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &279491967
-GameObject:
+--- !u!1001 &373909812
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 279491969}
-  - component: {fileID: 279491968}
-  m_Layer: 0
-  m_Name: Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &279491968
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2798201429804019754, guid: a3775ffa489c7a6468d60ba3dd654217, type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183701515301847908, guid: a3775ffa489c7a6468d60ba3dd654217, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183701515301847908, guid: a3775ffa489c7a6468d60ba3dd654217, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 161.67615
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183701515301847908, guid: a3775ffa489c7a6468d60ba3dd654217, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.79
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183701515301847908, guid: a3775ffa489c7a6468d60ba3dd654217, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -18.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183701515301847908, guid: a3775ffa489c7a6468d60ba3dd654217, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.70710784
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183701515301847908, guid: a3775ffa489c7a6468d60ba3dd654217, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183701515301847908, guid: a3775ffa489c7a6468d60ba3dd654217, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70710576
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183701515301847908, guid: a3775ffa489c7a6468d60ba3dd654217, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183701515301847908, guid: a3775ffa489c7a6468d60ba3dd654217, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183701515301847908, guid: a3775ffa489c7a6468d60ba3dd654217, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 8183701515301847908, guid: a3775ffa489c7a6468d60ba3dd654217, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a3775ffa489c7a6468d60ba3dd654217, type: 3}
+--- !u!114 &373909813 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 7404281311666465077, guid: a3775ffa489c7a6468d60ba3dd654217, type: 3}
+  m_PrefabInstance: {fileID: 373909812}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279491967}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52337f6d71c93664cac606d3e2ba097e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BreakCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.54926676
-      value: 0.8179496
-      inSlope: -0.95989
-      outSlope: -0.95989
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.1373072
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0.2
-      inSlope: -1.7374465
-      outSlope: -1.7374465
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.11920762
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  m_SteerCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: -0.023885135
-      outSlope: -0.023885135
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0.23686224
-    - serializedVersion: 3
-      time: 0.569489
-      value: 0.9313401
-      inSlope: -0.37761283
-      outSlope: -0.37761283
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.18104246
-      outWeight: 0.27780554
-    - serializedVersion: 3
-      time: 0.8808842
-      value: 0.6414503
-      inSlope: -1.7585948
-      outSlope: -1.7585948
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0.35
-      inSlope: -2.4467804
-      outSlope: -2.4467804
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  m_SteerSensetivity: 3
-  m_AutoSteerInterpolation: 5
-  m_SteerAutoAngleFactor: 0.8
-  m_WheelSpeedThreshold: 50
-  m_AutoBrakeStrength: 0.122
---- !u!4 &279491969
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 279491967}
-  m_LocalRotation: {x: -0, y: 0.70710576, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 161.67615, y: -1.79, z: -18.28}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &374432628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2975,7 +2923,7 @@ PrefabInstance:
     - target: {fileID: 5779307240287412464, guid: cda5cd281a19a37459b7ff1291959ff8, type: 3}
       propertyPath: m_CarInputControl
       value: 
-      objectReference: {fileID: 279491968}
+      objectReference: {fileID: 373909813}
     - target: {fileID: 5779307240287412464, guid: cda5cd281a19a37459b7ff1291959ff8, type: 3}
       propertyPath: m_TrackpointCircuit
       value: 

@@ -1797,11 +1797,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CarName: Mitsubishi Lancer Evo X
-  m_MaxSpeed: 350
+  m_CarPresets:
+  - {fileID: 11400000, guid: 643e4bb0dd7e92a439301bbded71511e, type: 2}
+  - {fileID: 11400000, guid: d81b2b1329e81b34fac402d6b86f3235, type: 2}
+  m_MaxSpeed: 320
   m_MaxSteerAngle: 50
   m_MaxBrakeTorque: 20000
   m_MaxHandbrakeTorque: 8000
-  m_CarPresets: []
   m_EngineTorqueCurve:
     serializedVersion: 2
     m_Curve:
@@ -1862,7 +1864,7 @@ MonoBehaviour:
   - 1.6
   - 1
   - 0.7
-  m_FinalDriveRatio: 3.7
+  m_FinalDriveRatio: 3
   m_RearGear: -3.7
   m_UpShiftEngineRpm: 4200
   m_DownShiftEngineRpm: 2000

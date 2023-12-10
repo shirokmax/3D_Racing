@@ -10,6 +10,8 @@ namespace UnityDrift
         [SerializeField] private string m_CarName;
         public string CarName => m_CarName;
 
+        [SerializeField] private CarPreset[] m_CarPresets;
+
         [SerializeField] private float m_MaxSpeed;
         public float MaxSpeed => m_MaxSpeed;
 
@@ -18,9 +20,6 @@ namespace UnityDrift
 
         [SerializeField] private float m_MaxBrakeTorque;
         [SerializeField] private float m_MaxHandbrakeTorque;
-
-        [Space]
-        [SerializeField] private CarPreset[] m_CarPresets;
 
         [Header("Engine")]
         [SerializeField] private AnimationCurve m_EngineTorqueCurve;
@@ -93,12 +92,13 @@ namespace UnityDrift
 
         public bool ApplyPreset(CarPresetType type)
         {
-            foreach(var preset in m_CarPresets)
+            foreach (var preset in m_CarPresets)
             {
                 if (preset.Type == type)
+                {
                     ApplyPresetProperties(preset);
-
-                return true;
+                    return true;
+                }        
             }
 
             return false;
@@ -106,7 +106,20 @@ namespace UnityDrift
 
         private void ApplyPresetProperties(CarPreset props)
         {
-            //TODO: применять пресет на все нужные компоненты
+            m_MaxSpeed = props.MaxSpeed;
+            m_MaxSteerAngle = props.MaxSteerAngle;
+            m_MaxBrakeTorque = props.MaxBrakeTorque;
+            m_MaxHandbrakeTorque = props.MaxHandbrakeTorque;
+            m_EngineMaxTorque = props.EngineMaxTorque;
+            m_EngineMinRpm = props.EngineMinRpm;
+            m_EngineMaxRpm = props.EngineMaxRpm;
+            m_UpShiftEngineRpm = props.UpShiftEngineRpm;
+            m_DownShiftEngineRpm = props.DownShiftEngineRpm;
+
+            for (int i = 0; i < m_CarChassis.WheelAxles.Length && i < props.WheelAxles.Length; i++)
+                m_CarChassis.WheelAxles[i].ApplyPreset(props.WheelAxles[i]);
+
+            m_CarChassis.ApplyPreset(props);
         }
 
         private void UpdateEngineTorque()

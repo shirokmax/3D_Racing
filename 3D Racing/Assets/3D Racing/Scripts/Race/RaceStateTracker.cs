@@ -9,6 +9,7 @@ namespace UnityDrift
         public SimpleTimer CountdownTimer => m_CountdownTimer;
 
         [SerializeField] private int m_LapsToComplete;
+        public int LapsToComplete => m_LapsToComplete;
 
         private TrackpointCircuit m_TrackpointCircuit;
         public void Construct(TrackpointCircuit obj) => m_TrackpointCircuit = obj;

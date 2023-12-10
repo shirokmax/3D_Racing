@@ -1210,11 +1210,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_CarName: Lamborghini Aventador
-  m_MaxSpeed: 400
+  m_CarPresets:
+  - {fileID: 11400000, guid: 6d6d5872f2ea0f14ca2e6238dc267ea8, type: 2}
+  - {fileID: 11400000, guid: f339b98fd7832cd46b400b43fe4af2be, type: 2}
+  m_MaxSpeed: 370
   m_MaxSteerAngle: 50
   m_MaxBrakeTorque: 20000
   m_MaxHandbrakeTorque: 8000
-  m_CarPresets: []
   m_EngineTorqueCurve:
     serializedVersion: 2
     m_Curve:
@@ -1275,7 +1277,7 @@ MonoBehaviour:
   - 1.6
   - 1
   - 0.7
-  m_FinalDriveRatio: 3.7
+  m_FinalDriveRatio: 3
   m_RearGear: -3.7
   m_UpShiftEngineRpm: 4500
   m_DownShiftEngineRpm: 2200
