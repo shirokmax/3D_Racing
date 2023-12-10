@@ -375,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3181653782880419307, guid: 7bb3f448dd7f91643b1176db6790af1e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3227552136555934430, guid: 7bb3f448dd7f91643b1176db6790af1e, type: 3}
       propertyPath: m_IsActive
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f139787e93a9451458b8544b002dd9cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackType: 0
+  m_TrackType: 1
   m_rackPointTriggerSound: {fileID: 1697786276}
 --- !u!82 &1697786276
 AudioSource:
@@ -1518,10 +1518,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3184502167873892357, guid: 3dfc0bba64e245148b106975a1a7747f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3796217395880274631, guid: 3dfc0bba64e245148b106975a1a7747f, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -1566,14 +1562,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5580171219314335609, guid: 3dfc0bba64e245148b106975a1a7747f, type: 3}
-      propertyPath: m_FontData.m_FontSize
-      value: 48
-      objectReference: {fileID: 0}
-    - target: {fileID: 7156168348432685570, guid: 3dfc0bba64e245148b106975a1a7747f, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7884450384196403337, guid: 3dfc0bba64e245148b106975a1a7747f, type: 3}
       propertyPath: m_Name
       value: RaceGUI
@@ -1581,46 +1569,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8055430262689162474, guid: 3dfc0bba64e245148b106975a1a7747f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 731871370742113910}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3dfc0bba64e245148b106975a1a7747f, type: 3}
---- !u!114 &731871370742113907 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5580171219314335609, guid: 3dfc0bba64e245148b106975a1a7747f, type: 3}
-  m_PrefabInstance: {fileID: 731871370742113906}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &731871370742113908 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7156168348432685570, guid: 3dfc0bba64e245148b106975a1a7747f, type: 3}
-  m_PrefabInstance: {fileID: 731871370742113906}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &731871370742113909 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8055430262689162474, guid: 3dfc0bba64e245148b106975a1a7747f, type: 3}
-  m_PrefabInstance: {fileID: 731871370742113906}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &731871370742113910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 731871370742113909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee318739dee073243befbbce202c62fc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_LapsCountPanel: {fileID: 731871370742113908}
-  m_LapsCountText: {fileID: 731871370742113907}
 --- !u!1001 &799783191498407218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2871,6 +2821,10 @@ PrefabInstance:
     - target: {fileID: 4658152068196900376, guid: cda5cd281a19a37459b7ff1291959ff8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5378580013982363675, guid: cda5cd281a19a37459b7ff1291959ff8, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5779307240287412464, guid: cda5cd281a19a37459b7ff1291959ff8, type: 3}
       propertyPath: m_Car

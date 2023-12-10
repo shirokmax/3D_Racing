@@ -14,6 +14,9 @@ namespace UnityDrift
         [SerializeField] private string m_Title;
         public string Title => m_Title;
 
+        [SerializeField] private RaceType m_RaceType;
+        public RaceType RaceType => m_RaceType;
+
         [SerializeField] private bool m_Night;
         public bool Night => m_Night;
     }

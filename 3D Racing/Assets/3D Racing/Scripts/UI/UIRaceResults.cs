@@ -2,9 +2,13 @@ using UnityDrift;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIRaceResults : MonoBehaviour, IDependency<RaceResults>
+public class UIRaceResults : MonoBehaviour, IDependency<RaceResults>, IDependency<LoadedRaceSceneInfo>
 {
     [SerializeField] private GameObject m_RaceResultsPanel;
+
+    [Space]
+    [SerializeField] private GameObject m_TimeRecordPanel;
+    [SerializeField] private GameObject m_DriftRecordPanel;
 
     [Space]
     [SerializeField] private Text m_RaceRecordTimeText;
@@ -19,35 +23,57 @@ public class UIRaceResults : MonoBehaviour, IDependency<RaceResults>
     private RaceResults m_RaceResults;
     public void Construct(RaceResults obj) => m_RaceResults = obj;
 
+    private LoadedRaceSceneInfo m_LoadedRaceSceneInfo;
+    public void Construct(LoadedRaceSceneInfo obj) => m_LoadedRaceSceneInfo = obj;
+
     private float m_CurrentTimeRecord;
     private float m_CurrentDriftRecord;
 
     private void Start()
     {
-        m_RaceResults.EventOnResultsUpdated.AddListener(OnResultsUpdated);
+        m_TimeRecordPanel.SetActive(false);
+        m_DriftRecordPanel.SetActive(false);
 
         m_TimeNewRecordText.enabled = false;
         m_DriftNewRecordText.enabled = false;
 
-        m_CurrentTimeRecord = m_RaceResults.GetAbsoluteTimeRecord();
-        m_RaceRecordTimeText.text = StringTime.SecondToTimeString(m_CurrentTimeRecord);
+        m_RaceResults.EventOnResultsUpdated.AddListener(OnResultsUpdated);
 
-        m_CurrentDriftRecord = m_RaceResults.GetAbsoluteDriftRecord();
-        m_RaceRecordDriftText.text = ((int)m_CurrentDriftRecord).ToString();
+        if (m_LoadedRaceSceneInfo.Info.RaceType == RaceType.Race)
+        {
+            m_CurrentTimeRecord = m_RaceResults.GetAbsoluteTimeRecord();
+            m_RaceRecordTimeText.text = StringTime.SecondToTimeString(m_CurrentTimeRecord);
+        }
+
+        if (m_LoadedRaceSceneInfo.Info.RaceType == RaceType.Drift)
+        {
+            m_CurrentDriftRecord = m_RaceResults.GetAbsoluteDriftRecord();
+            m_RaceRecordDriftText.text = ((int)m_CurrentDriftRecord).ToString();
+        }
     }
 
     private void OnResultsUpdated()
     {
         m_RaceResultsPanel.SetActive(true);
 
-        m_RacePlayerTimeText.text = StringTime.SecondToTimeString(m_RaceResults.CurrentTime);
+        if (m_LoadedRaceSceneInfo.Info.RaceType == RaceType.Race)
+        {
+            m_TimeRecordPanel.SetActive(true);
 
-        if (m_RaceResults.CurrentTime < m_CurrentTimeRecord)
-            m_TimeNewRecordText.enabled = true;
+            m_RacePlayerTimeText.text = StringTime.SecondToTimeString(m_RaceResults.CurrentTime);
 
-        m_RacePlayerDriftText.text = ((int)m_RaceResults.CurrentDriftPoints).ToString();
+            if (m_RaceResults.CurrentTime < m_CurrentTimeRecord)
+                m_TimeNewRecordText.enabled = true;
+        }
 
-        if ((int)m_RaceResults.CurrentDriftPoints > (int)m_CurrentDriftRecord)
-            m_DriftNewRecordText.enabled = true;
+        if (m_LoadedRaceSceneInfo.Info.RaceType == RaceType.Drift)
+        {
+            m_DriftRecordPanel.SetActive(true);
+
+            m_RacePlayerDriftText.text = ((int)m_RaceResults.CurrentDriftPoints).ToString();
+
+            if ((int)m_RaceResults.CurrentDriftPoints > (int)m_CurrentDriftRecord)
+                m_DriftNewRecordText.enabled = true;
+        }
     }
 }

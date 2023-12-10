@@ -4,7 +4,7 @@ using UnityEngine.UI;
 namespace UnityDrift
 {
     [RequireComponent(typeof(Text))]
-    public class UITrackTime : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<RaceTimeTracker>
+    public class UITrackTime : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<RaceTimeTracker>, IDependency<LoadedRaceSceneInfo>
     {
         private Text m_TimeText;
 
@@ -14,6 +14,9 @@ namespace UnityDrift
         private RaceTimeTracker m_RaceTimeTracker;
         public void Construct(RaceTimeTracker obj) => m_RaceTimeTracker = obj;
 
+        private LoadedRaceSceneInfo m_LoadedRaceSceneInfo;
+        public void Construct(LoadedRaceSceneInfo obj) => m_LoadedRaceSceneInfo = obj;
+
         private void Awake()
         {
             m_TimeText = GetComponent<Text>();
@@ -21,11 +24,14 @@ namespace UnityDrift
 
         private void Start()
         {
-            m_RaceStateTracker.EventOnRaceStarted.AddListener(OnRaceStarted);
-            m_RaceStateTracker.EventOnRaceFinished.AddListener(OnRaceFinished);
-
             m_TimeText.enabled = false;
             enabled = false;
+
+            if (m_LoadedRaceSceneInfo.Info.RaceType != RaceType.Race)
+                return;
+
+            m_RaceStateTracker.EventOnRaceStarted.AddListener(OnRaceStarted);
+            m_RaceStateTracker.EventOnRaceFinished.AddListener(OnRaceFinished);
         }
 
         private void Update()

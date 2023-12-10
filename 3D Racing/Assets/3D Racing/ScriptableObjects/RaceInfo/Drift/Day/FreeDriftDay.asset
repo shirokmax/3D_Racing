@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6021d9fe6c3de444ba5c77feb834c742, type: 3}
-  m_Name: TEST_SCENE_DAY
+  m_Name: FreeDriftDay
   m_EditorClassIdentifier: 
-  m_SceneName: cars_test_day
+  m_SceneName: free_drift_day
   m_PreviewSprite: {fileID: 21300000, guid: 6867d534711bad1429b8464ae2d213bb, type: 3}
-  m_Title: Test Scene
+  m_Title: Free Drift
   m_RaceType: 1
   m_Night: 0

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: TEST_SCENE_NIGHT
   m_EditorClassIdentifier: 
   m_SceneName: cars_test_night
-  m_Night: 1
   m_PreviewSprite: {fileID: 21300000, guid: ec5c32f7e15d4f54ca6d0e807b47dd8e, type: 3}
   m_Title: Test Scene
+  m_RaceType: 1
+  m_Night: 1

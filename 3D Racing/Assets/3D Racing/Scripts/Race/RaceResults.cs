@@ -94,18 +94,18 @@ namespace UnityDrift
 
         private void Load()
         {
-            m_PlayerRecordTime = PlayerPrefs.GetFloat(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + TIME_SAVE_MARK, 0);
-            m_PlayerRecordDrift = PlayerPrefs.GetFloat(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + DRIFT_SAVE_MARK, 0);
+            m_PlayerRecordTime = PlayerPrefs.GetFloat(SceneManager.GetActiveScene().buildIndex + TIME_SAVE_MARK, 0);
+            m_PlayerRecordDrift = PlayerPrefs.GetFloat(SceneManager.GetActiveScene().buildIndex + DRIFT_SAVE_MARK, 0);
         }
 
         private void SaveTimeRecord()
         {
-            PlayerPrefs.SetFloat(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + TIME_SAVE_MARK, m_PlayerRecordTime);
+            PlayerPrefs.SetFloat(SceneManager.GetActiveScene().buildIndex + TIME_SAVE_MARK, m_PlayerRecordTime);
         }
 
         private void SaveDriftRecord()
         {
-            PlayerPrefs.SetFloat(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + DRIFT_SAVE_MARK, m_PlayerRecordDrift);
+            PlayerPrefs.SetFloat(SceneManager.GetActiveScene().buildIndex + DRIFT_SAVE_MARK, m_PlayerRecordDrift);
         }
     }
 }

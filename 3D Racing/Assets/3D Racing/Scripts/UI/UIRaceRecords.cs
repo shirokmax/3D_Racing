@@ -3,9 +3,9 @@ using UnityEngine.UI;
 
 namespace UnityDrift
 {
-    public class UIRaceRecords : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<RaceDriftTracker>, IDependency<RaceResults>
+    public class UIRaceRecords : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<RaceDriftTracker>, IDependency<RaceResults>, IDependency<LoadedRaceSceneInfo>
     {
-        [SerializeField] private GameObject m_Panels;
+        [SerializeField] private GameObject m_RaceRecordsPanel;
 
         [Space]
         [SerializeField] private GameObject m_GoldTimeRecordPanel;
@@ -28,13 +28,21 @@ namespace UnityDrift
         private RaceResults m_RaceResults;
         public void Construct(RaceResults obj) => m_RaceResults = obj;
 
+        private LoadedRaceSceneInfo m_LoadedRaceSceneInfo;
+        public void Construct(LoadedRaceSceneInfo obj) => m_LoadedRaceSceneInfo = obj;
+
         private void Start()
         {
             m_RaceStateTracker.EventOnRaceStarted.AddListener(OnRaceStarted);
             m_RaceStateTracker.EventOnRaceFinished.AddListener(OnRaceFinished);
 
-            m_Panels.SetActive(true);
-            DisableRecordPanels();
+            m_RaceRecordsPanel.SetActive(true);
+
+            m_GoldTimeRecordPanel.SetActive(false);
+            m_PlayerTimeRecordPanel.SetActive(false);
+            m_BestDriftRecordPanel.SetActive(false);
+            m_PlayerDriftRecordPanel.SetActive(false);
+
             enabled = false;
         }
 
@@ -46,39 +54,38 @@ namespace UnityDrift
         private void OnRaceStarted()
         {
             enabled = true;
-            m_BestDriftRecordPanel.SetActive(true);
-            m_PlayerDriftRecordPanel.SetActive(true);
 
-            if (m_RaceResults.PlayerRecordTime > m_RaceResults.GoldTime || m_RaceResults.IsTimeRecordSetted == false)
+            if (m_LoadedRaceSceneInfo.Info.RaceType == RaceType.Race)
             {
-                m_GoldTimeRecordPanel.SetActive(true);
-                m_GoldTimeRecordText.text = StringTime.SecondToTimeString(m_RaceResults.GoldTime);
+                if (m_RaceResults.PlayerRecordTime > m_RaceResults.GoldTime || m_RaceResults.IsTimeRecordSetted == false)
+                {
+                    m_GoldTimeRecordPanel.SetActive(true);
+                    m_GoldTimeRecordText.text = StringTime.SecondToTimeString(m_RaceResults.GoldTime);
+                }
+
+                if (m_RaceResults.IsTimeRecordSetted == true)
+                {
+                    m_PlayerTimeRecordPanel.SetActive(true);
+                    m_PlayerTimeRecordText.text = StringTime.SecondToTimeString(m_RaceResults.PlayerRecordTime);
+                }
             }
 
-            if (m_RaceResults.IsTimeRecordSetted == true)
+            if (m_LoadedRaceSceneInfo.Info.RaceType == RaceType.Drift)
             {
-                m_PlayerTimeRecordPanel.SetActive(true);
-                m_PlayerTimeRecordText.text = StringTime.SecondToTimeString(m_RaceResults.PlayerRecordTime);
-            }
+                m_BestDriftRecordPanel.SetActive(true);
+                m_PlayerDriftRecordPanel.SetActive(true);
 
-            if (m_RaceResults.PlayerRecordDrift > m_RaceResults.GoldDrift)
-                m_DriftRecordText.text = ((int)m_RaceResults.PlayerRecordDrift).ToString();
-            else
-                m_DriftRecordText.text = ((int)m_RaceResults.GoldDrift).ToString();
+                if (m_RaceResults.PlayerRecordDrift > m_RaceResults.GoldDrift)
+                    m_DriftRecordText.text = ((int)m_RaceResults.PlayerRecordDrift).ToString();
+                else
+                    m_DriftRecordText.text = ((int)m_RaceResults.GoldDrift).ToString();
+            }
         }
 
         private void OnRaceFinished()
         {
             enabled = false;
-            DisableRecordPanels();
-        }
-
-        private void DisableRecordPanels()
-        {
-            m_GoldTimeRecordPanel.SetActive(false);
-            m_PlayerTimeRecordPanel.SetActive(false);
-            m_BestDriftRecordPanel.SetActive(false);
-            m_PlayerDriftRecordPanel.SetActive(false);
+            m_RaceRecordsPanel.SetActive(false);
         }
     }
 }

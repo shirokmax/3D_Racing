@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace UnityDrift
 {
-    public class RaceDriftTracker : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<Car>
+    public class RaceDriftTracker : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<Car>, IDependency<LoadedRaceSceneInfo>
     {
         public const string ROAD_TAG = "Road";
         public const float DRIFT_MIN_ANGLE = 15f;
@@ -25,6 +25,9 @@ namespace UnityDrift
 
         private Car m_Car;
         public void Construct(Car obj) => m_Car = obj;
+
+        private LoadedRaceSceneInfo m_LoadedRaceSceneInfo;
+        public void Construct(LoadedRaceSceneInfo obj) => m_LoadedRaceSceneInfo = obj;
 
         private float m_CurrentPoints;
         public float CurrentPoints => m_CurrentPoints;
@@ -55,11 +58,14 @@ namespace UnityDrift
 
         private void Start()
         {
+            enabled = false;
+
+            if (m_LoadedRaceSceneInfo.Info.RaceType != RaceType.Drift)
+                return;
+
             m_RaceStateTracker.EventOnRaceStarted.AddListener(OnRaceStarted);
             m_RaceStateTracker.EventOnRaceFinished.AddListener(OnRaceFinished);
             m_Car.EventOnCollision.AddListener(OnCarCollision);
-
-            enabled = false;
         }
 
         private void Update()
