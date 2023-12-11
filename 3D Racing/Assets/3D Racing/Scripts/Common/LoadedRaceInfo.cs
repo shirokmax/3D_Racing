@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace UnityDrift
 {
-    public class LoadedRaceSceneInfo : MonoBehaviour
+    public class LoadedRaceInfo : MonoBehaviour
     {
         [SerializeField] private RaceInfo m_DefaultInfo;
 

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 namespace UnityDrift
 {
-    public class UIRaceButton : UISelectableButton, IScriptableObjectProperty, IDependency<LoadedRaceSceneInfo>
+    public class UIRaceButton : UISelectableButton, IScriptableObjectProperty, IDependency<LoadedRaceInfo>
     {
         [SerializeField] private RaceInfo m_RaceInfo;
         public RaceInfo RaceInfo => m_RaceInfo;
@@ -15,8 +15,8 @@ namespace UnityDrift
         [SerializeField] private GameObject m_CompletedPanel;
         [SerializeField] private GameObject m_LockedPanel;
 
-        private LoadedRaceSceneInfo m_RaceSceneInfo;
-        public void Construct(LoadedRaceSceneInfo obj) => m_RaceSceneInfo = obj;
+        private LoadedRaceInfo m_RaceSceneInfo;
+        public void Construct(LoadedRaceInfo obj) => m_RaceSceneInfo = obj;
 
         private void Awake()
         {

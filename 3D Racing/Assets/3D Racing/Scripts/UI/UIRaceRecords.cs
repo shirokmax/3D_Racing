@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace UnityDrift
 {
-    public class UIRaceRecords : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<RaceDriftTracker>, IDependency<RaceResults>, IDependency<LoadedRaceSceneInfo>
+    public class UIRaceRecords : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<RaceDriftTracker>, IDependency<RaceResults>, IDependency<LoadedRaceInfo>
     {
         [SerializeField] private GameObject m_RaceRecordsPanel;
 
@@ -28,8 +28,8 @@ namespace UnityDrift
         private RaceResults m_RaceResults;
         public void Construct(RaceResults obj) => m_RaceResults = obj;
 
-        private LoadedRaceSceneInfo m_LoadedRaceSceneInfo;
-        public void Construct(LoadedRaceSceneInfo obj) => m_LoadedRaceSceneInfo = obj;
+        private LoadedRaceInfo m_LoadedRaceSceneInfo;
+        public void Construct(LoadedRaceInfo obj) => m_LoadedRaceSceneInfo = obj;
 
         private void Start()
         {

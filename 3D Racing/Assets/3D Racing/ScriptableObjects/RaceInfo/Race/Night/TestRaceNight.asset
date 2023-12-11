@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SceneName: test_race_night
   m_SaveName: test_race_night
-  m_Title: Test Night Level
+  m_Title: Test Night Race
   m_RaceType: 0
   m_PreviewSprite: {fileID: 21300000, guid: ec5c32f7e15d4f54ca6d0e807b47dd8e, type: 3}
   m_Night: 1
+  m_AlwaysUnlocked: 0

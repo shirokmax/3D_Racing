@@ -3,17 +3,11 @@ using UnityEngine.Events;
 
 namespace UnityDrift
 {
-    public class RaceResults : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<RaceTimeTracker>, IDependency<RaceDriftTracker>, IDependency<LoadedRaceSceneInfo>, IDependency<RaceCompletion>
+    public class RaceResults : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<RaceTimeTracker>, IDependency<RaceDriftTracker>, IDependency<LoadedRaceInfo>, IDependency<RaceCompletion>
     {
         public const string TIME_SAVE_MARK = "_player_best_time";
         public const string DRIFT_SAVE_MARK = "_player_best_drift";
         public const string COMPLETE_SAVE_MARK = "_complete";
-
-        [SerializeField] private float m_GoldTime;
-        public float GoldTime => m_GoldTime;
-
-        [SerializeField] private float m_GoldDrift;
-        public float GoldDrift => m_GoldDrift;
 
         private RaceStateTracker m_RaceStateTracker;
         public void Construct(RaceStateTracker obj) => m_RaceStateTracker = obj;
@@ -24,11 +18,17 @@ namespace UnityDrift
         private RaceDriftTracker m_RaceDriftTracker;
         public void Construct(RaceDriftTracker obj) => m_RaceDriftTracker = obj;
 
-        private LoadedRaceSceneInfo m_LoadedRaceSceneInfo;
-        public void Construct(LoadedRaceSceneInfo obj) => m_LoadedRaceSceneInfo = obj;
+        private LoadedRaceInfo m_LoadedRaceSceneInfo;
+        public void Construct(LoadedRaceInfo obj) => m_LoadedRaceSceneInfo = obj;
 
         private RaceCompletion m_RaceCompletion;
         public void Construct(RaceCompletion obj) => m_RaceCompletion = obj;
+
+        private float m_GoldTime;
+        public float GoldTime => m_GoldTime;
+
+        private float m_GoldDrift;
+        public float GoldDrift => m_GoldDrift;
 
         private float m_PlayerRecordTime;
         public float PlayerRecordTime => m_PlayerRecordTime;
@@ -50,6 +50,9 @@ namespace UnityDrift
         private void Start()
         {
             Load();
+
+            m_GoldTime = m_LoadedRaceSceneInfo.Info.GoldTime;
+            m_GoldDrift = m_LoadedRaceSceneInfo.Info.GoldDrift;
 
             m_RaceStateTracker.EventOnRaceFinished.AddListener(OnRaceFinished);
         }

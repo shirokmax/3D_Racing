@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace UnityDrift
 {
-    public class SwitchCarLights : MonoBehaviour, IDependency<LoadedRaceSceneInfo>
+    public class SwitchCarLights : MonoBehaviour, IDependency<LoadedRaceInfo>
     {
         [SerializeField] private CarLightsSetting m_CarLightsSettings;
         [SerializeField] private GameObject m_DefaultLight;
@@ -11,8 +11,8 @@ namespace UnityDrift
 
         private bool m_Neon;
 
-        private LoadedRaceSceneInfo m_LoadedSceneInfo;
-        public void Construct(LoadedRaceSceneInfo obj) => m_LoadedSceneInfo = obj;
+        private LoadedRaceInfo m_LoadedSceneInfo;
+        public void Construct(LoadedRaceInfo obj) => m_LoadedSceneInfo = obj;
 
         private void Start()
         {

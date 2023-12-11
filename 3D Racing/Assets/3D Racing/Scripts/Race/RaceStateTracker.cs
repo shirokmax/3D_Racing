@@ -3,16 +3,19 @@ using UnityEngine.Events;
 
 namespace UnityDrift
 {
-    public class RaceStateTracker : MonoBehaviour, IDependency<TrackpointCircuit>
+    public class RaceStateTracker : MonoBehaviour, IDependency<TrackpointCircuit>, IDependency<LoadedRaceInfo>
     {
         [SerializeField] private SimpleTimer m_CountdownTimer;
         public SimpleTimer CountdownTimer => m_CountdownTimer;
 
-        [SerializeField] private int m_LapsToComplete;
-        public int LapsToComplete => m_LapsToComplete;
-
         private TrackpointCircuit m_TrackpointCircuit;
         public void Construct(TrackpointCircuit obj) => m_TrackpointCircuit = obj;
+
+        private LoadedRaceInfo m_LoadedRaceInfo;
+        public void Construct(LoadedRaceInfo obj) => m_LoadedRaceInfo = obj;
+
+        private int m_LapsToComplete;
+        public int LapsToComplete => m_LapsToComplete;
 
         private RaceState m_State;
         public RaceState State => m_State;
@@ -37,6 +40,8 @@ namespace UnityDrift
 
         private void Start()
         {
+            m_LapsToComplete = m_LoadedRaceInfo.Info.LapsToComplete;
+
             StartState(RaceState.Preparation);
             m_EventOnPreparationStarted?.Invoke();
 

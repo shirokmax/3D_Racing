@@ -2,7 +2,7 @@ using UnityDrift;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIRaceResults : MonoBehaviour, IDependency<RaceResults>, IDependency<LoadedRaceSceneInfo>
+public class UIRaceResults : MonoBehaviour, IDependency<RaceResults>, IDependency<LoadedRaceInfo>
 {
     [SerializeField] private GameObject m_RaceResultsPanel;
 
@@ -23,8 +23,8 @@ public class UIRaceResults : MonoBehaviour, IDependency<RaceResults>, IDependenc
     private RaceResults m_RaceResults;
     public void Construct(RaceResults obj) => m_RaceResults = obj;
 
-    private LoadedRaceSceneInfo m_LoadedRaceSceneInfo;
-    public void Construct(LoadedRaceSceneInfo obj) => m_LoadedRaceSceneInfo = obj;
+    private LoadedRaceInfo m_LoadedRaceSceneInfo;
+    public void Construct(LoadedRaceInfo obj) => m_LoadedRaceSceneInfo = obj;
 
     private float m_CurrentTimeRecord;
     private float m_CurrentDriftRecord;

@@ -3,12 +3,15 @@ using UnityEngine.Events;
 
 namespace UnityDrift
 {
-    public class TrackpointCircuit : MonoBehaviour
+    public class TrackpointCircuit : MonoBehaviour, IDependency<LoadedRaceInfo>
     {
-        [SerializeField] private TrackType m_TrackType;
-        public TrackType TrackType => m_TrackType;
-
         [SerializeField] private AudioSource m_rackPointTriggerSound;
+
+        private LoadedRaceInfo m_LoadedRaceInfo;
+        public void Construct(LoadedRaceInfo obj) => m_LoadedRaceInfo = obj;
+
+        private TrackType m_TrackType;
+        public TrackType TrackType => m_TrackType;
 
         private TrackPoint[] m_Points;
         private int m_LapsCompleted = -1;
@@ -19,13 +22,11 @@ namespace UnityDrift
         private UnityEvent<int> m_EventOnLapCompleted = new UnityEvent<int>();
         public UnityEvent<int> EventOnLapCompleted => m_EventOnLapCompleted;
 
-        private void Awake()
-        {
-            BuildCircuit();
-        }
-
         private void Start()
         {
+            m_TrackType = m_LoadedRaceInfo.Info.TrackType;
+            BuildCircuit();
+
             foreach (var point in m_Points)
                 point.EventOnTriggered.AddListener(OnTrackPointTriggered);            
         }

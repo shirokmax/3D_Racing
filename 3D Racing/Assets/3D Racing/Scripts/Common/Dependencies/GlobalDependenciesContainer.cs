@@ -6,7 +6,7 @@ namespace UnityDrift
     public class GlobalDependenciesContainer : Dependency
     {
         [SerializeField] private Pauser m_Pauser;
-        [SerializeField] private LoadedRaceSceneInfo m_SceneInfo;
+        [SerializeField] private LoadedRaceInfo m_SceneInfo;
         [SerializeField] private RaceCompletion m_RaceCompletion;
 
         private static GlobalDependenciesContainer m_Instance;
@@ -34,7 +34,7 @@ namespace UnityDrift
         protected override void BindAll(MonoBehaviour monoBehaviourInScene)
         {
             Bind<Pauser>(m_Pauser, monoBehaviourInScene);
-            Bind<LoadedRaceSceneInfo>(m_SceneInfo, monoBehaviourInScene);
+            Bind<LoadedRaceInfo>(m_SceneInfo, monoBehaviourInScene);
             Bind<RaceCompletion>(m_RaceCompletion, monoBehaviourInScene);
         }
 

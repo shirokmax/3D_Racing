@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace UnityDrift
 {
-    public class RaceTimeTracker : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<LoadedRaceSceneInfo>
+    public class RaceTimeTracker : MonoBehaviour, IDependency<RaceStateTracker>, IDependency<LoadedRaceInfo>
     {
         private RaceStateTracker m_RaceStateTracker;
         public void Construct(RaceStateTracker obj) => m_RaceStateTracker = obj;
@@ -10,8 +10,8 @@ namespace UnityDrift
         private float m_CurrentTime;
         public float CurrentTime => m_CurrentTime;
 
-        private LoadedRaceSceneInfo m_LoadedRaceSceneInfo;
-        public void Construct(LoadedRaceSceneInfo obj) => m_LoadedRaceSceneInfo = obj;
+        private LoadedRaceInfo m_LoadedRaceSceneInfo;
+        public void Construct(LoadedRaceInfo obj) => m_LoadedRaceSceneInfo = obj;
 
         private void Start()
         {
