@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -9,21 +8,20 @@ namespace UnityDrift
     public class UIRaceButton : UISelectableButton, IScriptableObjectProperty, IDependency<LoadedRaceSceneInfo>
     {
         [SerializeField] private RaceInfo m_RaceInfo;
+        public RaceInfo RaceInfo => m_RaceInfo;
 
         [SerializeField] private Image m_PreviewImage;
         [SerializeField] private Text m_Title;
         [SerializeField] private GameObject m_CompletedPanel;
+        [SerializeField] private GameObject m_LockedPanel;
 
         private LoadedRaceSceneInfo m_RaceSceneInfo;
         public void Construct(LoadedRaceSceneInfo obj) => m_RaceSceneInfo = obj;
 
-        private void Start()
+        private void Awake()
         {
-            bool completed = Convert.ToBoolean(PlayerPrefs.GetInt(m_RaceInfo.Title + RaceResults.COMPLETE_SAVE_MARK, 0));
-
-            Debug.Log(m_RaceInfo.Title + RaceResults.COMPLETE_SAVE_MARK + ": " + PlayerPrefs.GetInt(m_RaceInfo.Title + RaceResults.COMPLETE_SAVE_MARK, 0));
-
-            m_CompletedPanel.SetActive(completed);
+            m_CompletedPanel.SetActive(false);
+            m_LockedPanel.SetActive(false);
 
             ApplyProperty(m_RaceInfo);
         }
@@ -31,6 +29,9 @@ namespace UnityDrift
         public override void OnPointerClick(PointerEventData eventData)
         {
             base.OnPointerClick(eventData);
+
+            if (Interactable == false) return;
+            if (Clickable == false) return;
 
             if (m_RaceInfo == null) return;
 
@@ -48,6 +49,17 @@ namespace UnityDrift
 
             m_PreviewImage.sprite = m_RaceInfo.PreviewSprite;
             m_Title.text = m_RaceInfo.Title;
+        }
+
+        public void SetCompleted()
+        {
+            m_CompletedPanel.SetActive(true);
+        }
+
+        public void SetLocked()
+        {
+            m_LockedPanel.SetActive(true);
+            Clickable = false;
         }
     }
 }

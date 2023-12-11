@@ -22,7 +22,18 @@ namespace UnityDrift
         }
 
         [SerializeField] private bool m_Clickable = true;
+        public bool Clickable
+        {
+            get => m_Clickable;
+            set => m_Clickable = value;
+        }
+
         [SerializeField] private bool m_Hoverable = true;
+        public bool Hoverable
+        {
+            get => m_Hoverable;
+            set => m_Hoverable = value;
+        }
 
         public UnityEvent OnClick;
 

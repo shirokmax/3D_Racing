@@ -30,11 +30,12 @@ namespace UnityDrift
                     m_Sounds.PlaySound(SoundType.Back);
                 }
             }
-
+            //////////////////////////////////////// ”ƒ¿À»“‹ ////////////////////////////////////////////////////
 #if UNITY_EDITOR
             if (Input.GetKeyDown(KeyCode.F5))
                 PlayerPrefs.DeleteAll();
 #endif
+            //////////////////////////////////////// ”ƒ¿À»“‹ ////////////////////////////////////////////////////
         }
 
         public void ExitToMainMenu()

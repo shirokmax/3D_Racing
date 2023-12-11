@@ -284,6 +284,75 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 389a883581b589044b2c41695f7883f5, type: 3}
   - {fileID: 8300000, guid: 1115ab141e097a3488b7450162659200, type: 3}
   - {fileID: 8300000, guid: bd59440900eb99f4cae03f9243303a99, type: 3}
+--- !u!1 &2314791452131335369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7636323751244197555}
+  - component: {fileID: 8672828248693266625}
+  m_Layer: 0
+  m_Name: RaceCompletion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7636323751244197555
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2314791452131335369}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7228287789267855023}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8672828248693266625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2314791452131335369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b30f505b7550f874180872bc5dcaaca3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CompletionData:
+  - raceInfo: {fileID: 11400000, guid: 97c8fcf87d2016949aca433c3b8654dd, type: 2}
+    complete: 0
+    playerBestTime: 0
+    playerBestDrift: 0
+  - raceInfo: {fileID: 11400000, guid: eb38f9ae249d79e428707dbb4e10df89, type: 2}
+    complete: 0
+    playerBestTime: 0
+    playerBestDrift: 0
+  - raceInfo: {fileID: 11400000, guid: 9da9ae46b0f9a8d4592ae3ce3db12303, type: 2}
+    complete: 0
+    playerBestTime: 0
+    playerBestDrift: 0
+  - raceInfo: {fileID: 11400000, guid: 1b43cf21754264244b97c6e5904b56a1, type: 2}
+    complete: 0
+    playerBestTime: 0
+    playerBestDrift: 0
+  - raceInfo: {fileID: 11400000, guid: 5e81e2e0f13fa24419a7a4e8a2485546, type: 2}
+    complete: 0
+    playerBestTime: 0
+    playerBestDrift: 0
+  - raceInfo: {fileID: 11400000, guid: 971d4d34f29892e4991fd7c9fc103861, type: 2}
+    complete: 0
+    playerBestTime: 0
+    playerBestDrift: 0
 --- !u!1 &3705142585140326078
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,6 +800,7 @@ Transform:
   m_Children:
   - {fileID: 3973586477214871769}
   - {fileID: 8450244590093294207}
+  - {fileID: 7636323751244197555}
   - {fileID: 2668733849968374857}
   - {fileID: 6625521321237307575}
   - {fileID: 1979100328478249100}
@@ -751,6 +821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Pauser: {fileID: 1799393868769672098}
   m_SceneInfo: {fileID: 632289808653417345}
+  m_RaceCompletion: {fileID: 8672828248693266625}
 --- !u!1 &8569650596241904120
 GameObject:
   m_ObjectHideFlags: 0

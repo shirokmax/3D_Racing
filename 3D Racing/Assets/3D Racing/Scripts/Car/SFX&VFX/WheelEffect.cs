@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace UnityDrift
 {
-    public class WheelEffect : MonoBehaviour, IDependency<Pauser>
+    public class WheelEffect : MonoBehaviour
     {
         [SerializeField] private WheelCollider[] m_Wheels;
         [SerializeField] private ParticleSystem[] m_WheelsSmoke;
@@ -15,9 +15,6 @@ namespace UnityDrift
 
         private Transform[] m_SkidTrails;
         private WheelHit m_WheelHit;
-
-        private Pauser m_Pauser;
-        public void Construct(Pauser obj) => m_Pauser = obj;
 
         private void Awake()
         {

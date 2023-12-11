@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: TestRaceDay
   m_EditorClassIdentifier: 
   m_SceneName: test_race_day
-  m_PreviewSprite: {fileID: 21300000, guid: 6867d534711bad1429b8464ae2d213bb, type: 3}
+  m_SaveName: test_race_day
   m_Title: Test Day Race
   m_RaceType: 0
+  m_PreviewSprite: {fileID: 21300000, guid: 6867d534711bad1429b8464ae2d213bb, type: 3}
   m_Night: 0

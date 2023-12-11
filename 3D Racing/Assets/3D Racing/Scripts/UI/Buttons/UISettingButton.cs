@@ -64,7 +64,7 @@ namespace UnityDrift
 
             if (m_Setting.m_IsMaxValue == true)
             {
-                m_NextButton.Interactable= false;
+                m_NextButton.Interactable = false;
                 m_NextButton.Image.color = m_ValueButtonsDisabledColor;
             }
             else

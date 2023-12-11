@@ -7,6 +7,7 @@ namespace UnityDrift
     {
         [SerializeField] private Pauser m_Pauser;
         [SerializeField] private LoadedRaceSceneInfo m_SceneInfo;
+        [SerializeField] private RaceCompletion m_RaceCompletion;
 
         private static GlobalDependenciesContainer m_Instance;
 
@@ -34,6 +35,7 @@ namespace UnityDrift
         {
             Bind<Pauser>(m_Pauser, monoBehaviourInScene);
             Bind<LoadedRaceSceneInfo>(m_SceneInfo, monoBehaviourInScene);
+            Bind<RaceCompletion>(m_RaceCompletion, monoBehaviourInScene);
         }
 
         private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
