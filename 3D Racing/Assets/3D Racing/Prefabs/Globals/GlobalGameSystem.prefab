@@ -347,7 +347,15 @@ MonoBehaviour:
     complete: 0
     playerBestTime: 0
     playerBestDrift: 0
+  - raceInfo: {fileID: 11400000, guid: 2f8de7547d11c854793b3c6479fa69f4, type: 2}
+    complete: 0
+    playerBestTime: 0
+    playerBestDrift: 0
   - raceInfo: {fileID: 11400000, guid: 9da9ae46b0f9a8d4592ae3ce3db12303, type: 2}
+    complete: 0
+    playerBestTime: 0
+    playerBestDrift: 0
+  - raceInfo: {fileID: 11400000, guid: 54f0aa16ea8c6084a94d59f30fb71745, type: 2}
     complete: 0
     playerBestTime: 0
     playerBestDrift: 0
@@ -355,11 +363,19 @@ MonoBehaviour:
     complete: 0
     playerBestTime: 0
     playerBestDrift: 0
-  - raceInfo: {fileID: 11400000, guid: d38e5cd88c1901e4da6ca93d02aa5b6b, type: 2}
+  - raceInfo: {fileID: 11400000, guid: ca3570f4ee34ac54e9d26d69b9772592, type: 2}
     complete: 0
     playerBestTime: 0
     playerBestDrift: 0
-  - raceInfo: {fileID: 11400000, guid: 5bf409850c0646a44b45018fe70253d1, type: 2}
+  - raceInfo: {fileID: 11400000, guid: af9ab5ea7c2cf6a479c67156e1a563e3, type: 2}
+    complete: 0
+    playerBestTime: 0
+    playerBestDrift: 0
+  - raceInfo: {fileID: 11400000, guid: a5a86ed284dbeca4a9c275962bf3f3d9, type: 2}
+    complete: 0
+    playerBestTime: 0
+    playerBestDrift: 0
+  - raceInfo: {fileID: 11400000, guid: 5ca856364eea53244a402883e48d0860, type: 2}
     complete: 0
     playerBestTime: 0
     playerBestDrift: 0

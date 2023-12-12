@@ -1127,7 +1127,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 01:12.45
+  m_Text: 
 --- !u!1 &2013193565504959707
 GameObject:
   m_ObjectHideFlags: 0
@@ -2025,7 +2025,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 00:42:00
+  m_Text: 
 --- !u!114 &3149629041147899693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2250,7 +2250,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 25000
+  m_Text: 
 --- !u!114 &105349784126481100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2491,7 +2491,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: 
 --- !u!114 &2463857619585658227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2755,7 +2755,7 @@ GameObject:
   - component: {fileID: 4454117561111612039}
   - component: {fileID: 439752699869996497}
   m_Layer: 0
-  m_Name: DriftTrackerPanel
+  m_Name: DriftTracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4154,7 +4154,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 42530
+  m_Text: 
 --- !u!114 &3291816330656642424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4342,7 +4342,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 01:11:23
+  m_Text: 
 --- !u!114 &747979593181526940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5254,7 +5254,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 25000
+  m_Text: 
 --- !u!1 &7156168348432685570
 GameObject:
   m_ObjectHideFlags: 0
@@ -6236,7 +6236,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: x1
+  m_Text: 
 --- !u!114 &3015024766539919429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6551,7 +6551,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 25000
+  m_Text: 
 --- !u!1 &8265341917757763422
 GameObject:
   m_ObjectHideFlags: 0
@@ -7005,7 +7005,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 01:12.45
+  m_Text: 
 --- !u!1 &8782281213261954603
 GameObject:
   m_ObjectHideFlags: 0
@@ -7086,7 +7086,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Lap 1/1
+  m_Text: 
 --- !u!114 &5634119457226055848
 MonoBehaviour:
   m_ObjectHideFlags: 0

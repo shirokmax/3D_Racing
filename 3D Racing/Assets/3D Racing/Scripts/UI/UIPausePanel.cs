@@ -13,7 +13,8 @@ namespace UnityDrift
         {
             m_PausePanel.SetActive(false);
 
-            m_Pauser.EventOnPauseStateChange += OnPauseStateChange;            
+            m_Pauser.EventOnPauseStateChange += OnPauseStateChange;        
+            Cursor.visible = false;
         }
 
         private void Update()
@@ -30,11 +31,13 @@ namespace UnityDrift
         public void UnPause()
         {
             m_Pauser.UnPause();
+            Cursor.visible = false;
         }
 
         private void OnPauseStateChange(bool isPaused)
         {
             m_PausePanel.SetActive(isPaused);
+            Cursor.visible = isPaused;
         }
     }
 }

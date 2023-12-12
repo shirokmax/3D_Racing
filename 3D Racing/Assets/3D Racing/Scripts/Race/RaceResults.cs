@@ -127,7 +127,7 @@ namespace UnityDrift
                 return m_GoldDrift;
         }
 
-        private void Load()
+        public void Load()
         {
             m_PlayerRecordTime = m_RaceCompletion.GetBestPlayerTime(m_LoadedRaceInfo.Info);
             m_PlayerRecordDrift = m_RaceCompletion.GetBestPlayerDrift(m_LoadedRaceInfo.Info);

@@ -9,10 +9,16 @@ EditorBuildSettings:
     path: Assets/3D Racing/Scenes/MainMenu.unity
     guid: 776c5a596b513794a83482d63cbb01a2
   - enabled: 1
-    path: Assets/3D Racing/Scenes/DayScenes/race_day_2.unity
+    path: Assets/3D Racing/Scenes/DayScenes/day_1.unity
+    guid: 735e0620d3f5d2a479107e73a33c5055
+  - enabled: 1
+    path: Assets/3D Racing/Scenes/DayScenes/day_2.unity
     guid: af0d0c9c5b92ed847b283b8bb3d403a9
   - enabled: 1
-    path: Assets/3D Racing/Scenes/NightScenes/race_night_2.unity
+    path: Assets/3D Racing/Scenes/NightScenes/night_1.unity
+    guid: 8a2f77fad07f1ba4cad543b3049ddacb
+  - enabled: 1
+    path: Assets/3D Racing/Scenes/NightScenes/night_2.unity
     guid: 20447341f5d51c94696d709227f7a81d
   - enabled: 1
     path: Assets/3D Racing/Scenes/DayScenes/free_drift_day.unity
@@ -20,10 +26,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/3D Racing/Scenes/NightScenes/free_drift_night.unity
     guid: 1018e6c9741c41444a074674618627e6
-  - enabled: 1
-    path: Assets/3D Racing/Scenes/DayScenes/TEST_SCENE_DAY.unity
-    guid: 635484e10337ca047bd66d7d081e92b1
-  - enabled: 1
-    path: Assets/3D Racing/Scenes/NightScenes/TEST_SCENE_NIGHT.unity
-    guid: e7f1340af5824d840a2363526d71d38b
   m_configObjects: {}
