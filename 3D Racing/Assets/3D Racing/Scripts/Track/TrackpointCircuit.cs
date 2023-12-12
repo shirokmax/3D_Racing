@@ -5,6 +5,7 @@ namespace UnityDrift
 {
     public class TrackpointCircuit : MonoBehaviour, IDependency<LoadedRaceInfo>
     {
+        [SerializeField] private bool m_Inverted;
         [SerializeField] private AudioSource m_rackPointTriggerSound;
 
         private LoadedRaceInfo m_LoadedRaceInfo;
@@ -27,14 +28,17 @@ namespace UnityDrift
             m_TrackType = m_LoadedRaceInfo.Info.TrackType;
             BuildCircuit();
 
-            foreach (var point in m_Points)
-                point.EventOnTriggered.AddListener(OnTrackPointTriggered);            
+            if (m_Points != null)
+            {
+                foreach (var point in m_Points)
+                    point.EventOnTriggered.AddListener(OnTrackPointTriggered);
+            }      
         }
 
         [ContextMenu(nameof(BuildCircuit))]
         private void BuildCircuit()
         {
-            m_Points = TrackCircuitBuilder.Build(transform, m_TrackType);
+            m_Points = TrackCircuitBuilder.Build(transform, m_TrackType, m_Inverted);
         }
 
         private void OnTrackPointTriggered(TrackPoint trackPoint)

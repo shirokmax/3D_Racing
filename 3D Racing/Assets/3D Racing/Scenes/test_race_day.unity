@@ -824,7 +824,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f139787e93a9451458b8544b002dd9cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TrackType: 1
+  m_Inverted: 1
   m_rackPointTriggerSound: {fileID: 1697786276}
 --- !u!82 &1697786276
 AudioSource:

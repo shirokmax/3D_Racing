@@ -90,6 +90,8 @@ namespace UnityDrift
 
         private void PlayMainMenuMusic()
         {
+            if (m_MainMenu == null) return;
+
             m_Audio.clip = m_MainMenu;
             m_Audio.Play();
 
@@ -98,6 +100,8 @@ namespace UnityDrift
 
         private void PlayRandomRaceMusic()
         {
+            if (m_RandomClips.Count == 0) return;
+
             m_CanChangeSong = true;
 
             if (m_RandomClips.Count == 0)

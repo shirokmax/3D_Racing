@@ -36,11 +36,19 @@ namespace UnityDrift
 
         private void OnRaceStarted()
         {
-            if (m_TrackpointCircuit.TrackType == TrackType.Circular)
-                m_LapsCountText.text = $"Laps 1/{m_RaceStateTracker.LapsToComplete}";
-            else if (m_TrackpointCircuit.TrackType == TrackType.Sprint)
-                m_LapsCountText.text = "Laps 1/1";
-
+            switch (m_TrackpointCircuit.TrackType)
+            {
+                case TrackType.Circular:
+                    m_LapsCountText.text = $"Laps 1/{m_RaceStateTracker.LapsToComplete}";
+                    break;
+                case TrackType.Sprint:
+                    m_LapsCountText.text = "Laps 1/1";
+                    break;
+                case TrackType.None:
+                    m_LapsCountPanel.SetActive(false);
+                    return;
+            }
+               
             m_LapsCountPanel.SetActive(true);
         }
 

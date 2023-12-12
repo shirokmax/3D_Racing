@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 namespace UnityDrift
 {
@@ -18,8 +19,8 @@ namespace UnityDrift
         private RaceDriftTracker m_RaceDriftTracker;
         public void Construct(RaceDriftTracker obj) => m_RaceDriftTracker = obj;
 
-        private LoadedRaceInfo m_LoadedRaceSceneInfo;
-        public void Construct(LoadedRaceInfo obj) => m_LoadedRaceSceneInfo = obj;
+        private LoadedRaceInfo m_LoadedRaceInfo;
+        public void Construct(LoadedRaceInfo obj) => m_LoadedRaceInfo = obj;
 
         private RaceCompletion m_RaceCompletion;
         public void Construct(RaceCompletion obj) => m_RaceCompletion = obj;
@@ -51,15 +52,29 @@ namespace UnityDrift
         {
             Load();
 
-            m_GoldTime = m_LoadedRaceSceneInfo.Info.GoldTime;
-            m_GoldDrift = m_LoadedRaceSceneInfo.Info.GoldDrift;
+            m_GoldTime = m_LoadedRaceInfo.Info.GoldTime;
+            m_GoldDrift = m_LoadedRaceInfo.Info.GoldDrift;
 
             m_RaceStateTracker.EventOnRaceFinished.AddListener(OnRaceFinished);
         }
 
+        private void OnDestroy()
+        {
+            // Сохранение рекорда дрифта для сцен Free Drift
+            if (m_LoadedRaceInfo.Info.TrackType == TrackType.None &&
+                m_LoadedRaceInfo.Info.RaceType == RaceType.Drift)
+            {
+                if (m_RaceDriftTracker.TotalPoints > m_PlayerRecordDrift)
+                {
+                    m_PlayerRecordDrift = m_RaceDriftTracker.TotalPoints;
+                    SaveDriftRecord();
+                }
+            }
+        }
+
         private void OnRaceFinished()
         {
-            if (m_LoadedRaceSceneInfo.Info.RaceType == RaceType.Race)
+            if (m_LoadedRaceInfo.Info.RaceType == RaceType.Race)
             {
                 if (m_RaceTimeTracker.CurrentTime < m_GoldTime)
                     SaveComplete();
@@ -76,7 +91,7 @@ namespace UnityDrift
                 m_CurrentTime = m_RaceTimeTracker.CurrentTime;
             }
 
-            if (m_LoadedRaceSceneInfo.Info.RaceType == RaceType.Drift)
+            if (m_LoadedRaceInfo.Info.RaceType == RaceType.Drift)
             {
                 if (m_RaceDriftTracker.TotalPoints > m_GoldDrift)
                     SaveComplete();
@@ -114,23 +129,23 @@ namespace UnityDrift
 
         private void Load()
         {
-            m_PlayerRecordTime = m_RaceCompletion.GetBestPlayerTime(m_LoadedRaceSceneInfo.Info);
-            m_PlayerRecordDrift = m_RaceCompletion.GetBestPlayerDrift(m_LoadedRaceSceneInfo.Info);
+            m_PlayerRecordTime = m_RaceCompletion.GetBestPlayerTime(m_LoadedRaceInfo.Info);
+            m_PlayerRecordDrift = m_RaceCompletion.GetBestPlayerDrift(m_LoadedRaceInfo.Info);
         }
 
         private void SaveTimeRecord()
         {
-            m_RaceCompletion.SaveRecordTime(m_LoadedRaceSceneInfo.Info, m_PlayerRecordTime);
+            m_RaceCompletion.SaveRecordTime(m_LoadedRaceInfo.Info, m_PlayerRecordTime);
         }
 
         private void SaveDriftRecord()
         {
-            m_RaceCompletion.SaveRecordDrift(m_LoadedRaceSceneInfo.Info, m_PlayerRecordDrift);
+            m_RaceCompletion.SaveRecordDrift(m_LoadedRaceInfo.Info, m_PlayerRecordDrift);
         }
 
         private void SaveComplete()
         {
-            m_RaceCompletion.SaveCompletion(m_LoadedRaceSceneInfo.Info);
+            m_RaceCompletion.SaveCompletion(m_LoadedRaceInfo.Info);
         }
     }
 }

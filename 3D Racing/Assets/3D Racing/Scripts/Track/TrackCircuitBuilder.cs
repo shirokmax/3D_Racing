@@ -4,35 +4,60 @@ namespace UnityDrift
 {
     public static class TrackCircuitBuilder
     {
-        public static TrackPoint[] Build(Transform trackTransform, TrackType trackType)
+        public static TrackPoint[] Build(Transform trackTransform, TrackType trackType, bool inverted)
         {
+            if (trackType == TrackType.None)
+                return null;
+
             TrackPoint[] points = new TrackPoint[trackTransform.childCount];
 
-            InitPoints(trackTransform, points);
+            InitPoints(trackTransform, points, trackType, inverted);
             SetLinks(points, trackType);
             MarkPoints(points, trackType);
 
             return points;
         }
 
-        private static void InitPoints(Transform trackTransform, TrackPoint[] points)
+        private static void InitPoints(Transform trackTransform, TrackPoint[] points, TrackType trackType, bool inverted)
         {
-            for (int i = 0; i < points.Length; i++)
+            if (inverted == true)
             {
-                if (trackTransform.GetChild(i).TryGetComponent(out TrackPoint point))
+                if (trackType == TrackType.Circular)
                 {
-                    points[i] = point;
-                }
-                else
-                {
-                    Debug.LogError($"There is no TrackPoint script on {i} child object");
-                    return;
+                    InitPointWithIndex(trackTransform, points, 0, 0);
+
+                    for (int i = points.Length - 1; i > 0; i--)
+                        InitPointWithIndex(trackTransform, points, i, points.Length - i);
                 }
 
-                points[i].Reset();
+                if (trackType == TrackType.Sprint)
+                {
+                    for (int i = points.Length - 1; i >= 0; i--)
+                        InitPointWithIndex(trackTransform, points, i, points.Length - 1 - i);
+                }
+            }
+            else
+            {
+                for (int i = 0; i < points.Length; i++)
+                    InitPointWithIndex(trackTransform, points, i, i);
             }
 
             points[0].AssignAsTarget();
+        }
+
+        private static void InitPointWithIndex(Transform trackTransform, TrackPoint[] points, int pointIndex, int childIndex)
+        {
+            if (trackTransform.GetChild(childIndex).TryGetComponent(out TrackPoint point))
+            {
+                points[pointIndex] = point;
+            }
+            else
+            {
+                Debug.LogError($"There is no TrackPoint script on {pointIndex} child object");
+                return;
+            }
+
+            points[pointIndex].Reset();
         }
 
         private static void SetLinks(TrackPoint[] points, TrackType trackType)

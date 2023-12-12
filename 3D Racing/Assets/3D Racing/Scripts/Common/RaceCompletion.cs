@@ -33,9 +33,9 @@ namespace UnityDrift
                         return;
 
                     item.complete = true;
-                }
 
-                DataSaver<RaceComplete[]>.Save(FILENAME, m_CompletionData);
+                    DataSaver<RaceComplete[]>.Save(FILENAME, m_CompletionData);
+                }
             }
         }
 
@@ -44,9 +44,10 @@ namespace UnityDrift
             foreach (var item in m_CompletionData)
             {
                 if (item.raceInfo == raceInfo)
+                {
                     item.playerBestTime = time;
-
-                DataSaver<RaceComplete[]>.Save(FILENAME, m_CompletionData);
+                    DataSaver<RaceComplete[]>.Save(FILENAME, m_CompletionData);
+                }
             }
         }
 
@@ -55,9 +56,10 @@ namespace UnityDrift
             foreach (var item in m_CompletionData)
             {
                 if (item.raceInfo == raceInfo)
+                {
                     item.playerBestDrift = drift;
-
-                DataSaver<RaceComplete[]>.Save(FILENAME, m_CompletionData);
+                    DataSaver<RaceComplete[]>.Save(FILENAME, m_CompletionData);
+                }
             }
         }
 

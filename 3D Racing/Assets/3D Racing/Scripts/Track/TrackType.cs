@@ -3,6 +3,7 @@
     public enum TrackType
     {
         Circular,
-        Sprint
+        Sprint,
+        None
     }
 }

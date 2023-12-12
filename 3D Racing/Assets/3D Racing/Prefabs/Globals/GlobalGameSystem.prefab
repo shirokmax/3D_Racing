@@ -284,6 +284,16 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 389a883581b589044b2c41695f7883f5, type: 3}
   - {fileID: 8300000, guid: 1115ab141e097a3488b7450162659200, type: 3}
   - {fileID: 8300000, guid: bd59440900eb99f4cae03f9243303a99, type: 3}
+  - {fileID: 8300000, guid: 00429affedd8b9046bd5e04f3d28be16, type: 3}
+  - {fileID: 8300000, guid: 2ff63d1e3f5e1f84188034e3536b39dd, type: 3}
+  - {fileID: 8300000, guid: e862038d43c6c5e4fbf39fe3ad3c0502, type: 3}
+  - {fileID: 8300000, guid: 5d261aea6b4a8394a84ea5a431e5ad8c, type: 3}
+  - {fileID: 8300000, guid: a9f122a2873254548a663cb17ef355ea, type: 3}
+  - {fileID: 8300000, guid: af2c9bcc54fb0ef4fbe2db29917ca116, type: 3}
+  - {fileID: 8300000, guid: 56ae5a37d4e35fd47b2586990764fd75, type: 3}
+  - {fileID: 8300000, guid: fe17447bf7309d2458ad9f328fb44463, type: 3}
+  - {fileID: 8300000, guid: cbf3fe47d7f49114eab02296be877bf4, type: 3}
+  - {fileID: 8300000, guid: f0ed61e7e68df8546a2bfa6a5551636d, type: 3}
 --- !u!1 &2314791452131335369
 GameObject:
   m_ObjectHideFlags: 0
@@ -350,6 +360,14 @@ MonoBehaviour:
     playerBestTime: 0
     playerBestDrift: 0
   - raceInfo: {fileID: 11400000, guid: 971d4d34f29892e4991fd7c9fc103861, type: 2}
+    complete: 0
+    playerBestTime: 0
+    playerBestDrift: 0
+  - raceInfo: {fileID: 11400000, guid: 7a808705e8dfd114ab9642b118ee34a7, type: 2}
+    complete: 0
+    playerBestTime: 0
+    playerBestDrift: 0
+  - raceInfo: {fileID: 11400000, guid: d0040adf7f34667448f26efb84179fa1, type: 2}
     complete: 0
     playerBestTime: 0
     playerBestDrift: 0
