@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6021d9fe6c3de444ba5c77feb834c742, type: 3}
-  m_Name: RaceDayLevel_1
+  m_Name: RaceNightLevel_2
   m_EditorClassIdentifier: 
-  m_SceneName: race_day_2
-  m_SaveName: race_day_level_1
-  m_Title: Track 1
+  m_SceneName: race_night_2
+  m_SaveName: race_night_level_2
+  m_Title: Track 2
   m_RaceType: 0
-  m_TrackType: 1
-  m_LapsToComplete: 0
-  m_GoldTime: 25
+  m_TrackType: 0
+  m_LapsToComplete: 2
+  m_GoldTime: 200
   m_GoldDrift: 0
   m_PreviewSprite: {fileID: 21300000, guid: 6867d534711bad1429b8464ae2d213bb, type: 3}
-  m_Night: 0
+  m_Night: 1
   m_AlwaysUnlocked: 0

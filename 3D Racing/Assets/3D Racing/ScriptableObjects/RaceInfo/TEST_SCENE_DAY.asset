@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6021d9fe6c3de444ba5c77feb834c742, type: 3}
   m_Name: TEST_SCENE_DAY
   m_EditorClassIdentifier: 
-  m_SceneName: cars_test_day
+  m_SceneName: TEST_SCENE_DAY
   m_SaveName: TEST_DAY
-  m_Title: Test Scene
+  m_Title: Track 1
   m_RaceType: 1
-  m_TrackType: 2
-  m_LapsToComplete: 0
-  m_GoldTime: 0
-  m_GoldDrift: 0
+  m_TrackType: 0
+  m_LapsToComplete: 2
+  m_GoldTime: 200
+  m_GoldDrift: 25000
   m_PreviewSprite: {fileID: 21300000, guid: 6867d534711bad1429b8464ae2d213bb, type: 3}
   m_Night: 0
   m_AlwaysUnlocked: 1
