@@ -351,14 +351,6 @@ MonoBehaviour:
     complete: 0
     playerBestTime: 0
     playerBestDrift: 0
-  - raceInfo: {fileID: 11400000, guid: 1b43cf21754264244b97c6e5904b56a1, type: 2}
-    complete: 0
-    playerBestTime: 0
-    playerBestDrift: 0
-  - raceInfo: {fileID: 11400000, guid: 5e81e2e0f13fa24419a7a4e8a2485546, type: 2}
-    complete: 0
-    playerBestTime: 0
-    playerBestDrift: 0
   - raceInfo: {fileID: 11400000, guid: 971d4d34f29892e4991fd7c9fc103861, type: 2}
     complete: 0
     playerBestTime: 0
@@ -786,7 +778,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a43d0b886a6f3843819557bff549894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DefaultInfo: {fileID: 11400000, guid: 7a808705e8dfd114ab9642b118ee34a7, type: 2}
+  m_DefaultInfo: {fileID: 11400000, guid: 97c8fcf87d2016949aca433c3b8654dd, type: 2}
 --- !u!1 &8050931326075728506
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,7 +815,7 @@ Transform:
   - {fileID: 6625521321237307575}
   - {fileID: 1979100328478249100}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3196158953870133735
 MonoBehaviour:
