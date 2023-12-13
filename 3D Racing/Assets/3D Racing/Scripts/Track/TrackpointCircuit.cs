@@ -5,6 +5,11 @@ namespace UnityDrift
 {
     public class TrackpointCircuit : MonoBehaviour, IDependency<LoadedRaceInfo>
     {
+        /// <summary>
+        /// Инвертировать ли массив точек трассы.
+        /// Если трек инвертируется, то нужно развернуть все трек поинты в обратную сторону, чтобы они вперед по пути трассы
+        /// для корректного респавна машины.
+        /// </summary>
         [SerializeField] private bool m_Inverted;
         [SerializeField] private AudioSource m_rackPointTriggerSound;
 
