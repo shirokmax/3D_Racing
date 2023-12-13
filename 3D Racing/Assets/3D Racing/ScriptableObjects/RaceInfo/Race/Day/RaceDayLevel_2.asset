@@ -20,6 +20,6 @@ MonoBehaviour:
   m_LapsToComplete: 2
   m_GoldTime: 160
   m_GoldDrift: 0
-  m_PreviewSprite: {fileID: 21300000, guid: 6867d534711bad1429b8464ae2d213bb, type: 3}
+  m_PreviewSprite: {fileID: 21300000, guid: b10bbd300a2e7f546a7bc51255f17821, type: 3}
   m_Night: 0
   m_AlwaysUnlocked: 0

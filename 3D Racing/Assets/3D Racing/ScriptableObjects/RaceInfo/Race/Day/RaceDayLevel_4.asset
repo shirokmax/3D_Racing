@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6021d9fe6c3de444ba5c77feb834c742, type: 3}
+  m_Name: RaceDayLevel_4
+  m_EditorClassIdentifier: 
+  m_SceneName: day_4
+  m_SaveName: race_day_level_4
+  m_Title: Track 4
+  m_RaceType: 0
+  m_TrackType: 0
+  m_LapsToComplete: 4
+  m_GoldTime: 360
+  m_GoldDrift: 0
+  m_PreviewSprite: {fileID: 21300000, guid: 82ba6b6070df0114e86ed0c1c52b236c, type: 3}
+  m_Night: 0
+  m_AlwaysUnlocked: 0

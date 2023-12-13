@@ -2,7 +2,7 @@ using UnityDrift;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIRaceResults : MonoBehaviour, IDependency<RaceResults>, IDependency<LoadedRaceInfo>
+public class UIRaceResults : MonoBehaviour, IDependency<RaceResults>, IDependency<LoadedRaceInfo>, IDependency<RaceStateTracker>
 {
     [SerializeField] private GameObject m_RaceResultsPanel;
 
@@ -26,6 +26,9 @@ public class UIRaceResults : MonoBehaviour, IDependency<RaceResults>, IDependenc
     private LoadedRaceInfo m_LoadedRaceSceneInfo;
     public void Construct(LoadedRaceInfo obj) => m_LoadedRaceSceneInfo = obj;
 
+    private RaceStateTracker m_RaceStateTracker;
+    public void Construct(RaceStateTracker obj) => m_RaceStateTracker = obj;
+
     private float m_CurrentTimeRecord;
     private float m_CurrentDriftRecord;
 
@@ -38,9 +41,11 @@ public class UIRaceResults : MonoBehaviour, IDependency<RaceResults>, IDependenc
         m_DriftNewRecordText.enabled = false;
 
         m_RaceResults.EventOnResultsUpdated.AddListener(OnResultsUpdated);
+        m_RaceStateTracker.EventOnRaceStarted.AddListener(OnRaceStarted);
+    }
 
-        m_RaceResults.Load();
-
+    private void OnRaceStarted()
+    {
         if (m_LoadedRaceSceneInfo.Info.RaceType == RaceType.Race)
         {
             m_CurrentTimeRecord = m_RaceResults.GetAbsoluteTimeRecord();

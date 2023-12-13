@@ -18,7 +18,7 @@ MonoBehaviour:
   m_RaceType: 0
   m_TrackType: 0
   m_LapsToComplete: 2
-  m_GoldTime: 90
+  m_GoldTime: 120
   m_GoldDrift: 0
   m_PreviewSprite: {fileID: 21300000, guid: b92ee83c0d1ac4b48b611912accf0f26, type: 3}
   m_Night: 0
