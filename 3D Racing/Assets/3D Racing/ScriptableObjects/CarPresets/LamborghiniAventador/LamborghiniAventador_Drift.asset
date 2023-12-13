@@ -24,7 +24,7 @@ MonoBehaviour:
     m_IsSteer: 1
     m_WheelBaseWidth: 2.86
     m_AntiRollForce: 70000
-    m_AdditionalWheelDownForce: 120
+    m_AdditionalWheelDownForce: 300
     m_BaseForwardStiffness: 1
     m_StabilityForwardFactor: 0.8
     m_BaseSidewaysStiffness: 0.8
@@ -42,16 +42,16 @@ MonoBehaviour:
     m_AdditionalWheelDownForce: 150
     m_BaseForwardStiffness: 1
     m_StabilityForwardFactor: 0.8
-    m_BaseSidewaysStiffness: 0.4
-    m_StabilitySidewaysFactor: 0.2
-  m_CenterOfMassPosition: {x: 0, y: -0.27, z: -0.171}
-  m_DownForceMin: 100
-  m_DownForceMax: 200
+    m_BaseSidewaysStiffness: 0.2
+    m_StabilitySidewaysFactor: 0.8
+  m_CenterOfMassPosition: {x: 0, y: -0.8, z: 0.6}
+  m_DownForceMin: 150
+  m_DownForceMax: 250
   m_DownForceFactor: 0.1
   m_AngularDragMin: 0.3
   m_AngularDragMax: 3
   m_AngularDragFactor: 0.05
-  m_MaxSpeed: 400
+  m_MaxSpeed: 350
   m_MaxSteerAngle: 50
   m_MaxBrakeTorque: 20000
   m_MaxHandbrakeTorque: 8000

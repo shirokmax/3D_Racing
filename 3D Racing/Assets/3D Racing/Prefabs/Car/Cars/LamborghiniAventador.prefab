@@ -1127,7 +1127,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2788463528912297175}
   serializedVersion: 4
-  m_Mass: 1500
+  m_Mass: 2000
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -1268,7 +1268,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  m_EngineMaxTorque: 1600
+  m_EngineMaxTorque: 1700
   m_EngineMinRpm: 1000
   m_EngineMaxRpm: 5500
   m_Gears:
@@ -1576,7 +1576,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3089753897808334345}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.43, y: -0.050999284, z: 2.512989}
+  m_LocalPosition: {x: 1.43, y: -0.12699929, z: 2.512989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2332,7 +2332,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5126276582840550185}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.43, y: -0.051, z: 2.512989}
+  m_LocalPosition: {x: -1.43, y: -0.127, z: 2.512989}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3224,7 +3224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6571661030447592879}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.27, z: -0.171}
+  m_LocalPosition: {x: 0, y: -0.7, z: 0.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3321,7 +3321,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6749579180387940971}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.43, y: -0.047999978, z: -2.084998}
+  m_LocalPosition: {x: -1.43, y: -0.12399998, z: -2.084998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3965,7 +3965,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7193564631542827048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.43, y: -0.048, z: -2.085}
+  m_LocalPosition: {x: 1.43, y: -0.124000005, z: -2.085}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4558,8 +4558,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.470625, y: 1.757007, z: 8.245245}
-  m_Center: {x: -0.00000021674416, y: 0.23906393, z: 0.37345496}
+  m_Size: {x: 3.470625, y: 1.5609206, z: 8.245245}
+  m_Center: {x: -0.00000023841858, y: 0.33710712, z: 0.37345505}
 --- !u!1 &7944024849318543270
 GameObject:
   m_ObjectHideFlags: 0
@@ -5656,6 +5656,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2142550440761264391}
     m_Modifications:
+    - target: {fileID: 806814411159309163, guid: 51b430e03418fcb449bfd0e01c91a6aa, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1706265273242291709, guid: 51b430e03418fcb449bfd0e01c91a6aa, type: 3}
       propertyPath: m_Name
       value: CarMiniMapCanvas

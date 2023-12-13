@@ -53,6 +53,7 @@ namespace UnityDrift
             if (m_CenterOfMass != null)
                 m_RigidBody.centerOfMass = m_CenterOfMass.localPosition;
 
+            // Стабильность просчета колес, но плохо работает: в начале движения передние колеса почти не поворачивают
             //foreach (var axle in m_WheelAxles)
             //    axle.ConfigureVehicleSubsteps(50, 50, 50);
         }

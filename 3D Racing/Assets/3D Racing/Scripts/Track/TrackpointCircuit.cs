@@ -26,6 +26,13 @@ namespace UnityDrift
         private void Start()
         {
             m_TrackType = m_LoadedRaceInfo.Info.TrackType;
+
+            if (m_TrackType == TrackType.None)
+            {
+                gameObject.SetActive(false);
+                return;
+            }
+
             BuildCircuit();
 
             if (m_Points != null)

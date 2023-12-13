@@ -42,8 +42,8 @@ MonoBehaviour:
     m_AdditionalWheelDownForce: 150
     m_BaseForwardStiffness: 1
     m_StabilityForwardFactor: 0.8
-    m_BaseSidewaysStiffness: 0.4
-    m_StabilitySidewaysFactor: 0.2
+    m_BaseSidewaysStiffness: 0.1
+    m_StabilitySidewaysFactor: 0.4
   m_CenterOfMassPosition: {x: 0, y: -0.5, z: -0.463}
   m_DownForceMin: 100
   m_DownForceMax: 200

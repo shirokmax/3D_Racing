@@ -51,8 +51,6 @@ public class UIRaceResults : MonoBehaviour, IDependency<RaceResults>, IDependenc
         {
             m_CurrentDriftRecord = m_RaceResults.GetAbsoluteDriftRecord();
             m_RaceRecordDriftText.text = ((int)m_CurrentDriftRecord).ToString();
-
-            Debug.Log(m_CurrentDriftRecord);
         }
     }
 

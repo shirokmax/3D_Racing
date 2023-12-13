@@ -39,10 +39,10 @@ namespace UnityDrift
             switch (m_TrackpointCircuit.TrackType)
             {
                 case TrackType.Circular:
-                    m_LapsCountText.text = $"Laps 1/{m_RaceStateTracker.LapsToComplete}";
+                    m_LapsCountText.text = $"Lap 1/{m_RaceStateTracker.LapsToComplete}";
                     break;
                 case TrackType.Sprint:
-                    m_LapsCountText.text = "Laps 1/1";
+                    m_LapsCountText.text = "Lap 1/1";
                     break;
                 case TrackType.None:
                     m_LapsCountPanel.SetActive(false);
@@ -54,7 +54,7 @@ namespace UnityDrift
 
         private void OnLapCompleted(int lapsCount)
         {
-            m_LapsCountText.text = $"Laps {lapsCount + 1}/{m_RaceStateTracker.LapsToComplete}";
+            m_LapsCountText.text = $"Lap {lapsCount + 1}/{m_RaceStateTracker.LapsToComplete}";
         }
 
         private void OnRaceFinished()
