@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6021d9fe6c3de444ba5c77feb834c742, type: 3}
   m_Name: FreeDriftDay
   m_EditorClassIdentifier: 
-  m_SceneName: day_2
+  m_SceneName: day_1
   m_SaveName: free_drift_day
   m_Title: Free Drift
   m_RaceType: 1
