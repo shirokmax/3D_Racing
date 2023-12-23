@@ -100,8 +100,6 @@ namespace UnityDrift
 
         private void PlayRandomRaceMusic()
         {
-            if (m_RandomClips.Count == 0) return;
-
             m_CanChangeSong = true;
 
             if (m_RandomClips.Count == 0)
